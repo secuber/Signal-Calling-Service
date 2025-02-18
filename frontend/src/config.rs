@@ -16,8 +16,8 @@ pub struct Config {
     #[arg(long, default_value = "0.0.0.0")]
     pub server_ip: IpAddr,
 
-    /// The port to use to access the server.
-    #[arg(long, default_value = "8080")]
+    /// The port to use to access the server. //8080
+    #[arg(long, default_value = "8090")]
     pub server_port: u16,
 
     /// The IP address to bind to for the backend to frontend API.

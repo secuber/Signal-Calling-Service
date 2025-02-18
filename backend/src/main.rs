@@ -91,7 +91,7 @@ fn main() -> Result<()> {
     // Initialize logging.
     env_logger::Builder::from_env(
         Env::default()
-            .default_filter_or("calling_backend=info")
+            .default_filter_or("calling_backend=trace")
             .default_write_style_or("never"),
     )
     .format(calling_common::format_log_line)

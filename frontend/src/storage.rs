@@ -5,7 +5,7 @@
 
 use anyhow::{anyhow, Context, Result};
 use async_trait::async_trait;
-use aws_config::BehaviorVersion;
+use aws_config::{default_provider::endpoint_url, BehaviorVersion};
 use aws_credential_types::Credentials;
 use aws_sdk_dynamodb::{
     operation::{delete_item::DeleteItemError, update_item::UpdateItemError},
@@ -13,7 +13,7 @@ use aws_sdk_dynamodb::{
     Client, Config,
 };
 use aws_smithy_async::rt::sleep::default_async_sleep;
-use aws_smithy_types::{retry::RetryConfigBuilder, timeout::TimeoutConfig, Blob};
+use aws_smithy_types::{endpoint, retry::RetryConfigBuilder, timeout::TimeoutConfig, Blob};
 use aws_types::region::Region;
 use calling_common::{Duration, RoomId};
 use log::*;
@@ -274,22 +274,23 @@ impl DynamoDb {
             default_async_sleep().ok_or_else(|| anyhow!("failed to create sleep_impl"))?;
 
         let client = match &config.storage_endpoint {
+            // Some(endpoint) => {
+            //     const KEY: &str = "DummyAccessKey";
+            //     const PASSWORD: &str = "DummyPassword";
+
+            //     info!("Using endpoint for DynamodDB testing: {}", endpoint);
+
+            //     let aws_config = Config::builder()
+            //         .behavior_version(BehaviorVersion::v2024_03_28())
+            //         .credentials_provider(Credentials::from_keys(KEY, PASSWORD, None))
+            //         .endpoint_url(endpoint)
+            //         .sleep_impl(sleep_impl)
+            //         .region(Region::new(config.storage_region.clone()))
+            //         .build();
+            //     Client::from_conf(aws_config)
+            // }
+            // _ => {
             Some(endpoint) => {
-                const KEY: &str = "DummyAccessKey";
-                const PASSWORD: &str = "DummyPassword";
-
-                info!("Using endpoint for DynamodDB testing: {}", endpoint);
-
-                let aws_config = Config::builder()
-                    .behavior_version(BehaviorVersion::v2024_03_28())
-                    .credentials_provider(Credentials::from_keys(KEY, PASSWORD, None))
-                    .endpoint_url(endpoint)
-                    .sleep_impl(sleep_impl)
-                    .region(Region::new(config.storage_region.clone()))
-                    .build();
-                Client::from_conf(aws_config)
-            }
-            _ => {
                 info!(
                     "Using region for DynamodDB access: {}",
                     config.storage_region.as_str()
@@ -306,8 +307,8 @@ impl DynamoDb {
                     .read_timeout(core::time::Duration::from_millis(3100))
                     .connect_timeout(core::time::Duration::from_millis(3100))
                     .build();
-
                 let aws_config = aws_config::defaults(BehaviorVersion::v2024_03_28())
+                    .endpoint_url(endpoint)
                     .sleep_impl(sleep_impl)
                     .retry_config(retry_config)
                     .timeout_config(timeout_config)
@@ -317,6 +318,21 @@ impl DynamoDb {
 
                 Client::new(&aws_config)
             }
+             None => {
+                const KEY: &str = "DummyAccessKey";
+                const PASSWORD: &str = "DummyPassword";
+
+                //info!("Using endpoint for DynamodDB testing: {}", endpoint);
+
+                let aws_config = Config::builder()
+                    .behavior_version(BehaviorVersion::v2024_03_28())
+                    .credentials_provider(Credentials::from_keys(KEY, PASSWORD, None))
+                    //.endpoint_url(endpoint)
+                    .sleep_impl(sleep_impl)
+                    .region(Region::new(config.storage_region.clone()))
+                    .build();
+                Client::from_conf(aws_config)
+            }           
         };
 
         Ok(Self {

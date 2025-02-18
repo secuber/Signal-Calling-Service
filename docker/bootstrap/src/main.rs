@@ -41,8 +41,8 @@ async fn build_table(
 async fn main() -> Result<(), Error> {
     // Be sure that AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY are defined in the environment.
     let sdk_config = aws_config::defaults(aws_config::BehaviorVersion::v2024_03_28())
-        .endpoint_url("http://dynamodb:8000")
-        .region(Region::new("us-west-1"))
+        .endpoint_url("http://127.0.0.1:9066")
+        .region(Region::new("us-west-2"))
         .load()
         .await;
 

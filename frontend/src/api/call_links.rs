@@ -552,7 +552,7 @@ pub mod tests {
     fn initialize_logging() {
         let _ = env_logger::Builder::from_env(
             env_logger::Env::default()
-                .default_filter_or("calling_frontend=info")
+                .default_filter_or("calling_frontend=trace")
                 .default_write_style_or("never"),
         )
         .format_timestamp_millis()
