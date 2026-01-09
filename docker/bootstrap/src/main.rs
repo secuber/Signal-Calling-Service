@@ -40,9 +40,10 @@ async fn build_table(
 #[allow(clippy::result_large_err)]
 async fn main() -> Result<(), Error> {
     // Be sure that AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY are defined in the environment.
+    let endpoint = std::env::var("DYNAMODB_ENDPOINT").unwrap_or_else(|_| "http://dynamodb:4566".to_string());
     let sdk_config = aws_config::defaults(aws_config::BehaviorVersion::v2024_03_28())
-        .endpoint_url("http://127.0.0.1:9066")
-        .region(Region::new("us-west-2"))
+        .endpoint_url(&endpoint)
+        .region(Region::new("us-west-1"))
         .load()
         .await;
 

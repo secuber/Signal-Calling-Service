@@ -46,19 +46,17 @@ version: '3.8'
 services:
 
   dynamodb:
-    image: "amazon/dynamodb-local:latest"
+    image: localstack/localstack:latest
     container_name: dynamodb
-    ulimits:
-      nproc: 65535
-      nofile:
-        soft: 65535
-        hard: 65535
     ports:
-      - "8000:8000"
-    working_dir: /home/dynamodblocal
-    command:
-      # Use -inMemory for performance and because the data is temporary.
-      -jar DynamoDBLocal.jar -inMemory
+      - "4566:4566"
+      - "4510-4559:4510-4559"
+    environment:
+      - SERVICES=dynamodb
+      - AWS_DEFAULT_REGION=us-west-1
+      - EDGE_PORT=4566
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
 
   # Sets up the table for the Calling Frontend. This sets up a table here:
   #   region: us-west-1
@@ -69,8 +67,10 @@ services:
     build: ./docker/bootstrap
     container_name: bootstrap
     environment:
-      AWS_ACCESS_KEY_ID: 'DummyAccessKey'
-      AWS_SECRET_ACCESS_KEY: 'DummyPassword'
+      AWS_ACCESS_KEY_ID: 'test'
+      AWS_SECRET_ACCESS_KEY: 'test'
+      AWS_DEFAULT_REGION: 'us-west-1'
+      DYNAMODB_ENDPOINT: 'http://dynamodb:4566'
 
   calling-frontend:
     depends_on:
@@ -98,6 +98,10 @@ services:
       - "8090:8080"
       - "8100:8100"
     entrypoint: calling_frontend
+    environment:
+      AWS_ACCESS_KEY_ID: 'test'
+      AWS_SECRET_ACCESS_KEY: 'test'
+      AWS_DEFAULT_REGION: 'us-west-1'
     command:
       - --region
       - "us-west1"
@@ -119,7 +123,7 @@ services:
       - --storage-table
       - "Rooms"
       - --storage-endpoint
-      - "http://dynamodb:8000"
+      - "http://dynamodb:4566"
       - --storage-region
       - "us-west-1"
       - --internal-api-port
