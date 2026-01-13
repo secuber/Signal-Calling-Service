@@ -19,11 +19,10 @@ use calling_common::{
 use hkdf::Hkdf;
 use log::*;
 use parking_lot::Mutex;
-use rand::rngs::OsRng;
 use sha2::Sha256;
 use strum::IntoEnumIterator;
 use thiserror::Error;
-use x25519_dalek::{EphemeralSecret, PublicKey};
+use signal_crypto::{sm2_generate_key, sm2_compute_shared_key};
 
 use crate::{
     call::{self, Call, CallSizeBucket, LoggableCallId},
@@ -66,6 +65,8 @@ pub enum SfuError {
     ConnectionError(connection::Error),
     #[error("call error: {0}")]
     CallError(call::Error),
+    #[error("crypto error: {0}")]
+    CryptoError(String),
 }
 
 impl std::fmt::Debug for SfuError {
@@ -559,11 +560,12 @@ impl Sfu {
         // video base layer, so use that.
         let ack_ssrc = call::LayerId::Video0.to_ssrc(demux_id);
 
-        let server_secret = EphemeralSecret::random_from_rng(OsRng);
-        let server_dhe_public_key = PublicKey::from(&server_secret).to_bytes();
-        let shared_secret = server_secret.diffie_hellman(&PublicKey::from(client_dhe_public_key));
+        let (server_private_key, server_dhe_public_key) = sm2_generate_key()
+            .map_err(|e| SfuError::CryptoError(format!("Key generation failed: {}", e)))?;
+        let shared_secret = sm2_compute_shared_key(&server_private_key, &client_dhe_public_key)
+            .map_err(|e| SfuError::CryptoError(format!("Shared key computation failed: {}", e)))?;
         let mut srtp_master_key_material = new_master_key_material();
-        Hkdf::<Sha256>::new(None, shared_secret.as_bytes())
+        Hkdf::<Sha256>::new(None, &shared_secret)
             .expand_multi_info(
                 &[
                     b"Signal_Group_Call_20211105_SignallingDH_SRTPKey_KDF",
@@ -1361,6 +1363,10 @@ mod sfu_tests {
         std::iter::repeat_with(random_user_id).take(count).collect()
     }
 
+    fn valid_client_key() -> DhePublicKey {
+        sm2_generate_key().expect("key generation failed").1
+    }
+
     #[tokio::test]
     async fn test_create_call() {
         let initial_now = Instant::now();
@@ -1378,7 +1384,7 @@ mod sfu_tests {
             &user_id,
             demux_id,
             "1".to_string(),
-            [0; 32],
+            valid_client_key(),
         );
 
         assert_eq!(1, sfu.call_by_call_id.len());
@@ -1399,6 +1405,7 @@ mod sfu_tests {
 
         // We aren't measuring lock time in this test.
         let mut sfu = sfu.lock();
+        let client_key = valid_client_key();
 
         let start = Instant::now();
         for (index, call_id) in call_ids.iter().enumerate() {
@@ -1410,7 +1417,7 @@ mod sfu_tests {
                 &user_id,
                 demux_id,
                 "1".to_string(),
-                [0u8; 32],
+                client_key,
             );
         }
         let end = Instant::now();
@@ -1444,7 +1451,7 @@ mod sfu_tests {
             &user_id,
             demux_id,
             "1".to_string(),
-            [0; 32],
+            valid_client_key(),
         ) {
             Ok(_) => {
                 // Expected results:
@@ -1478,6 +1485,7 @@ mod sfu_tests {
 
         // We aren't measuring lock time in this test.
         let mut sfu = sfu.lock();
+        let client_key = valid_client_key();
 
         let start = Instant::now();
         for call_id in &call_ids {
@@ -1489,7 +1497,7 @@ mod sfu_tests {
                     user_id,
                     demux_id,
                     "1".to_string(),
-                    [0; 32],
+                    client_key,
                 ) {
                     Ok(_) => {
                         // Nothing to do here.
@@ -1549,7 +1557,7 @@ mod sfu_tests {
                     user_id,
                     demux_id,
                     "1".to_string(),
-                    [0; 32],
+                    valid_client_key(),
                 ) {
                     Ok(_) => {
                         group_record.push(GroupRecord {
@@ -1640,7 +1648,7 @@ mod sfu_tests {
                     user_id,
                     demux_id,
                     "1".to_string(),
-                    [0; 32],
+                    valid_client_key(),
                 ) {
                     Ok(_) => {
                         group_record.push(GroupRecord {

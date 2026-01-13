@@ -311,7 +311,7 @@ async fn join(
     let user_id = validate_user_id(&request.user_id)
         .map_err(|err| (StatusCode::BAD_REQUEST, err.to_string()))?;
 
-    let client_dhe_public_key = <[u8; 32]>::from_hex(request.client_dhe_public_key)
+    let client_dhe_public_key = <[u8; 65]>::from_hex(request.client_dhe_public_key)
         .map_err(|err| (StatusCode::BAD_REQUEST, err.to_string()))?;
 
     let client_hkdf_extra_info = match request.hkdf_extra_info {
@@ -489,16 +489,16 @@ mod signaling_server_tests {
     use once_cell::sync::Lazy;
     use tokio::sync::oneshot;
     use tower::ServiceExt;
+    use signal_crypto::sm2_generate_key;
 
     use super::*;
     use crate::sfu::DhePublicKey;
 
     const ROOM_ID: &str = "ff0000dd";
     const CALL_ID: &str = "fe076d76bffb54b1";
-    const CLIENT_DHE_PUB_KEY: [u8; 32] = [
-        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
-        26, 27, 28, 29, 30, 31, 32,
-    ];
+    static CLIENT_DHE_PUB_KEY: Lazy<DhePublicKey> = Lazy::new(|| {
+        sm2_generate_key().expect("key gen failed").1
+    });
     const USER_ID_1: &str = "7ab9bbf0b71f81598ae1b592aaf82f9b20b638142a9610c3e37965bec7519112";
     const USER_ID_2: &str = "b25387a93fd65599bacae4a8f8726e9e818ecf0bec3360593fe542cdb8e611a3";
 
@@ -725,7 +725,7 @@ mod signaling_server_tests {
             USER_ID_1,
             DEMUX_ID_1,
             UFRAG,
-            CLIENT_DHE_PUB_KEY,
+            *CLIENT_DHE_PUB_KEY,
         );
 
         let response = api
@@ -763,7 +763,7 @@ mod signaling_server_tests {
             USER_ID_2,
             DEMUX_ID_2,
             UFRAG,
-            CLIENT_DHE_PUB_KEY,
+            *CLIENT_DHE_PUB_KEY,
         );
 
         let response = api
@@ -870,7 +870,7 @@ mod signaling_server_tests {
             USER_ID_1,
             DEMUX_ID_1,
             UFRAG,
-            CLIENT_DHE_PUB_KEY,
+            *CLIENT_DHE_PUB_KEY,
         );
 
         let response = api
@@ -908,7 +908,7 @@ mod signaling_server_tests {
             USER_ID_2,
             DEMUX_ID_2,
             UFRAG,
-            CLIENT_DHE_PUB_KEY,
+            *CLIENT_DHE_PUB_KEY,
         );
 
         let response = api
@@ -1183,7 +1183,7 @@ mod signaling_server_tests {
         let response: JoinResponse = serde_json::from_slice(&body).unwrap();
         assert_eq!(response.server_ip, "127.0.0.1");
         assert_eq!(response.server_port, 10000);
-        assert_eq!(64, response.server_dhe_public_key.len());
+        assert_eq!(130, response.server_dhe_public_key.len());
         assert_eq!(ClientStatus::Active.to_string(), response.client_status);
 
         assert!(

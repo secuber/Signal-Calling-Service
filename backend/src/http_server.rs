@@ -303,7 +303,7 @@ async fn join_conference(
             .into_response());
     }
 
-    let client_dhe_public_key = match <[u8; 32]>::from_hex(join_request.dhe_public_key) {
+    let client_dhe_public_key = match <[u8; 65]>::from_hex(join_request.dhe_public_key) {
         Ok(client_dhe_public_key) => client_dhe_public_key,
         Err(_) => {
             return Ok((

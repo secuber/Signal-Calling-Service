@@ -1,0 +1,11 @@
+
+
+
+1、第一次运行，初始化表：
+./run_bootstrap.sh
+
+2、后台启动：
+./start_daemon.sh
+
+3、查看日志：
+tail -f ../logs/*.log

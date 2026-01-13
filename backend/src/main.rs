@@ -141,7 +141,7 @@ fn main() -> Result<()> {
         )?))?;
 
         let mut tls_config = ServerConfig::builder_with_provider(Arc::new(
-            rustls::crypto::aws_lc_rs::default_provider(),
+            rustls::crypto::ring::default_provider(),
         ))
         .with_protocol_versions(&[&TLS13])?
         .with_no_client_auth()

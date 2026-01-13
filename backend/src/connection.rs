@@ -131,7 +131,8 @@ struct CongestionControl {
     pacer: Pacer,
 }
 
-pub type DhePublicKey = [u8; 32];
+// SM2 public key is 65 bytes (0x04 + X + Y)
+pub type DhePublicKey = [u8; 65];
 
 impl Connection {
     #[allow(clippy::too_many_arguments)]
