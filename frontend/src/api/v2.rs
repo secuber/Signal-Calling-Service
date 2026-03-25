@@ -115,6 +115,7 @@ impl From<storage::CallLinkState> for call_links::CallLinkState {
 }
 
 /// Handler for the GET /conference/participants route.
+/// frontend前端业务服务逻辑 获取当前会议参与者列表
 pub async fn get_participants(
     State(frontend): State<Arc<Frontend>>,
     group_auth: Option<Extension<UserAuthorization>>,
@@ -122,7 +123,7 @@ pub async fn get_participants(
     room_id: Option<TypedHeader<RoomId>>,
     OriginalUri(original_uri): OriginalUri,
 ) -> Result<impl IntoResponse, StatusCode> {
-    trace!("get_participants:");
+    trace!("frontend前端业务 获取当前会议参与者列表:");
 
     let (call, user_id, call_link_state) = match (group_auth, call_links_auth, room_id) {
         (Some(Extension(user_authorization)), None, None) => (
@@ -142,12 +143,14 @@ pub async fn get_participants(
             {
                 Ok((Some(state), call)) => {
                     verify_auth_credential_against_zkparams(&auth_credential, &state, &frontend)?;
+                    trace!("frontend前端业务 获取当前会议参与者列表 after hex user_id={:?}", 
+                        user_id_from_uuid_ciphertext(&auth_credential.get_user_id()));
                     if let Some(call) = call {
                         (
                             call,
                             user_id_from_uuid_ciphertext(&auth_credential.get_user_id()),
                             Some(state),
-                        )
+                        )                        
                     } else if state.revoked || state.expiration < SystemTime::now() {
                         return Ok(not_found("expired"));
                     } else {
@@ -204,6 +207,8 @@ pub struct Region {
     region: Option<String>,
 }
 
+// frontend前端业务服务逻辑
+// 加入/创建会议
 /// Handler for the PUT /conference/participants route.
 pub async fn join(
     State(frontend): State<Arc<Frontend>>,
@@ -237,6 +242,8 @@ pub async fn join(
         (Some(Extension(user_authorization)), None, None) => {
             let get_or_create_timer =
                 start_timer_us!("calling.frontend.api.v2.join.get_or_create_call_record.timed");
+            // 检查数据库中是否有对应的会议
+            trace!("frontend前端业务 加入/创建视频会议 user_id={:?}", user_authorization.user_id);
             let call = frontend
                 .get_or_create_call_record(
                     &user_authorization.room_id,
@@ -272,7 +279,13 @@ pub async fn join(
                         } else {
                             false
                         };
+                        trace!("frontend前端业务 加入/创建视频会议 before hex user_id={:?} is_admin={}", 
+                            user_id_from_uuid_ciphertext(&auth_credential.get_user_id()), is_admin);
+                        
                         let user_id = user_id_from_uuid_ciphertext(&auth_credential.get_user_id());
+
+                        trace!("frontend前端业务 加入/创建视频会议 after hex user_id={:?}", user_id);
+
                         let call = match call {
                             Some(call) => call,
                             None => {

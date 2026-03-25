@@ -89,18 +89,37 @@ pub struct ClientsResponse {
 #[serde_as]
 #[derive(Deserialize, Serialize)]
 #[serde(rename_all = "camelCase")]
+/// 客户端加入房间的请求结构体 (Join Request)
 pub struct JoinRequest {
+    /// 用户ID (Endpoint ID)
     #[serde(rename = "endpointId")]
     pub user_id: String,
+    
+    /// 客户端生成的 ICE 用户片段 (ICE Ufrag)，用于 STUN/TURN 连接
     pub client_ice_ufrag: String,
+    
+    /// 客户端生成的临时 Diffie-Hellman 公钥 (Hex 字符串)
+    /// 用于前向安全 (Forward Secrecy) 的密钥协商
     pub client_dhe_public_key: String,
+    
+    /// HKDF (HMAC-based Key Derivation Function) 的额外信息 (可选)
     pub hkdf_extra_info: Option<String>,
+    
+    /// 客户端所在的地理区域 (用于路由优化)
     pub region: Option<String>,
+    
+    /// 是否要求新加入的客户端等待批准 (Admin 选项)
     #[serde(default)]
     pub new_clients_require_approval: bool,
+    
+    /// 当前请求加入的用户是否是管理员
     pub is_admin: bool,
+    
+    /// 房间ID (Room ID)
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub room_id: Option<RoomId>,
+    
+    /// 预先批准的用户列表 (可选)
     #[serde_as(as = "Option<Vec<call::UserIdAsStr>>")]
     pub approved_users: Option<Vec<UserId>>,
 }
@@ -283,6 +302,8 @@ async fn get_clients(
             pending_clients,
         };
 
+        info!("get_clients: 返回成员列表 (Returning member list): Count={}, UserIDs={:?}", response.user_ids.len(), response.user_ids);
+
         Ok(Json(response).into_response())
     } else {
         Ok(StatusCode::NOT_FOUND.into_response())
@@ -296,23 +317,85 @@ async fn join(
     Extension(config): Extension<&'static config::Config>,
     Json(request): Json<JoinRequest>,
 ) -> Result<impl IntoResponse, (StatusCode, String)> {
-    trace!("join(): {} {}", call_id, demux_id);
+    // STEP 1: 验证请求参数 (Validate Request Parameters)
+    info!("STEP 1: 收到加入请求 (Received Join Request): call_id={}, demux_id={}", call_id, demux_id);
+    info!("STEP 1 Extra: 客户端上传 UserID (Client Uploaded UserID): {}", request.user_id);
+    info!("client_dhe_public_key len: {}", request.client_dhe_public_key.len());
+    
+    // Log extended key info for debugging / 调试用：记录更多密钥信息
+    if request.client_dhe_public_key.len() > 10 {
+        info!("client_dhe_public_key prefix: {}", &request.client_dhe_public_key[0..10]);
+    }
 
     if let Err(err) = validate_room_id(&request.room_id) {
+        warn!("join() failed: validate_room_id: {}", err);
         return Err((StatusCode::BAD_REQUEST, err.to_string()));
     }
 
     let call_id =
-        call_id_from_hex(&call_id).map_err(|err| (StatusCode::BAD_REQUEST, err.to_string()))?;
+        call_id_from_hex(&call_id).map_err(|err| {
+            warn!("join() failed: call_id_from_hex: {}", err);
+            (StatusCode::BAD_REQUEST, err.to_string())
+        })?;
 
     let demux_id =
-        DemuxId::try_from(demux_id).map_err(|err| (StatusCode::BAD_REQUEST, err.to_string()))?;
+        DemuxId::try_from(demux_id).map_err(|err| {
+            warn!("join() failed: DemuxId::try_from: {}", err);
+            (StatusCode::BAD_REQUEST, err.to_string())
+        })?;
 
     let user_id = validate_user_id(&request.user_id)
-        .map_err(|err| (StatusCode::BAD_REQUEST, err.to_string()))?;
+        .map_err(|err| {
+            warn!("join() failed: validate_user_id: {}", err);
+            (StatusCode::BAD_REQUEST, err.to_string())
+        })?;
 
-    let client_dhe_public_key = <[u8; 65]>::from_hex(request.client_dhe_public_key)
-        .map_err(|err| (StatusCode::BAD_REQUEST, err.to_string()))?;
+    // let client_dhe_public_key = <[u8; 65]>::from_hex(request.client_dhe_public_key)
+        // .map_err(|err| (StatusCode::BAD_REQUEST, err.to_string()))?;
+
+    // 原始25519格式
+    // let client_dhe_public_key = <[u8; 32]>::from_hex(request.client_dhe_public_key)
+    //     .map_err(|err| (StatusCode::BAD_REQUEST, err.to_string()))?;
+    
+    // STEP 2: 处理客户端公钥 (Handle Client Public Key)
+    // 支持 SM2 压缩格式 (33字节) 和 非压缩格式 (65字节)
+    // Support both 33-byte compressed and 65-byte uncompressed keys
+    info!("STEP 2: 开始处理客户端 SM2 公钥 (Processing Client SM2 Public Key)");
+
+    let client_dhe_public_key: [u8; 33] = if request.client_dhe_public_key.len() == 66 {
+        // Compressed format (33 bytes) / 压缩格式
+        info!("Key format: Compressed (33 bytes)");
+        <[u8; 33]>::from_hex(&request.client_dhe_public_key)
+            .map_err(|err| {
+                warn!("join() failed: Invalid compressed key: {}", err);
+                (StatusCode::BAD_REQUEST, format!("Invalid compressed key hex: {}", err))
+            })?
+    } else if request.client_dhe_public_key.len() == 130 {
+        // Uncompressed format (65 bytes) - likely 0x04 || X || Y
+        // 非压缩格式
+        info!("Key format: Uncompressed 0x04/0x05 (65 bytes)");
+        let raw_full = <[u8; 65]>::from_hex(&request.client_dhe_public_key)
+            .map_err(|err| {
+                 warn!("join() failed: Invalid uncompressed key: {}", err);
+                 (StatusCode::BAD_REQUEST, format!("Invalid uncompressed key hex: {}", err))
+            })?;
+        
+        info!("Uncompressed key prefix byte: 0x{:02x}", raw_full[0]);
+        // Allow 0x04 (Standard) and 0x05 (Non-standard/Hybrid? observed in client logs)
+        if raw_full[0] != 0x04 && raw_full[0] != 0x05 {
+             warn!("join() failed: Invalid prefix 0x{:02x}", raw_full[0]);
+             return Err((StatusCode::BAD_REQUEST, format!("Invalid uncompressed key prefix: {}", raw_full[0])));
+        }
+
+        let mut xy = [0u8; 64];
+        xy.copy_from_slice(&raw_full[1..65]);
+        // compress_public_key returns [u8; 33], not Result
+        sfu::compress_public_key(&xy)
+    } else {
+        warn!("join() failed: Unsupported key length: {}", request.client_dhe_public_key.len());
+        return Err((StatusCode::BAD_REQUEST, format!("Unsupported public key length: {}", request.client_dhe_public_key.len())));
+    };
+    info!("STEP 2 Success: Client Key parsed OK");
 
     let client_hkdf_extra_info = match request.hkdf_extra_info {
         None => vec![],
@@ -329,6 +412,7 @@ async fn join(
         Region::Unset
     };
 
+    info!("STEP 3: 调用 SFU 创建或加入通话 (Calling SFU logic to create/join call)");
     let mut sfu = sfu.lock();
     match sfu.get_or_create_call_and_add_client(
         call_id,
@@ -346,8 +430,13 @@ async fn join(
         request.approved_users,
     ) {
         Ok((server_dhe_public_key, client_status)) => {
+            info!("STEP 3 Success: Added to SFU. ClientStatus={}", client_status.to_string());
+            
+            // 构建返回给客户端的响应 / Build response
             let media_server = config::ServerMediaAddress::from(config);
             let server_dhe_public_key = server_dhe_public_key.encode_hex();
+
+            info!("STEP 4: 返回 JoinResponse (Returning response) - Server IP: {}", media_server.ip());
 
             let response = JoinResponse {
                 server_ip: media_server.ip().to_string(),
@@ -369,7 +458,7 @@ async fn join(
             Ok(Json(response))
         }
         Err(err) => {
-            error!("client failed to join call {}", err);
+            error!("STEP 3 FAILED: client failed to join call {}", err);
             if err == sfu::SfuError::DuplicateDemuxIdDetected {
                 // Invalid argument because the demux_id is a duplicate.
                 Err((StatusCode::BAD_REQUEST, err.to_string()))
@@ -489,7 +578,7 @@ mod signaling_server_tests {
     use once_cell::sync::Lazy;
     use tokio::sync::oneshot;
     use tower::ServiceExt;
-    use signal_crypto::sm2_generate_key;
+    use sm2_integrated::sm2_generate_key;
 
     use super::*;
     use crate::sfu::DhePublicKey;
@@ -497,7 +586,12 @@ mod signaling_server_tests {
     const ROOM_ID: &str = "ff0000dd";
     const CALL_ID: &str = "fe076d76bffb54b1";
     static CLIENT_DHE_PUB_KEY: Lazy<DhePublicKey> = Lazy::new(|| {
-        sm2_generate_key().expect("key gen failed").1
+        let raw = sm2_generate_key().expect("key gen failed").1;
+        let mut compressed = [0u8; 33];
+        // Compress public key
+        compressed[0] = if raw[63] & 1 == 1 { 0x03 } else { 0x02 };
+        compressed[1..33].copy_from_slice(&raw[0..32]);
+        compressed
     });
     const USER_ID_1: &str = "7ab9bbf0b71f81598ae1b592aaf82f9b20b638142a9610c3e37965bec7519112";
     const USER_ID_2: &str = "b25387a93fd65599bacae4a8f8726e9e818ecf0bec3360593fe542cdb8e611a3";
@@ -1183,7 +1277,7 @@ mod signaling_server_tests {
         let response: JoinResponse = serde_json::from_slice(&body).unwrap();
         assert_eq!(response.server_ip, "127.0.0.1");
         assert_eq!(response.server_port, 10000);
-        assert_eq!(130, response.server_dhe_public_key.len());
+        assert_eq!(66, response.server_dhe_public_key.len());
         assert_eq!(ClientStatus::Active.to_string(), response.client_status);
 
         assert!(

@@ -131,8 +131,10 @@ struct CongestionControl {
     pacer: Pacer,
 }
 
-// SM2 public key is 65 bytes (0x04 + X + Y)
-pub type DhePublicKey = [u8; 65];
+// 原始25519的格式
+// pub type DhePublicKey = [u8; 32];
+// SM2 compressed
+pub type DhePublicKey = [u8; 33];
 
 impl Connection {
     #[allow(clippy::too_many_arguments)]

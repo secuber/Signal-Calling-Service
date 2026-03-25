@@ -152,19 +152,24 @@ fn current_time() -> zkgroup::Timestamp {
 }
 
 pub fn verify_auth_credential_against_zkparams(
-    auth_credential: &CallLinkAuthCredentialPresentation,
-    existing_call_link: &storage::CallLinkState,
+    auth_credential: &CallLinkAuthCredentialPresentation,       // 用户凭证
+    existing_call_link: &storage::CallLinkState,                //call link
     frontend: &Frontend,
 ) -> Result<(), StatusCode> {
+    // 第一步：反序列化链接的公共参数 (zkparams)
+    // 每一个 Call Link 都有自己的一套加密参数 (zkparams)，存储在数据库中。
+    // 这里将其从二进制格式转换回 Rust 结构体 CallLinkPublicParams。
     let call_link_params: CallLinkPublicParams = bincode::deserialize(&existing_call_link.zkparams)
         .map_err(|err| {
             error!("stored zkparams corrupted: {err}");
             StatusCode::INTERNAL_SERVER_ERROR
         })?;
+    // / 传入当前时间，防止重放攻击或验证凭证是否过期
+    // // 服务器全局的 ZK 参数
     auth_credential
         .verify(current_time(), &frontend.zkparams, &call_link_params)
         .map_err(|_| {
-            event!("calling.frontend.api.call_links.bad_credential");
+            event!("凭证验证失败 calling.frontend.api.call_links.bad_credential");
             StatusCode::FORBIDDEN
         })?;
     Ok(())
@@ -515,8 +520,11 @@ pub mod tests {
         backend::MockBackend, config, frontend::FrontendIdGenerator, storage::MockStorage,
     };
 
+    const zkparams_priKey: &str = "";
+    const zkparams_pubKey: &str = "";
+
     const AUTH_KEY: &str = "f00f0014fe091de31827e8d686969fad65013238aadd25ef8629eb8a9e5ef69b";
-    const ZKPARAMS: &str = "AMJqvmQRYwEGlm0MSy6QFPIAvgOVsqRASNX1meQyCOYHJFqxO8lITPkow5kmhPrsNbu9JhVfKFwesVSKhdZaqQko3IZlJZMqP7DDw0DgTWpdnYzSt0XBWT50DM1cw1nCUXXBZUiijdaFs+JRlTKdh54M7sf43pFxyMHlS3URH50LOeR8jVQKaUHi1bDP2GR9ZXp3Ot9Fsp0pM4D/vjL5PwoOUuzNNdpIqUSFhKVrtazwuHNn9ecHMsFsN0QPzByiDA8nhKcGpdzyWUvGjEDBvpKkBtqjo8QuXWjyS3jSl2oJ/Z4Fh3o2N1YfD2aWV/K88o+TN2/j2/k+KbaIZgmiWwppLU+SYGwthxdDfZgnbaaGT/vMYX9P5JlUWSuP3xIxDzPzxBEFho67BP0Pvux+0a5nEOEVEpfRSs61MMvwNXEKZtzkO0QFbOrFYrPntyb7ToqNi66OQNyTfl/J7kqFZg2MTm3CKjHTAIvVMFAGCIamsrT9sWXOtuNeMS94xazxDA==";
+    const ZKPARAMS: &str = "AHIOzqhIg62nVNDe32qiQHFjnuhQH2z/714wjTolUpFdoinrqPWenlNaPFERbwaKMrryUAs9Rbc5oWiJLt6X2dECk999Q0+NDMVYVPp5ntNRKo/iFg1g2OlVo0YB3iJaPdxYFk0jlsmcdmExLR6soqDIKca3tu2I5PceWIYlG8tjF3fwzTnxUKMgpXg+U2Cwnnedn0ukQWwg+n3y1XlhY/51MsYrPT+nyHE0Ruw2nKmvTcOZbDUe4ahv1j14wfttaXmUcJohLHqVMeapmZImhZjAANRtrvITJLujb/PJI9U1YCiiGx3dLVzcVLkBbGc0kiLuj7JXHjovjW8tm6Kx6bi4h6IQ/UePJV7786tfhsdZHMD1Rskn4TYvOzjQjEqV6IwlYxb6LCwSb8BRyYMvSlLKbwzkm/MhpV3AxbN+I+/84P6/70YpuiDTl8ZhvjN/AP6cj6CsrHrTfRw4Tm7qLASTe55WMjqPuQuArdTovtz57+gm6IPPigMoCFbaF4cERPg=";
 
     pub const USER_ID_1: &str = "11111111111111111111111111111111";
     pub const USER_ID_1_DOUBLE_ENCODED: &str = "00b033dec3c913aa7d087a49be7bbf4115cd441453778a73d5c705f3515d500841b867748697709fe3f587f796d6c9b20104a27cd1250af6b330fc0dd4eda07005";

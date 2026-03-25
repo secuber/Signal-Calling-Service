@@ -12,8 +12,11 @@ description = "Media forwarding server for group calls."
 license = "AGPL-3.0-only"
 
 [dependencies]
-mrp = { git = "https://github.com/signalapp/ringrtc", tag = "v2.43.0" }
+# mrp = { git = "https://github.com/signalapp/ringrtc", tag = "v2.43.0" }
+# Use local ringrtc mrp for SM2 changes
+mrp = { path = "../../ringrtc/mrp" }
 calling_common = { path = "../common" }
+sm2_integrated = { path = "/home/leiqiu/unicrypt/sm2/sm2_integrated" }
 
 # For error handling
 anyhow = "1.0.86"
@@ -65,7 +68,7 @@ rand = "0.8.5"
 # For SRTP key derivation using DHE
 hkdf = "0.12.4"
 rand_core = { version = "0.6.4", features = [] }
-signal-crypto = { path = "../sm2-rust" }
+sm2-crypto = { path = "/home/leiqiu/signal_video/sm2-rust", package = "sm2-rust" }
 
 # For (S)RTP
 aes = "0.8.4"

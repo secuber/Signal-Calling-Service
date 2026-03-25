@@ -69,10 +69,10 @@ psutil = { version = "3.3.0", default-features = false, features = ["process"] }
 
 # For the call link credentials
 bincode = "1.3.3"
-zkgroup = { git = "https://github.com/signalapp/libsignal", tag = "v0.52.0" }
+zkgroup = { path = "../../../rust-signal/rust/zkgroup" }
 
 [dev-dependencies]
-libsignal-core = { git = "https://github.com/signalapp/libsignal", tag = "v0.52.0" }
+libsignal-core = { path = "../../../rust-signal/rust/core" }
 mockall = "0.12.1"
 mock_instant = { version = "0.3.2" }
 lazy_static = "1.5.0"

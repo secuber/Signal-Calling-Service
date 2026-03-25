@@ -29,4 +29,10 @@ else
     echo "No backend.pid found."
 fi
 
+# Force kill any remaining binaries by name, just in case
+pkill -f "calling_backend" && echo "Terminated remaining calling_backend processes."
+pkill -f "calling_frontend" && echo "Terminated remaining calling_frontend processes."
+
+echo "=== Services stopped ==="
+
 echo "=== Services stopped ==="

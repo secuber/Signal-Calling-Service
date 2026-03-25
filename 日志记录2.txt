@@ -1,0 +1,770 @@
+2026-02-03 20:05:23.403 10675-11870 MemoryTracker           org.thoughtcrime.securesms           D  The system decreased our app JVM heap from 268435456 (256.00 MiB) to 73317096 (69.92 MiB)
+2026-02-03 20:05:23.403 10675-11870 MemoryTracker           org.thoughtcrime.securesms           D  Used memory has decreased from 47096304 (44.91 MiB) to 23165856 (22.09 MiB)
+2026-02-03 20:05:23.459 10675-12132 ProfileInstaller        org.thoughtcrime.securesms           D  Installing profile for org.thoughtcrime.securesms
+2026-02-03 20:05:24.936 10675-10675 MIUIInput               org.thoughtcrime.securesms           I  [MotionEvent] ViewRootImpl windowName 'org.thoughtcrime.securesms/org.thoughtcrime.securesms.RoutingActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=149643279, downTime=149643279, phoneEventTime=20:05:24.929 } moveCount:0
+2026-02-03 20:05:24.990 10675-10675 MIUIInput               org.thoughtcrime.securesms           I  [MotionEvent] ViewRootImpl windowName 'org.thoughtcrime.securesms/org.thoughtcrime.securesms.RoutingActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=149643338, downTime=149643279, phoneEventTime=20:05:24.988 } moveCount:0
+2026-02-03 20:05:25.000 10675-10675 RenderThread            org.thoughtcrime.securesms           W  type=1400 audit(0.0:133492): avc:  denied  { getattr } for  path="/sys/module/metis/parameters/minor_window_app" dev="sysfs" ino=83885 scontext=u:r:untrusted_app:s0:c169,c257,c512,c768 tcontext=u:object_r:sysfs_migt:s0 tclass=file permissive=0 app=org.thoughtcrime.securesms
+2026-02-03 20:05:25.000 10675-10675 RenderThread            org.thoughtcrime.securesms           W  type=1400 audit(0.0:133493): avc:  denied  { getattr } for  path="/sys/module/mist/parameters/mist_set_uid" dev="sysfs" ino=83821 scontext=u:r:untrusted_app:s0:c169,c257,c512,c768 tcontext=u:object_r:sysfs_migt:s0 tclass=file permissive=0 app=org.thoughtcrime.securesms
+2026-02-03 20:05:25.004 10675-11896 crime.securesms         org.thoughtcrime.securesms           E  FrameInsert open fail: No such file or directory
+2026-02-03 20:05:25.008  3454-5131  WindowManager           system_server                        E  setClientVisible ActivityRecord{13bcb47 u0 org.thoughtcrime.securesms/.conversation.v2.ConversationActivity true
+2026-02-03 20:05:25.015 10675-11899 ContentCatcher          org.thoughtcrime.securesms           I  SettingTrigger : unregister status observer org.thoughtcrime.securesms.RoutingActivity
+2026-02-03 20:05:25.016  3454-6240  WindowManager           system_server                        E  setClientVisible ActivityRecord{13bcb47 u0 org.thoughtcrime.securesms/.conversation.v2.ConversationActivity t287} true
+2026-02-03 20:05:25.016  3454-6240  WindowManager           system_server                        E  setClientVisible ActivityRecord{13bcb47 u0 org.thoughtcrime.securesms/.conversation.v2.ConversationActivity t287} true
+2026-02-03 20:05:25.020 10675-11827 ActivityThread          org.thoughtcrime.securesms           I  HardwareRenderer preload  done
+2026-02-03 20:05:25.022 10675-10675 PassphraseRequiredActiv org.thoughtcrime.securesms           D  routeApplicationState(), state: 0
+2026-02-03 20:05:25.022 10675-10675 BaseActivity            org.thoughtcrime.securesms           D  [ConversationActivity] onCreate()
+2026-02-03 20:05:25.023 10675-11899 ViewContentFactory      org.thoughtcrime.securesms           D  initViewContentFetcherClass
+2026-02-03 20:05:25.023 10675-11899 ContentCatcher          org.thoughtcrime.securesms           I  ViewContentFetcher : ViewContentFetcher
+2026-02-03 20:05:25.023 10675-11899 ViewContentFactory      org.thoughtcrime.securesms           D  createInterceptor took 1ms
+2026-02-03 20:05:25.023 10675-11899 ContentCatcherManager   org.thoughtcrime.securesms           E  failed to get ContentCatcherService.
+2026-02-03 20:05:25.023 10675-11899 ContentCatcherManager   org.thoughtcrime.securesms           E  failed to get ContentCatcherService.
+2026-02-03 20:05:25.026 10675-10675 LoggingFragment         org.thoughtcrime.securesms           D  [ConversationFragment] onCreate()
+2026-02-03 20:05:25.026 10675-10675 BaseActivity            org.thoughtcrime.securesms           D  [ConversationActivity] onStart()
+2026-02-03 20:05:25.028 10675-10675 ScrollerOp...ionManager org.thoughtcrime.securesms           D  registerConfigChangedListener
+2026-02-03 20:05:25.036 10675-10675 ScrollerOp...ionManager org.thoughtcrime.securesms           D  registerConfigChangedListener
+2026-02-03 20:05:25.061 10675-12188 ConversationDataSource  org.thoughtcrime.securesms           D  [size(), thread 2] 0 ms
+2026-02-03 20:05:25.061 10675-10675 MiuiMultiWindowUtils    org.thoughtcrime.securesms           D  freeform resolution args raw data:{  "wide_default":{    "freeform_args": {        "vertical_portrait":{"aspect_ratio":0.626, "original_ratio":0.5643,"original_scale":0.74,"top_margin":0.168,"left_margin":0.484},        "horizontal_portrait":{"aspect_ratio":0.626, "original_ratio":0.5643,"original_scale":0.74,"top_margin":0.1222,"left_margin":0.59745},        "vertical_landscape":{"aspect_ratio":1.6, "original_ratio":1,"original_scale":0.604,"top_margin":0.2596,"left_margin":0.2624},        "horizontal_landscape":{"aspect_ratio":1.6, "original_ratio":1,"original_scale":0.604,"top_margin":0.213,"left_margin":0.3758}    },    "mini_freeform_args":{        "vertical_portrait":{"original_ratio":0.147},        "horizontal_portrait":{"original_ratio":0.147},        "vertical_landscape":{"original_ratio":0.165},        "horizontal_landscape":{"original_ratio":0.165}    }  },  "narrow_default": {    "freeform_args": {        "vertical_portrait":{"aspect_ratio":0.626, "original_ratio":1,"original_scale":0.74,"top_margin":0.0753,"left_margin":-1},        "horizontal_portrait":{"aspect_ratio":0.626, "original_ratio":1,"original_scale":0.5756,"top_margin":-1,"left_margin":0.0753},        "vertical_landscape":{"aspect_ratio":1.6, "original_ratio":0.6847,"original_scale":0.587,"top_margin":0.0753,"left_margin":-1},        "horizontal_landscape":{"aspect_ratio":1.6, "original_ratio":0.6847,"original_scale":0.587,"top_margin":-1,"left_margin":0.0753}    },    "mini_freeform_args":{        "vertical_portrait":{"original_ratio":0.26},        "horizontal_portrait":{"original_ratio":0.26},        "vertical_landscape":{"original_ratio":0.293},        "horizontal_landscape":{"original_ratio":0.293}    }  },  "regular_default": {    "freeform_args": {      "vertical_portrait":{"aspect_ratio":0.625, "original_ratio":1,"original_scale":0.7,"top_margin":0.109,"left_margin":-1},      "horizontal_portrait":{"aspect_ratio":0.6667, "original_ratio":1,"original_scale":0.6102,"top_margin":-1,"left_margin":0.026},      "vertical_landscape":{"aspect_ratio":1.6, "original_ratio":1,"original_scale":0.4244,"top_margin":0.109,"left_margin":-1},      "horizontal_landscape":{"aspect_ratio":1.6, "original_ratio":1,"original_scale":0.4244,"top_margin":-1,"left_margin":0.026}    },    "mini_freeform_args":{      "vertical_portrait":{"original_ratio":0.25},      "horizontal_portrait":{"original_ratio":0.25},      "vertical_landscape":{"original_ratio":0.25},      "horizontal_landscape":{"original_ratio":0.25}    }  },  "pad_default": {    "freeform_args": {      "vertical_portrait":{"aspect_ratio":0.5625, "original_ratio":0.375,"original_scale":0.835,"top_margin":0.049,"left_margin":0.2775},      "horizontal_portrait":{"aspect_ratio":0.5625, "original_ratio":0.375,"original_scale":0.835,"top_margin":-1,"left_margin":0.6525},      "vertical_landscape":{"aspect_ratio":-1, "original_ratio":1,"original_scale":0.468,"top_margin":0.049,"left_margin":-1},      "horizontal_landscape":{"aspect_ratio":-1, "original_ratio":1,"original_scale":0.468,"top_margin":-1,"left_margin":0.4976}    },    "mini_freeform_args":{      "vertical_portrait":{"original_ratio":0.144},      "horizontal_portrait":{"original_ratio":0.144},      "vertical_landscape":{"original_ratio":0.2},      "horizontal_landscape":{"original_ratio":0.2}    }  }}
+2026-02-03 20:05:25.061 10675-10675 MiuiMultiWindowUtils    org.thoughtcrime.securesms           D  initFreeFormResolutionArgs failed, device is haotian
+2026-02-03 20:05:25.061 10675-10675 IS_CTS_MODE             org.thoughtcrime.securesms           D  false
+2026-02-03 20:05:25.061 10675-10675 MULTI_WIND...CH_ENABLED org.thoughtcrime.securesms           D  false
+2026-02-03 20:05:25.063 10675-12183 Job                     org.thoughtcrime.securesms           I  [JOB::07058a3f-c4f5-41c9-a4c9-7ffa489560b3][RetrieveProfileJob] onSubmit() (Time Since Submission: 1 ms, Lifespan: Immortal, Run Attempt: 1/3, Queue: RetrieveProfileJob_3)
+2026-02-03 20:05:25.064 10675-10675 System.out              org.thoughtcrime.securesms           I  request set Avatar Image View ???? 3
+2026-02-03 20:05:25.064 10675-10675 System.out              org.thoughtcrime.securesms           I  request set Avatar Image View ???? 4
+2026-02-03 20:05:25.064 10675-11900 JobRunner               org.thoughtcrime.securesms           I  [JOB::07058a3f-c4f5-41c9-a4c9-7ffa489560b3][RetrieveProfileJob][1] Running job. (Time Since Submission: 2 ms, Lifespan: Immortal, Run Attempt: 1/3, Queue: RetrieveProfileJob_3)
+2026-02-03 20:05:25.065 10675-11881 JobSchedulerScheduler   org.thoughtcrime.securesms           I  JobScheduler enqueue of NETWORK (-1733499378)
+2026-02-03 20:05:25.070 10675-10675 LoggingFragment         org.thoughtcrime.securesms           D  [ConversationFragment] onStart()
+2026-02-03 20:05:25.070 10675-10675 VoiceNoteMediaControlle org.thoughtcrime.securesms           I  Postponing media controller creation. (conversation.v2.ConversationActivity})
+2026-02-03 20:05:25.070 10675-10675 SecurityManager         org.thoughtcrime.securesms           D  checkAccessControl flag0
+2026-02-03 20:05:25.071 10675-11899 ContentCatcher          org.thoughtcrime.securesms           I  SettingTrigger : register screen QA status observer org.thoughtcrime.securesms.conversation.v2.ConversationActivity
+2026-02-03 20:05:25.071 10675-11899 ContentCatcher          org.thoughtcrime.securesms           I  SettingTrigger : register global collect status observer org.thoughtcrime.securesms.conversation.v2.ConversationActivity
+2026-02-03 20:05:25.071 10675-10675 ConversationGroupCallVi org.thoughtcrime.securesms           I  Peek call for RecipientId::4
+2026-02-03 20:05:25.073 10675-10675 LockManager             org.thoughtcrime.securesms           D  Wifi Activity Policy: -1
+2026-02-03 20:05:25.074 10675-10675 CallManager             org.thoughtcrime.securesms           I  createCallManager():
+2026-02-03 20:05:25.074 10675-10675 CallManager             org.thoughtcrime.securesms           I  CallManager():
+2026-02-03 20:05:25.074 10675-10675 ringrtc                 org.thoughtcrime.securesms           I  call_manager.rs:468: RingRTC v2.48.4
+2026-02-03 20:05:25.075 10675-11944 ConversationDataSource  org.thoughtcrime.securesms           D  [load(0, 6), thread 2] messages: 4.46, extra-data: 3.00, models: 0.17, conversion: 4.26, header: 1.60, total: 13.50 || mentions: 0.63, is-quoted: 1.62, reactions: 0.67, attachments: 0.64, payments: 0.05, calls: 1.19 >> cpuTime: 5.80, wallTime: 2.63
+2026-02-03 20:05:25.078 10675-11939 Job                     org.thoughtcrime.securesms           I  [JOB::9cb3fe13-484e-4a64-9be5-7dff357aacdc][RequestGroupV2InfoJob] onSubmit() (Time Since Submission: 2 ms, Lifespan: Immortal, Run Attempt: 1/Unlimited, Queue: RequestGroupV2InfoSyncJob)
+2026-02-03 20:05:25.078 10675-11939 Job                     org.thoughtcrime.securesms           I  [JOB::83998093-f09c-4408-9f54-3db64d7ee42f][GroupV2UpdateSelfProfileKeyJob] onSubmit() (Time Since Submission: 2 ms, Lifespan: 86400000 ms, Run Attempt: 1/Unlimited, Queue: GroupV2UpdateSelfProfileKeyJob)
+2026-02-03 20:05:25.078 10675-11881 JobSchedulerScheduler   org.thoughtcrime.securesms           I  JobScheduler enqueue of  (0)
+2026-02-03 20:05:25.079 10675-11902 JobRunner               org.thoughtcrime.securesms           I  [JOB::9cb3fe13-484e-4a64-9be5-7dff357aacdc][RequestGroupV2InfoJob][3] Running job. (Time Since Submission: 3 ms, Lifespan: Immortal, Run Attempt: 1/Unlimited, Queue: RequestGroupV2InfoSyncJob)
+2026-02-03 20:05:25.080 10675-10675 DecorViewImmersiveImpl  org.thoughtcrime.securesms           D  onAttachedToWindow:org.thoughtcrime.securesms/org.thoughtcrime.securesms.conversation.v2.ConversationActivity
+2026-02-03 20:05:25.080 10675-10675 DecorViewImmersiveImpl  org.thoughtcrime.securesms           D  getWindowType: 1 title:org.thoughtcrime.securesms/org.thoughtcrime.securesms.conversation.v2.ConversationActivity
+2026-02-03 20:05:25.080 10675-10675 DecorViewImmersiveImpl  org.thoughtcrime.securesms           D  window type: 1
+2026-02-03 20:05:25.080 10675-10675 MiuiNBIManagerImpl      org.thoughtcrime.securesms           D  mRemote has create
+2026-02-03 20:05:25.080 10675-10675 DecorViewImmersiveImpl  org.thoughtcrime.securesms           D  isNBIEnable=false
+2026-02-03 20:05:25.082 10675-11902 Job                     org.thoughtcrime.securesms           I  [JOB::f1040610-0857-4c1c-afa7-1a043444cf37][RequestGroupV2InfoWorkerJob] onSubmit() (Time Since Submission: 2 ms, Lifespan: 86400000 ms, Run Attempt: 1/Unlimited, Queue: __PUSH_PROCESS_JOB__RecipientId::4)
+2026-02-03 20:05:25.082 10675-11902 JobRunner               org.thoughtcrime.securesms           I  [JOB::9cb3fe13-484e-4a64-9be5-7dff357aacdc][RequestGroupV2InfoJob][3] Job finished with result SUCCESS in 3 ms. (Time Since Submission: 6 ms, Lifespan: Immortal, Run Attempt: 1/Unlimited, Queue: RequestGroupV2InfoSyncJob)
+2026-02-03 20:05:25.082 10675-12190 System.out              org.thoughtcrime.securesms           I  --CALL LINK AUTH CREDENTIAL RESPONSE--
+2026-02-03 20:05:25.083 10675-11901 JobRunner               org.thoughtcrime.securesms           I  [JOB::f1040610-0857-4c1c-afa7-1a043444cf37][RequestGroupV2InfoWorkerJob][2] Running job. (Time Since Submission: 2 ms, Lifespan: 86400000 ms, Run Attempt: 1/Unlimited, Queue: __PUSH_PROCESS_JOB__RecipientId::4)
+2026-02-03 20:05:25.083 10675-11901 RequestGroupV2InfoWorke org.thoughtcrime.securesms           I  Updating group to latest revision
+2026-02-03 20:05:25.086 10675-12190 GroupsV2AuthorizationSi org.thoughtcrime.securesms           I  Loaded 8 credentials from local storage
+2026-02-03 20:05:25.086 10675-11902 JobRunner               org.thoughtcrime.securesms           I  [JOB::83998093-f09c-4408-9f54-3db64d7ee42f][GroupV2UpdateSelfProfileKeyJob][3] Running job. (Time Since Submission: 10 ms, Lifespan: 86400000 ms, Run Attempt: 1/Unlimited, Queue: GroupV2UpdateSelfProfileKeyJob)
+2026-02-03 20:05:25.086 10675-12190 GroupsV2AuthorizationSi org.thoughtcrime.securesms           I  Loaded 0 credentials from local storage
+2026-02-03 20:05:25.086 10675-12190 System.out              org.thoughtcrime.securesms           I  --CALL LINK AUTH CREDENTIAL RESPONSE--
+2026-02-03 20:05:25.086 10675-11902 GroupV2UpdateSelfProfil org.thoughtcrime.securesms           I  Ensuring profile key up to date on group __signal_group__v2__!28687dc5b1223712a3e8ac3013aa0d65c57184712fa08febfaf9c0cc11de81fd
+2026-02-03 20:05:25.094 10675-11901 GroupsV2StateProcessor  org.thoughtcrime.securesms           I  [__signal_group__v2__!28687dc5b1223712a3e8ac3013aa0d65c57184712fa08febfaf9c0cc11de81fd] Paging from server targetRevision: latest
+2026-02-03 20:05:25.094 10675-11901 System.out              org.thoughtcrime.securesms           I  --CALL LINK AUTH CREDENTIAL RESPONSE--
+2026-02-03 20:05:25.112 10675-10675 View                    org.thoughtcrime.securesms           W  requestLayout() improperly called by org.thoughtcrime.securesms.conversation.mutiselect.MultiselectRecyclerView{55021aa VFED.V... ......ID 0,0-1080,2185 #7f0a0428 app:id/conversation_item_recycler} during layout: running second layout pass
+2026-02-03 20:05:25.113 10675-10675 VRI[Conver...nActivity] org.thoughtcrime.securesms           D  vri.reportNextDraw android.view.ViewRootImpl.performTraversals:4955 android.view.ViewRootImpl.doTraversal:3555 android.view.ViewRootImpl$TraversalRunnable.run:11583 android.view.Choreographer$CallbackRecord.run:1721 android.view.Choreographer$CallbackRecord.run:1730 
+2026-02-03 20:05:25.113 10675-10675 VRI[Conver...nActivity] org.thoughtcrime.securesms           D  vri.Setup new sync=wmsSync-VRI[ConversationActivity]#2
+2026-02-03 20:05:25.116 10675-10675 TextViewImpl            org.thoughtcrime.securesms           V  sendCursorInfo support:true
+2026-02-03 20:05:25.117 10675-10675 System.out              org.thoughtcrime.securesms           I  --字体大小：18.0
+2026-02-03 20:05:25.117 10675-11896 HWUI                    org.thoughtcrime.securesms           D  makeCurrent grContext:0xb400006ee38efe30 reset mTextureAvailable
+2026-02-03 20:05:25.120 10675-10675 VRI[Conver...nActivity] org.thoughtcrime.securesms           D  vri.reportDrawFinished
+2026-02-03 20:05:25.121  5185-6243  ActivityManagerWrapper  com.miui.home                        E  getRecentTasksForceIncludingTaskIdIfValid: getRecentTasks: size=7
+                                                                                                     mainTaskId=287   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{org.thoughtcrime.securesms/org.thoughtcrime.securesms.RoutingActivity} }
+                                                                                                     mainTaskId=200   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.dragon.read/com.dragon.read.pages.splash.SplashActivity} }
+                                                                                                     mainTaskId=273   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.jinse.app/com.example.flutter_client.MainActivity} }
+                                                                                                     mainTaskId=269   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.ss.android.ugc.aweme/com.ss.android.ugc.aweme.splash.SplashActivity} }
+                                                                                                     mainTaskId=41   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=271581184 cmp=ComponentInfo{com.tencent.mm/com.tencent.mm.ui.LauncherUI} }
+                                                                                                     mainTaskId=211   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.tencent.qqmusic/com.tencent.qqmusic.activity.AppStarterActivity} }
+                                                                                                     mainTaskId=143   userId=0   windowMode=1   baseIntent=Intent { act=com.tencent.QQBrowser.action.VIEW flag=268435456 cmp=ComponentInfo{com.tencent.mtt/com.tencent.mtt.MainActivity} }
+2026-02-03 20:05:25.121  3454-3792  WindowManager           system_server                        E  setClientVisible ActivityRecord{13bcb47 u0 org.thoughtcrime.securesms/.conversation.v2.ConversationActivity t287} true
+2026-02-03 20:05:25.122 10675-10675 System.out              org.thoughtcrime.securesms           I  request set Avatar Image View ???? 4
+2026-02-03 20:05:25.125  5185-6243  ActivityManagerWrapper  com.miui.home                        E  getRecentTasksForceIncludingTaskIdIfValid: getRecentTasks: size=7
+                                                                                                     mainTaskId=287   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{org.thoughtcrime.securesms/org.thoughtcrime.securesms.RoutingActivity} }
+                                                                                                     mainTaskId=200   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.dragon.read/com.dragon.read.pages.splash.SplashActivity} }
+                                                                                                     mainTaskId=273   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.jinse.app/com.example.flutter_client.MainActivity} }
+                                                                                                     mainTaskId=269   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.ss.android.ugc.aweme/com.ss.android.ugc.aweme.splash.SplashActivity} }
+                                                                                                     mainTaskId=41   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=271581184 cmp=ComponentInfo{com.tencent.mm/com.tencent.mm.ui.LauncherUI} }
+                                                                                                     mainTaskId=211   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.tencent.qqmusic/com.tencent.qqmusic.activity.AppStarterActivity} }
+                                                                                                     mainTaskId=143   userId=0   windowMode=1   baseIntent=Intent { act=com.tencent.QQBrowser.action.VIEW flag=268435456 cmp=ComponentInfo{com.tencent.mtt/com.tencent.mtt.MainActivity} }
+2026-02-03 20:05:25.130 10675-10675 ConversationLayoutManag org.thoughtcrime.securesms           D  Re-requesting pending scroll position: 0 offset: 0
+2026-02-03 20:05:25.141 10675-10675 AssistStructure         org.thoughtcrime.securesms           I  Flattened final assist data: 10916 bytes, containing 1 windows, 85 views
+2026-02-03 20:05:25.142 10675-10675 JobSchedulerScheduler   org.thoughtcrime.securesms           I  Waking due to job: 0
+2026-02-03 20:05:25.142 10675-10675 JobSchedulerScheduler   org.thoughtcrime.securesms           I  Waking due to job: -1733499378
+2026-02-03 20:05:25.159 10675-11900 RetrieveProfileJob      org.thoughtcrime.securesms           D  Fetched 1 existing records.
+2026-02-03 20:05:25.160 10675-11900 Badges                  org.thoughtcrime.securesms           D  Selected badge density xxhdpi
+2026-02-03 20:05:25.161 10675-10675 System.out              org.thoughtcrime.securesms           I  request set Avatar Image View ???? 3
+2026-02-03 20:05:25.161 10675-10675 System.out              org.thoughtcrime.securesms           I  request set Avatar Image View ???? 4
+2026-02-03 20:05:25.161 10675-11900 RetrieveProfileJob      org.thoughtcrime.securesms           D  Committing updates to 0 of 1 retrieved profiles.
+2026-02-03 20:05:25.163 10675-11900 RetrieveProfileJob      org.thoughtcrime.securesms           D  Started with 1 recipient(s). Found 1 profile(s), and had keys for 1 of them. Will retry 0.
+2026-02-03 20:05:25.163 10675-11900 RetrieveProfileJob      org.thoughtcrime.securesms           D  [RetrieveProfile] resolve-ensure: 0, requests: 1, responses: 89, disk-fetch: 3, filter: 1, process: 0, mark-fetched: 1, registered-update: 0, identityKeys: 1, total: 97
+2026-02-03 20:05:25.164 10675-11900 JobRunner               org.thoughtcrime.securesms           I  [JOB::07058a3f-c4f5-41c9-a4c9-7ffa489560b3][RetrieveProfileJob][1] Job finished with result SUCCESS in 100 ms. (Time Since Submission: 102 ms, Lifespan: Immortal, Run Attempt: 1/3, Queue: RetrieveProfileJob_3)
+2026-02-03 20:05:25.166 10675-11901 System.out              org.thoughtcrime.securesms           I  make storage request url:http://47.242.157.99:11008/v2/groups/joined_at_version
+2026-02-03 20:05:25.169 10675-12190 System.out              org.thoughtcrime.securesms           I  make storage request url:http://47.242.157.99:11008/v2/groups/token
+2026-02-03 20:05:25.170 10675-11901 System.out              org.thoughtcrime.securesms           I  -okhttpClient wait newCall-
+2026-02-03 20:05:25.170 10675-11901 System.out              org.thoughtcrime.securesms           I  wait call execute
+2026-02-03 20:05:25.170 10675-11901 System.out              org.thoughtcrime.securesms           I  DeprecatedClientPreventionInterceptor - START
+2026-02-03 20:05:25.170 10675-11901 System.out              org.thoughtcrime.securesms           I  Request URL: http://47.242.157.99:11008/v2/groups/joined_at_version
+2026-02-03 20:05:25.170 10675-11901 System.out              org.thoughtcrime.securesms           I  isClientDeprecated:  false
+2026-02-03 20:05:25.170 10675-11901 System.out              org.thoughtcrime.securesms           I  DeprecatedClientPreventionInterceptor - PROCEEDING
+2026-02-03 20:05:25.172 10675-12225 TrafficStats            org.thoughtcrime.securesms           D  tagSocket(256) with statsTag=0xffffffff, statsUid=-1
+2026-02-03 20:05:25.172 10675-12190 System.out              org.thoughtcrime.securesms           I  -okhttpClient wait newCall-
+2026-02-03 20:05:25.172 10675-12190 System.out              org.thoughtcrime.securesms           I  wait call execute
+2026-02-03 20:05:25.172 10675-12190 System.out              org.thoughtcrime.securesms           I  DeprecatedClientPreventionInterceptor - START
+2026-02-03 20:05:25.172 10675-12190 System.out              org.thoughtcrime.securesms           I  Request URL: http://47.242.157.99:11008/v2/groups/token
+2026-02-03 20:05:25.172 10675-12190 System.out              org.thoughtcrime.securesms           I  isClientDeprecated:  false
+2026-02-03 20:05:25.172 10675-12190 System.out              org.thoughtcrime.securesms           I  DeprecatedClientPreventionInterceptor - PROCEEDING
+2026-02-03 20:05:25.173 10675-12190 TrafficStats            org.thoughtcrime.securesms           D  tagSocket(258) with statsTag=0xffffffff, statsUid=-1
+2026-02-03 20:05:25.185 10675-10675 System.out              org.thoughtcrime.securesms           I  request set Avatar Image View ???? 3
+2026-02-03 20:05:25.185 10675-10675 System.out              org.thoughtcrime.securesms           I  request set Avatar Image View ???? 4
+2026-02-03 20:05:25.192 10675-10675 HandWritingStubImpl     org.thoughtcrime.securesms           I  refreshLastKeyboardType: 1
+2026-02-03 20:05:25.193 10675-10675 HandWritingStubImpl     org.thoughtcrime.securesms           I  getCurrentKeyboardType: 1
+2026-02-03 20:05:25.199 10675-10675 System.out              org.thoughtcrime.securesms           I  request set Avatar Image View ???? 4
+2026-02-03 20:05:25.200 10675-10675 ConversationFragment    org.thoughtcrime.securesms           D  doAfterFirstRender
+2026-02-03 20:05:25.200 10675-10675 WindowOnBackDispatcher  org.thoughtcrime.securesms           W  OnBackInvokedCallback is not enabled for the application.
+                                                                                                    Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+2026-02-03 20:05:25.201 10675-11856 LocalMetrics            org.thoughtcrime.securesms           D  [conversation-open] total: 174 | viewmodel-init: 32, metadata-loaded: 3, data-loaded: 8, data-posted: 74, render: 58
+2026-02-03 20:05:25.204 10675-10675 System.out              org.thoughtcrime.securesms           I  --LinkPreviewRepository--
+2026-02-03 20:05:25.205 10675-10675 CameraExtStub           org.thoughtcrime.securesms           D  init android.hardware.camera2.impl.CameraExtImplXiaoMi
+2026-02-03 20:05:25.206 10675-10675 CameraInjector          org.thoughtcrime.securesms           D  waitForResult: 
+2026-02-03 20:05:25.206 10675-12238 CameraInjector          org.thoughtcrime.securesms           D  updateCloudCameraControllerInfoAsync: E
+2026-02-03 20:05:25.209 10675-12238 CameraInjector          org.thoughtcrime.securesms           D  isMiviInfo4: use MiviInfo V4.0
+2026-02-03 20:05:25.209 10675-12238 CameraInjector          org.thoughtcrime.securesms           D  parseMiviInfo4 cameraExposedRoleIdList: 21#23#60#61#0#63#64
+2026-02-03 20:05:25.209 10675-12238 CameraInjector          org.thoughtcrime.securesms           D  updateCloudCameraControllerInfoAsync: X
+2026-02-03 20:05:25.209 10675-10675 libc                    org.thoughtcrime.securesms           W  Access denied finding property "vendor.camera.aux.packagelist"
+2026-02-03 20:05:25.209 10675-10675 libc                    org.thoughtcrime.securesms           W  Access denied finding property "vendor.camera.aux.packagelistext"
+2026-02-03 20:05:25.211 10675-10675 VoiceNoteMediaControlle org.thoughtcrime.securesms           I  Finishing postponed media controller creation. (conversation.v2.ConversationActivity})
+2026-02-03 20:05:25.212 10675-10675 ConversationUpdateTick  org.thoughtcrime.securesms           I  No time since last tick. Initialising and posting update in 60000 ms
+2026-02-03 20:05:25.215 10675-12225 TrafficStats            org.thoughtcrime.securesms           D  tagSocket(247) with statsTag=0xffffffff, statsUid=-1
+2026-02-03 20:05:25.219 10675-10675 System.out              org.thoughtcrime.securesms           I  request set Avatar Image View ???? 4
+2026-02-03 20:05:25.232 10675-10675 ConversationFragment    org.thoughtcrime.securesms           D  Update scroll state ConversationScrollButtonState(hideScrollButtonsForReactionOverlay=false, showScrollButtonsForScrollPosition=false, willScrollToBottomOnNewMessage=true, unreadCount=0, hasMentions=false)
+2026-02-03 20:05:25.233 10675-12187 BubbleUtil              org.thoughtcrime.securesms           D  Bubble State:	nm.areBubblesEnabled() = true	nm.getBubblePreference() = 0	nm.areBubblesAllowed() = false	cc.canBubble(messages_1) = false	Final answer… canBubble: false
+2026-02-03 20:05:25.245 10675-10675 DraftRepository         org.thoughtcrime.securesms           D  Shared this data at -1 and last processed share data at -1
+2026-02-03 20:05:25.245 10675-10675 DraftRepository         org.thoughtcrime.securesms           D  Have not processed this share data. Proceeding.
+2026-02-03 20:05:25.248 10675-10675 System.out              org.thoughtcrime.securesms           I  request set Avatar Image View ???? 4
+2026-02-03 20:05:25.256 10675-10675 System.out              org.thoughtcrime.securesms           I  request set Avatar Image View ???? 4
+2026-02-03 20:05:25.258 10675-11901 System.out              org.thoughtcrime.securesms           I  DeprecatedClientPreventionInterceptor - Response: 200
+2026-02-03 20:05:25.258 10675-10675 VoiceNoteMediaControlle org.thoughtcrime.securesms           D  MediaController successfully initialized. (conversation.v2.ConversationActivity)
+2026-02-03 20:05:25.259 10675-11901 GroupsV2StateProcessor  org.thoughtcrime.securesms           I  [__signal_group__v2__!28687dc5b1223712a3e8ac3013aa0d65c57184712fa08febfaf9c0cc11de81fd] Requesting change logs from server, currentRevision=0 logsNeededFrom=0 includeFirstState=true sendEndorsementExpiration=true
+2026-02-03 20:05:25.259 10675-11901 System.out              org.thoughtcrime.securesms           I  --CALL LINK AUTH CREDENTIAL RESPONSE--
+2026-02-03 20:05:25.293 10675-11862 MarkReadHelper          org.thoughtcrime.securesms           D  Marking 0 messages as read.
+2026-02-03 20:05:25.293 10675-11865 NotificationChannels    org.thoughtcrime.securesms           D  ensureCustomChannelConsistency()
+2026-02-03 20:05:25.296 10675-11943 ConversationListDataSou org.thoughtcrime.securesms           D  [size(), UnarchivedConversationListDataSource, OFF] 1 ms
+2026-02-03 20:05:25.300 10675-11944 ConversationListDataSou org.thoughtcrime.securesms           D  [load(0, 2), UnarchivedConversationListDataSource, OFF] cursor: 3.45, cache-recipients: 0.30, recipient-resolve: 0.02, total: 3.77
+2026-02-03 20:05:25.300 10675-11865 DefaultMessageNotifier  org.thoughtcrime.securesms           I  State is empty, cancelling all notifications
+2026-02-03 20:05:25.300 10675-11865 NotificationCancellatio org.thoughtcrime.securesms           D  cancelLegacy() called with: notificationId = [1338]
+2026-02-03 20:05:25.301 10675-11862 Job                     org.thoughtcrime.securesms           I  [JOB::3d407aa3-338d-4237-9fb9-07977d267f17][CallLogEventSendJob] onSubmit() (Time Since Submission: 1 ms, Lifespan: 86400000 ms, Run Attempt: 1/Unlimited, Queue: CallLogEventSendJob)
+2026-02-03 20:05:25.302 10675-11900 JobRunner               org.thoughtcrime.securesms           I  [JOB::3d407aa3-338d-4237-9fb9-07977d267f17][CallLogEventSendJob][1] Running job. (Time Since Submission: 1 ms, Lifespan: 86400000 ms, Run Attempt: 1/Unlimited, Queue: CallLogEventSendJob)
+2026-02-03 20:05:25.303 10675-11900 System.out              org.thoughtcrime.securesms           I  Send msg
+2026-02-03 20:05:25.304 10675-11900 System.out              org.thoughtcrime.securesms           I  get Encrypted msg
+2026-02-03 20:05:25.304 10675-11900 System.out              org.thoughtcrime.securesms           I  get Encrypted msg content:Optional[Content{syncMessage=SyncMessage{padding=[size=509 hex=0e7333cfb4761f350dcd005dfa10b028a55c4ffa3a8cd7caa5512d0cee457aa5ebff426e1fd3f55e5b4c1be64308e4cd8600abdecf0ed9efa02b61b59065a56e…], callLogEvent=CallLogEvent{type=MARKED_AS_READ_IN_CONVERSATION, timestamp=1770119498515, conversationId=[hex=28687dc5b1223712a3e8ac3013aa0d65c57184712fa08febfaf9c0cc11de81fd], callId=9010397929601799476}}}]
+2026-02-03 20:05:25.328 10675-11901 System.out              org.thoughtcrime.securesms           I  make storage request url:http://47.242.157.99:11008/v2/groups/logs/0?maxSupportedChangeEpoch=5&includeFirstState=true&includeLastState=false
+2026-02-03 20:05:25.329 10675-11901 System.out              org.thoughtcrime.securesms           I  -okhttpClient wait newCall-
+2026-02-03 20:05:25.329 10675-11901 System.out              org.thoughtcrime.securesms           I  wait call execute
+2026-02-03 20:05:25.329 10675-11901 System.out              org.thoughtcrime.securesms           I  DeprecatedClientPreventionInterceptor - START
+2026-02-03 20:05:25.329 10675-11901 System.out              org.thoughtcrime.securesms           I  Request URL: http://47.242.157.99:11008/v2/groups/logs/0?maxSupportedChangeEpoch=5&includeFirstState=true&includeLastState=false
+2026-02-03 20:05:25.329 10675-11901 System.out              org.thoughtcrime.securesms           I  isClientDeprecated:  false
+2026-02-03 20:05:25.329 10675-11901 System.out              org.thoughtcrime.securesms           I  DeprecatedClientPreventionInterceptor - PROCEEDING
+2026-02-03 20:05:25.339  3454-11822 WindowManager           system_server                        E  setClientVisible ActivityRecord{8137a03 u0 org.thoughtcrime.securesms/.RoutingActivity t287} false
+2026-02-03 20:05:25.340 10675-10675 VRI[RoutingActivity]    org.thoughtcrime.securesms           D  visibilityChanged oldVisibility=true newVisibility=false
+2026-02-03 20:05:25.348 10675-11896 HWUI                    org.thoughtcrime.securesms           D  endAllActiveAnimators on 0xb400006f7394abd0 (StateListDrawable) with handle 0xb400006f63a3ade0
+2026-02-03 20:05:25.350 10675-10675 BaseActivity            org.thoughtcrime.securesms           D  [MainActivity] onStop()
+2026-02-03 20:05:25.351 10675-10675 LoggingFragment         org.thoughtcrime.securesms           D  [ConversationListFragmen] onStop()
+2026-02-03 20:05:25.360 10675-11900 JobRunner               org.thoughtcrime.securesms           I  [JOB::3d407aa3-338d-4237-9fb9-07977d267f17][CallLogEventSendJob][1] Job finished with result SUCCESS in 58 ms. (Time Since Submission: 59 ms, Lifespan: 86400000 ms, Run Attempt: 1/Unlimited, Queue: CallLogEventSendJob)
+2026-02-03 20:05:25.420 10675-11901 System.out              org.thoughtcrime.securesms           I  DeprecatedClientPreventionInterceptor - Response: 200
+2026-02-03 20:05:25.435 10675-11901 GroupStatePatcher       org.thoughtcrime.securesms           D  Skipping revision 0 as it is already applied (current revision: 0)
+2026-02-03 20:05:25.436 10675-11901 GroupsV2StateProcessor  org.thoughtcrime.securesms           I  [__signal_group__v2__!28687dc5b1223712a3e8ac3013aa0d65c57184712fa08febfaf9c0cc11de81fd] Local state is at or later than server revision: 0
+2026-02-03 20:05:25.436 10675-11901 JobRunner               org.thoughtcrime.securesms           I  [JOB::f1040610-0857-4c1c-afa7-1a043444cf37][RequestGroupV2InfoWorkerJob][2] Job finished with result SUCCESS in 353 ms. (Time Since Submission: 355 ms, Lifespan: 86400000 ms, Run Attempt: 1/Unlimited, Queue: __PUSH_PROCESS_JOB__RecipientId::4)
+2026-02-03 20:05:25.438 10675-12190 System.out              org.thoughtcrime.securesms           I  DeprecatedClientPreventionInterceptor - Response: 200
+2026-02-03 20:05:25.445 10675-11902 GroupManagerV2          org.thoughtcrime.securesms           I  Own Profile Key is already up to date in group __signal_group__v2__!28687dc5b1223712a3e8ac3013aa0d65c57184712fa08febfaf9c0cc11de81fd
+2026-02-03 20:05:25.446 10675-11902 JobRunner               org.thoughtcrime.securesms           I  [JOB::83998093-f09c-4408-9f54-3db64d7ee42f][GroupV2UpdateSelfProfileKeyJob][3] Job finished with result SUCCESS in 359 ms. (Time Since Submission: 369 ms, Lifespan: 86400000 ms, Run Attempt: 1/Unlimited, Queue: GroupV2UpdateSelfProfileKeyJob)
+2026-02-03 20:05:25.447 10675-12190 CallManager             org.thoughtcrime.securesms           I  peekGroupCall():
+2026-02-03 20:05:25.447 10675-12190 ringrtc                 org.thoughtcrime.securesms           I  http.rs:201: http:DelegatingClient:make_request()
+2026-02-03 20:05:25.447 10675-12190 ringrtc                 org.thoughtcrime.securesms           I  android_platform.rs:1649: send_request(): request_id: 0
+2026-02-03 20:05:25.447 10675-12190 CallManager             org.thoughtcrime.securesms           I  sendHttpRequest():
+2026-02-03 20:05:25.447 10675-12190 SignalCallManager       org.thoughtcrime.securesms           I  onSendHttpRequest(): request_id: 0
+2026-02-03 20:05:25.447 10675-12190 System.out              org.thoughtcrime.securesms           I  群组视频服务
+2026-02-03 20:05:25.447 10675-12190 System.out              org.thoughtcrime.securesms           I  DeprecatedClientPreventionInterceptor - START
+2026-02-03 20:05:25.447 10675-12190 System.out              org.thoughtcrime.securesms           I  Request URL: http://47.242.157.99:11101/v2/conference/participants
+2026-02-03 20:05:25.447 10675-12190 System.out              org.thoughtcrime.securesms           I  isClientDeprecated:  false
+2026-02-03 20:05:25.447 10675-12190 System.out              org.thoughtcrime.securesms           I  DeprecatedClientPreventionInterceptor - PROCEEDING
+2026-02-03 20:05:25.448 10675-12190 TrafficStats            org.thoughtcrime.securesms           D  tagSocket(224) with statsTag=0xffffffff, statsUid=-1
+2026-02-03 20:05:25.550 10675-11879 System.out              org.thoughtcrime.securesms           I  会话列表 组织架构
+2026-02-03 20:05:25.670 10675-12190 System.out              org.thoughtcrime.securesms           I  DeprecatedClientPreventionInterceptor - Response: 404
+2026-02-03 20:05:25.671 10675-12190 CallManager             org.thoughtcrime.securesms           I  receivedHttpResponse(): requestId: 0
+2026-02-03 20:05:25.671 10675-12190 ringrtc                 org.thoughtcrime.securesms           I  call_manager.rs:727: API:CallManager:handle_received_http_response():
+2026-02-03 20:05:25.671 10675-12189 ringrtc                 org.thoughtcrime.securesms           I  call_manager.rs:1822: handle_received_http_response(): request_id: 0
+2026-02-03 20:05:25.672 10675-12189 ringrtc                 org.thoughtcrime.securesms           I  http.rs:165: http:DelegatingClient:received_response(): request_id: 0
+2026-02-03 20:05:25.672 10675-12189 ringrtc                 org.thoughtcrime.securesms           I  http.rs:172:   status_code: 404
+2026-02-03 20:05:25.672 10675-12189 ringrtc                 org.thoughtcrime.securesms           I  sfu.rs:464: Got group call peek result with device count = 0 (status code 404)
+2026-02-03 20:05:25.672 10675-12189 ringrtc                 org.thoughtcrime.securesms           I  call_manager.rs:2733: handle_peek_response
+2026-02-03 20:05:25.672 10675-12189 ringrtc                 org.thoughtcrime.securesms           I  android_platform.rs:2020: handle_peek_response():
+2026-02-03 20:05:25.672 10675-12189 PeekInfo                org.thoughtcrime.securesms           I  fromNative(): joinedMembers.size = 0
+2026-02-03 20:05:25.676 10675-11865 NotificationChannels    org.thoughtcrime.securesms           D  ensureCustomChannelConsistency()
+2026-02-03 20:05:25.679 10675-11865 DefaultMessageNotifier  org.thoughtcrime.securesms           I  State is empty, cancelling all notifications
+2026-02-03 20:05:25.679 10675-11865 NotificationCancellatio org.thoughtcrime.securesms           D  cancelLegacy() called with: notificationId = [1338]
+2026-02-03 20:05:25.799 10675-11943 ConversationListDataSou org.thoughtcrime.securesms           D  [size(), UnarchivedConversationListDataSource, OFF] 2 ms
+2026-02-03 20:05:25.806 10675-11944 ConversationListDataSou org.thoughtcrime.securesms           D  [load(0, 2), UnarchivedConversationListDataSource, OFF] cursor: 3.78, cache-recipients: 0.37, recipient-resolve: 0.02, total: 4.17
+2026-02-03 20:05:32.065 10675-11876 IncomingMessageObserver org.thoughtcrime.securesms           I  Retrieved 1 envelopes!
+2026-02-03 20:05:32.065 10675-11876 IncomingMessageObserver org.thoughtcrime.securesms           D  Beginning database transaction...
+2026-02-03 20:05:32.066 10675-11876 System.out              org.thoughtcrime.securesms           I  --Message Decryptor 消息解密--
+2026-02-03 20:05:32.066 10675-11876 System.out              org.thoughtcrime.securesms           I  decrypt UNIDENTIFIED_SENDER
+2026-02-03 20:05:32.069 10675-11876 libsignal               org.thoughtcrime.securesms           I  rust/protocol/src/sealed_sender.rs:441: deserialized UnidentifiedSenderMessageContent from 742680e3-0557-4aa7-8cfc-18b08d816dae.1 with type Whisper
+2026-02-03 20:05:32.073 10675-11876 libsignal               org.thoughtcrime.securesms           I  /home/leiqiu/rust-signal/rust/protocol/src/session_cipher.rs:664: 742680e3-0557-4aa7-8cfc-18b08d816dae.1 creating new chains.
+2026-02-03 20:05:32.075 10675-11876 libsignal               org.thoughtcrime.securesms           I  rust/protocol/src/state/session.rs:290: Trimming excessive receiver_chain for session with base key 8f7e83701f812cf8433359d003b7860e285b9287847c5c68e57bf9f722134e960f73b46bcaf6ebe7f6dff6937b2d911a27488c9c4bdc8402a7f76ac6ad230546, chain count: 6
+2026-02-03 20:05:32.075 10675-11876 libsignal               org.thoughtcrime.securesms           I  rust/protocol/src/session_cipher.rs:699: 单人会话 序号 get_or_create_message_key: 742680e3-0557-4aa7-8cfc-18b08d816dae.1 counter 0 current 0
+2026-02-03 20:05:32.076 10675-11876 libsignal               org.thoughtcrime.securesms           I  /home/leiqiu/rust-signal/rust/protocol/src/session_cipher.rs:462: decrypted Whisper message from 742680e3-0557-4aa7-8cfc-18b08d816dae.1 with current session state (base key 6542d7bc56e35148fd7594a6d704a7610d81a3599cb8c4bf07d91d535eeda48841614bacc18209159141d5e597a9ae03ba14e50f2fbbc7567f7ef097bbf67577)
+2026-02-03 20:05:32.077 10675-11876 System.out              org.thoughtcrime.securesms           I  cipher decrypt success plaintext data: [B@2532439
+2026-02-03 20:05:32.077 10675-11876 System.out              org.thoughtcrime.securesms           I  cipher decrypt success plaintext data: [B@2532439
+2026-02-03 20:05:32.077 10675-11876 MessageDecryptor        org.thoughtcrime.securesms           D  [1770120332260] <ACI:742680e3-0557-4aa7-8cfc-18b08d816dae>:1 | Successfully decrypted the envelope in 10.89 ms  (GUID null). Delivery latency: 6 ms, Urgent: false
+2026-02-03 20:05:32.078 10675-11856 LocalMetrics            org.thoughtcrime.securesms           D  [message-latency-low-priority] total: 6 | latency: 6
+2026-02-03 20:05:32.084 10675-11876 RecipientId             org.thoughtcrime.securesms           D  RecipientId cache miss for __signal_group__v2__!28687dc5b1223712a3e8ac3013aa0d65c57184712fa08febfaf9c0cc11de81fd
+2026-02-03 20:05:32.085 10675-11876 MessageProcessorV2      org.thoughtcrime.securesms           I  [1770120332260] Beginning message processing. Sender: RecipientId::3 (742680e3-0557-4aa7-8cfc-18b08d816dae.1)
+2026-02-03 20:05:32.099 10675-11876 MessageProcessorV2      org.thoughtcrime.securesms           I  [1770120332260] Group call update message.
+2026-02-03 20:05:32.101 10675-11876 Job                     org.thoughtcrime.securesms           I  [JOB::ef22e887-e280-421b-b6b6-c88d4c0d3226][GroupCallPeekJob] onSubmit() (Time Since Submission: 1 ms, Lifespan: Immortal, Run Attempt: 1/1, Queue: __GroupCallPeekJob__4)
+2026-02-03 20:05:32.102 10675-11876 System.out              org.thoughtcrime.securesms           I  storeSession 保存会话记录 record : org.signal.libsignal.protocol.state.SessionRecord@9d23bdf
+2026-02-03 20:05:32.102 10675-11862 JobSchedulerScheduler   org.thoughtcrime.securesms           I  JobScheduler enqueue of  (0)
+2026-02-03 20:05:32.102 10675-11902 JobRunner               org.thoughtcrime.securesms           I  [JOB::ef22e887-e280-421b-b6b6-c88d4c0d3226][GroupCallPeekJob][3] Running job. (Time Since Submission: 2 ms, Lifespan: Immortal, Run Attempt: 1/1, Queue: __GroupCallPeekJob__4)
+2026-02-03 20:05:32.102 10675-11876 IncomingMessageObserver org.thoughtcrime.securesms           D  Ended database transaction.
+2026-02-03 20:05:32.102 10675-11876 IncomingMessageObserver org.thoughtcrime.securesms           D  Running 0 follow-up operations...
+2026-02-03 20:05:32.102 10675-11876 IncomingMessageObserver org.thoughtcrime.securesms           D  Decrypted 1 envelopes in 37 ms (~37.0 ms per message)
+2026-02-03 20:05:32.103 10675-11876 IncomingMessageObserver org.thoughtcrime.securesms           D  [Needs Connection] Network: true, Foreground: true, Time Since Last Interaction: N/A, FCM: false, Stay open requests: [], Registered: true, Proxy: false, Force websocket: false
+2026-02-03 20:05:32.103 10675-11876 IncomingMessageObserver org.thoughtcrime.securesms           D  Reading message...
+2026-02-03 20:05:32.104 10675-11902 Job                     org.thoughtcrime.securesms           I  [JOB::01a25ed0-8588-46ea-8f08-35a91ecbd116][GroupCallPeekWorkerJob] onSubmit() (Time Since Submission: 1 ms, Lifespan: Immortal, Run Attempt: 1/1, Queue: __PUSH_PROCESS_JOB__RecipientId::4)
+2026-02-03 20:05:32.104 10675-11902 JobRunner               org.thoughtcrime.securesms           I  [JOB::ef22e887-e280-421b-b6b6-c88d4c0d3226][GroupCallPeekJob][3] Job finished with result SUCCESS in 2 ms. (Time Since Submission: 4 ms, Lifespan: Immortal, Run Attempt: 1/1, Queue: __GroupCallPeekJob__4)
+2026-02-03 20:05:32.104 10675-11900 JobRunner               org.thoughtcrime.securesms           I  [JOB::01a25ed0-8588-46ea-8f08-35a91ecbd116][GroupCallPeekWorkerJob][1] Running job. (Time Since Submission: 1 ms, Lifespan: Immortal, Run Attempt: 1/1, Queue: __PUSH_PROCESS_JOB__RecipientId::4)
+2026-02-03 20:05:32.106 10675-11900 JobRunner               org.thoughtcrime.securesms           I  [JOB::01a25ed0-8588-46ea-8f08-35a91ecbd116][GroupCallPeekWorkerJob][1] Job finished with result SUCCESS in 2 ms. (Time Since Submission: 3 ms, Lifespan: Immortal, Run Attempt: 1/1, Queue: __PUSH_PROCESS_JOB__RecipientId::4)
+2026-02-03 20:05:32.106 10675-10675 JobSchedulerScheduler   org.thoughtcrime.securesms           I  Waking due to job: 0
+2026-02-03 20:05:32.112 10675-12190 System.out              org.thoughtcrime.securesms           I  --CALL LINK AUTH CREDENTIAL RESPONSE--
+2026-02-03 20:05:32.211 10675-12190 System.out              org.thoughtcrime.securesms           I  make storage request url:http://47.242.157.99:11008/v2/groups/token
+2026-02-03 20:05:32.212 10675-12190 System.out              org.thoughtcrime.securesms           I  -okhttpClient wait newCall-
+2026-02-03 20:05:32.213 10675-12190 System.out              org.thoughtcrime.securesms           I  wait call execute
+2026-02-03 20:05:32.213 10675-12190 System.out              org.thoughtcrime.securesms           I  DeprecatedClientPreventionInterceptor - START
+2026-02-03 20:05:32.213 10675-12190 System.out              org.thoughtcrime.securesms           I  Request URL: http://47.242.157.99:11008/v2/groups/token
+2026-02-03 20:05:32.213 10675-12190 System.out              org.thoughtcrime.securesms           I  isClientDeprecated:  false
+2026-02-03 20:05:32.213 10675-12190 System.out              org.thoughtcrime.securesms           I  DeprecatedClientPreventionInterceptor - PROCEEDING
+2026-02-03 20:05:32.304 10675-12190 System.out              org.thoughtcrime.securesms           I  DeprecatedClientPreventionInterceptor - Response: 200
+2026-02-03 20:05:32.319 10675-12190 CallManager             org.thoughtcrime.securesms           I  peekGroupCall():
+2026-02-03 20:05:32.319 10675-12190 ringrtc                 org.thoughtcrime.securesms           I  http.rs:201: http:DelegatingClient:make_request()
+2026-02-03 20:05:32.319 10675-12190 ringrtc                 org.thoughtcrime.securesms           I  android_platform.rs:1649: send_request(): request_id: 1
+2026-02-03 20:05:32.320 10675-12190 CallManager             org.thoughtcrime.securesms           I  sendHttpRequest():
+2026-02-03 20:05:32.320 10675-12190 SignalCallManager       org.thoughtcrime.securesms           I  onSendHttpRequest(): request_id: 1
+2026-02-03 20:05:32.320 10675-12190 System.out              org.thoughtcrime.securesms           I  群组视频服务
+2026-02-03 20:05:32.320 10675-12190 System.out              org.thoughtcrime.securesms           I  DeprecatedClientPreventionInterceptor - START
+2026-02-03 20:05:32.320 10675-12190 System.out              org.thoughtcrime.securesms           I  Request URL: http://47.242.157.99:11101/v2/conference/participants
+2026-02-03 20:05:32.320 10675-12190 System.out              org.thoughtcrime.securesms           I  isClientDeprecated:  false
+2026-02-03 20:05:32.320 10675-12190 System.out              org.thoughtcrime.securesms           I  DeprecatedClientPreventionInterceptor - PROCEEDING
+2026-02-03 20:05:32.380 10675-12190 System.out              org.thoughtcrime.securesms           I  DeprecatedClientPreventionInterceptor - Response: 200
+2026-02-03 20:05:32.380 10675-12190 CallManager             org.thoughtcrime.securesms           I  receivedHttpResponse(): requestId: 1
+2026-02-03 20:05:32.381 10675-12190 ringrtc                 org.thoughtcrime.securesms           I  call_manager.rs:727: API:CallManager:handle_received_http_response():
+2026-02-03 20:05:32.381 10675-12189 ringrtc                 org.thoughtcrime.securesms           I  call_manager.rs:1822: handle_received_http_response(): request_id: 1
+2026-02-03 20:05:32.381 10675-12189 ringrtc                 org.thoughtcrime.securesms           I  http.rs:165: http:DelegatingClient:received_response(): request_id: 1
+2026-02-03 20:05:32.381 10675-12189 ringrtc                 org.thoughtcrime.securesms           I  http.rs:172:   status_code: 200
+2026-02-03 20:05:32.381 10675-12189 ringrtc                 org.thoughtcrime.securesms           I  sfu.rs:449: Got group call peek result with device count = 1, pending count = 0
+2026-02-03 20:05:32.381 10675-12189 ringrtc                 org.thoughtcrime.securesms           I  call_manager.rs:2733: handle_peek_response
+2026-02-03 20:05:32.381 10675-12189 ringrtc                 org.thoughtcrime.securesms           I  android_platform.rs:2020: handle_peek_response():
+2026-02-03 20:05:32.381 10675-12189 PeekInfo                org.thoughtcrime.securesms           I  fromNative(): joinedMembers.size = 0
+2026-02-03 20:05:32.437 10675-12189 CallTable               org.thoughtcrime.securesms           D  Inserted new call event from group call update message. Call Id: -8081579679013988533
+2026-02-03 20:05:32.439 10675-12188 ConversationDataSource  org.thoughtcrime.securesms           D  [size(), thread 2] 1 ms
+2026-02-03 20:05:32.440 10675-10675 System.out              org.thoughtcrime.securesms           I  文字：威应
+2026-02-03 20:05:32.440 10675-11943 ConversationListDataSou org.thoughtcrime.securesms           D  [size(), UnarchivedConversationListDataSource, OFF] 0 ms
+2026-02-03 20:05:32.440 10675-11865 NotificationChannels    org.thoughtcrime.securesms           D  ensureCustomChannelConsistency()
+2026-02-03 20:05:32.441 10675-10675 ConversationFragment    org.thoughtcrime.securesms           D  Update scroll state ConversationScrollButtonState(hideScrollButtonsForReactionOverlay=false, showScrollButtonsForScrollPosition=false, willScrollToBottomOnNewMessage=true, unreadCount=1, hasMentions=false)
+2026-02-03 20:05:32.447 10675-11865 DefaultMessageNotifier  org.thoughtcrime.securesms           I  threads: 1 messages: 1
+2026-02-03 20:05:32.447 10675-11944 ConversationDataSource  org.thoughtcrime.securesms           D  [load(0, 7), thread 2] messages: 2.07, extra-data: 2.09, models: 0.09, conversion: 1.45, header: 1.74, total: 7.45 || mentions: 0.53, is-quoted: 1.57, reactions: 0.27, attachments: 0.87, payments: 0.03, calls: 0.95 >> cpuTime: 4.67, wallTime: 1.75
+2026-02-03 20:05:32.451 10675-11944 ConversationListDataSou org.thoughtcrime.securesms           D  [load(0, 2), UnarchivedConversationListDataSource, OFF] cursor: 3.40, cache-recipients: 0.21, recipient-resolve: 0.01, total: 3.62
+2026-02-03 20:05:32.489 10675-10675 System.out              org.thoughtcrime.securesms           I  request set Avatar Image View ???? 4
+2026-02-03 20:05:32.494 10675-10675 System.out              org.thoughtcrime.securesms           I  request set Avatar Image View ???? 4
+2026-02-03 20:05:32.496 10675-10675 ConversationItemAnimato org.thoughtcrime.securesms           D  Dispatched slide animation for view at 6
+2026-02-03 20:05:32.496 10675-10675 ConversationItemAnimato org.thoughtcrime.securesms           D  Dispatched slide animation for view at 5
+2026-02-03 20:05:32.496 10675-10675 ConversationItemAnimato org.thoughtcrime.securesms           D  Dispatched slide animation for view at 4
+2026-02-03 20:05:32.496 10675-10675 ConversationItemAnimato org.thoughtcrime.securesms           D  Dispatched slide animation for view at 3
+2026-02-03 20:05:32.496 10675-10675 ConversationItemAnimato org.thoughtcrime.securesms           D  Dispatched slide animation for view at 2
+2026-02-03 20:05:32.496 10675-10675 ConversationItemAnimato org.thoughtcrime.securesms           D  Dispatched slide animation for view at 1
+2026-02-03 20:05:32.496 10675-10675 ConversationItemAnimato org.thoughtcrime.securesms           D  Dispatched slide animation for view at 0
+2026-02-03 20:05:32.500 10675-10675 System.out              org.thoughtcrime.securesms           I  request set Avatar Image View ???? 4
+2026-02-03 20:05:32.500 10675-10675 ConversationItemAnimato org.thoughtcrime.securesms           D  Starting 7 animations.
+2026-02-03 20:05:32.571 10675-11880 MarkReadHelper          org.thoughtcrime.securesms           D  Marking 1 messages as read.
+2026-02-03 20:05:32.571 10675-11865 NotificationChannels    org.thoughtcrime.securesms           D  ensureCustomChannelConsistency()
+2026-02-03 20:05:32.573 10675-10675 ConversationFragment    org.thoughtcrime.securesms           D  Update scroll state ConversationScrollButtonState(hideScrollButtonsForReactionOverlay=false, showScrollButtonsForScrollPosition=false, willScrollToBottomOnNewMessage=true, unreadCount=0, hasMentions=false)
+2026-02-03 20:05:32.575 10675-10675 System.out              org.thoughtcrime.securesms           I  文字：威应
+2026-02-03 20:05:32.575 10675-11865 DefaultMessageNotifier  org.thoughtcrime.securesms           I  State is empty, cancelling all notifications
+2026-02-03 20:05:32.575 10675-11865 NotificationCancellatio org.thoughtcrime.securesms           D  cancelLegacy() called with: notificationId = [1338]
+2026-02-03 20:05:32.575 10675-11880 Job                     org.thoughtcrime.securesms           I  [JOB::ebeec263-9514-4fab-87f6-26ba0f4bd806][MultiDeviceReadUpdateJob] onSubmit() (Time Since Submission: 4 ms, Lifespan: 86400000 ms, Run Attempt: 1/Unlimited, Queue: null)
+2026-02-03 20:05:32.578 10675-11862 JobSchedulerScheduler   org.thoughtcrime.securesms           I  JobScheduler enqueue of NETWORK (-1733499378)
+2026-02-03 20:05:32.580 10675-11901 JobRunner               org.thoughtcrime.securesms           I  [JOB::ebeec263-9514-4fab-87f6-26ba0f4bd806][MultiDeviceReadUpdateJob][2] Running job. (Time Since Submission: 9 ms, Lifespan: 86400000 ms, Run Attempt: 1/Unlimited, Queue: null)
+2026-02-03 20:05:32.582 10675-11880 Job                     org.thoughtcrime.securesms           I  [JOB::b78c1f00-e64d-4483-9cf1-63a4ea3e4a0c][SendReadReceiptJob] onSubmit() (Time Since Submission: 6 ms, Lifespan: 86400000 ms, Run Attempt: 1/Unlimited, Queue: RecipientId::3)
+2026-02-03 20:05:32.582 10675-10675 JobSchedulerScheduler   org.thoughtcrime.securesms           I  Waking due to job: -1733499378
+2026-02-03 20:05:32.582 10675-11901 System.out              org.thoughtcrime.securesms           I  Send msg
+2026-02-03 20:05:32.582 10675-11901 System.out              org.thoughtcrime.securesms           I  get Encrypted msg
+2026-02-03 20:05:32.583 10675-11901 System.out              org.thoughtcrime.securesms           I  get Encrypted msg content:Optional[Content{syncMessage=SyncMessage{read=[Read{senderAci=742680e3-0557-4aa7-8cfc-18b08d816dae, timestamp=1770120332400}], padding=[size=326 hex=4ed4957d7351e4f40571b89f8bf4e4fe3988d0c775f9693471458c062c407092c415a854728254ea9f59a3addc456238ca858439a4d03a7d29ccb8951845955f…]}}]
+2026-02-03 20:05:32.584 10675-11904 JobRunner               org.thoughtcrime.securesms           I  [JOB::b78c1f00-e64d-4483-9cf1-63a4ea3e4a0c][SendReadReceiptJob][4] Running job. (Time Since Submission: 4 ms, Lifespan: 86400000 ms, Run Attempt: 1/Unlimited, Queue: RecipientId::3)
+2026-02-03 20:05:32.585 10675-11904 SealedSenderAccessUtil  org.thoughtcrime.securesms           I  Unidentified: 1, Other: 0
+2026-02-03 20:05:32.585 10675-11904 SignalServ...sageSender org.thoughtcrime.securesms           D  [1770120332576] Sending a receipt.
+2026-02-03 20:05:32.585 10675-11904 System.out              org.thoughtcrime.securesms           I  Send msg
+2026-02-03 20:05:32.585 10675-11904 System.out              org.thoughtcrime.securesms           I  get Encrypted msg
+2026-02-03 20:05:32.585 10675-11904 System.out              org.thoughtcrime.securesms           I  get Encrypted msg content:Optional[Content{receiptMessage=ReceiptMessage{type=READ, timestamp=[1770120332400]}}]
+2026-02-03 20:05:32.586 10675-11880 Job                     org.thoughtcrime.securesms           I  [JOB::f00009d7-d064-40cd-9969-f8271438341e][CallLogEventSendJob] onSubmit() (Time Since Submission: 1 ms, Lifespan: 86400000 ms, Run Attempt: 1/Unlimited, Queue: CallLogEventSendJob)
+2026-02-03 20:05:32.587 10675-11902 JobRunner               org.thoughtcrime.securesms           I  [JOB::f00009d7-d064-40cd-9969-f8271438341e][CallLogEventSendJob][3] Running job. (Time Since Submission: 2 ms, Lifespan: 86400000 ms, Run Attempt: 1/Unlimited, Queue: CallLogEventSendJob)
+2026-02-03 20:05:32.587 10675-11904 System.out              org.thoughtcrime.securesms           I  消息加密
+2026-02-03 20:05:32.588 10675-11902 System.out              org.thoughtcrime.securesms           I  Send msg
+2026-02-03 20:05:32.588 10675-11904 System.out              org.thoughtcrime.securesms           I  loadSession 获取对应address 的 会话记录 :742680e3-0557-4aa7-8cfc-18b08d816dae
+2026-02-03 20:05:32.588 10675-11902 System.out              org.thoughtcrime.securesms           I  get Encrypted msg
+2026-02-03 20:05:32.588 10675-11902 System.out              org.thoughtcrime.securesms           I  get Encrypted msg content:Optional[Content{syncMessage=SyncMessage{padding=[size=432 hex=0cb4c388e87d9767f0cbbccd4bb03da80b53b5949c3c6dd24993eb67086365b912bbaaff2544d6667cb0e069b82e425a7c7104a881b7aefbac849d9124cf03be…], callLogEvent=CallLogEvent{type=MARKED_AS_READ_IN_CONVERSATION, timestamp=1770120332400, conversationId=[hex=28687dc5b1223712a3e8ac3013aa0d65c57184712fa08febfaf9c0cc11de81fd], callId=-8081579679013988533}}}]
+2026-02-03 20:05:32.589 10675-11904 System.out              org.thoughtcrime.securesms           I  storeSession 保存会话记录 record : org.signal.libsignal.protocol.state.SessionRecord@318e8a5
+2026-02-03 20:05:32.593 10675-11904 System.out              org.thoughtcrime.securesms           I  loadSession 获取对应address 的 会话记录 :742680e3-0557-4aa7-8cfc-18b08d816dae
+2026-02-03 20:05:32.658 10675-11901 JobRunner               org.thoughtcrime.securesms           I  [JOB::ebeec263-9514-4fab-87f6-26ba0f4bd806][MultiDeviceReadUpdateJob][2] Job finished with result SUCCESS in 78 ms. (Time Since Submission: 87 ms, Lifespan: 86400000 ms, Run Attempt: 1/Unlimited, Queue: null)
+2026-02-03 20:05:32.659 10675-10675 ConversationItemAnimato org.thoughtcrime.securesms           D  Finished running animations.
+2026-02-03 20:05:32.696 10675-11904 JobRunner               org.thoughtcrime.securesms           I  [JOB::b78c1f00-e64d-4483-9cf1-63a4ea3e4a0c][SendReadReceiptJob][4] Job finished with result SUCCESS in 112 ms. (Time Since Submission: 116 ms, Lifespan: 86400000 ms, Run Attempt: 1/Unlimited, Queue: RecipientId::3)
+2026-02-03 20:05:32.701 10675-11902 JobRunner               org.thoughtcrime.securesms           I  [JOB::f00009d7-d064-40cd-9969-f8271438341e][CallLogEventSendJob][3] Job finished with result SUCCESS in 114 ms. (Time Since Submission: 116 ms, Lifespan: 86400000 ms, Run Attempt: 1/Unlimited, Queue: CallLogEventSendJob)
+2026-02-03 20:05:32.836 10675-11862 System.out              org.thoughtcrime.securesms           I  会话列表 组织架构
+2026-02-03 20:05:32.945 10675-11943 ConversationListDataSou org.thoughtcrime.securesms           D  [size(), UnarchivedConversationListDataSource, OFF] 3 ms
+2026-02-03 20:05:32.953 10675-11944 ConversationListDataSou org.thoughtcrime.securesms           D  [load(0, 2), UnarchivedConversationListDataSource, OFF] cursor: 6.49, cache-recipients: 0.61, recipient-resolve: 0.04, total: 7.14
+2026-02-03 20:05:34.169 10675-10675 MIUIInput               org.thoughtcrime.securesms           I  [MotionEvent] ViewRootImpl windowName 'org.thoughtcrime.securesms/org.thoughtcrime.securesms.conversation.v2.ConversationActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=149652514, downTime=149652514, phoneEventTime=20:05:34.164 } moveCount:0
+2026-02-03 20:05:34.271 10675-10675 MIUIInput               org.thoughtcrime.securesms           I  [MotionEvent] ViewRootImpl windowName 'org.thoughtcrime.securesms/org.thoughtcrime.securesms.conversation.v2.ConversationActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=149652618, downTime=149652514, phoneEventTime=20:05:34.268 } moveCount:0
+2026-02-03 20:05:34.282 10675-12500 CallManager             org.thoughtcrime.securesms           I  setSelfUuid():
+2026-02-03 20:05:34.283 10675-12500 ringrtc                 org.thoughtcrime.securesms           I  call_manager.rs:509: set_self_uuid():
+2026-02-03 20:05:34.283 10675-12500 SignalCallManager       org.thoughtcrime.securesms           V  Processing action: isCallActive, handler: IdleActionProcessor
+2026-02-03 20:05:34.291 10675-12500 SignalCallManager       org.thoughtcrime.securesms           V  Processing action: startPreJoinCall, handler: IdleActionProcessor
+2026-02-03 20:05:34.291 10675-12500 IdleActionProcessor     org.thoughtcrime.securesms           I  handlePreJoinCall():
+2026-02-03 20:05:34.294  3454-11823 WindowManager           system_server                        E  setClientVisible ActivityRecord{7ab007e u0 org.thoughtcrime.securesms/.WebRtcCallActivity true
+2026-02-03 20:05:34.310  5185-6243  ActivityManagerWrapper  com.miui.home                        E  getRecentTasksForceIncludingTaskIdIfValid: getRecentTasks: size=8
+                                                                                                     mainTaskId=288   userId=0   windowMode=1   baseIntent=Intent { act=CallIntent.android.intent.action.VIEW flag=276824064 cmp=ComponentInfo{org.thoughtcrime.securesms/org.thoughtcrime.securesms.WebRtcCallActivity} }
+                                                                                                     mainTaskId=287   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{org.thoughtcrime.securesms/org.thoughtcrime.securesms.RoutingActivity} }
+                                                                                                     mainTaskId=200   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.dragon.read/com.dragon.read.pages.splash.SplashActivity} }
+                                                                                                     mainTaskId=273   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.jinse.app/com.example.flutter_client.MainActivity} }
+                                                                                                     mainTaskId=269   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.ss.android.ugc.aweme/com.ss.android.ugc.aweme.splash.SplashActivity} }
+                                                                                                     mainTaskId=41   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=271581184 cmp=ComponentInfo{com.tencent.mm/com.tencent.mm.ui.LauncherUI} }
+                                                                                                     mainTaskId=211   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.tencent.qqmusic/com.tencent.qqmusic.activity.AppStarterActivity} }
+                                                                                                     mainTaskId=143   userId=0   windowMode=1   baseIntent=Intent { act=com.tencent.QQBrowser.action.VIEW flag=268435456 cmp=ComponentInfo{com.tencent.mtt/com.tencent.mtt.MainActivity} }
+2026-02-03 20:05:34.316 10675-10675 libc                    org.thoughtcrime.securesms           W  Access denied finding property "vendor.migl.debug"
+2026-02-03 20:05:34.316 10675-10675 libMiGL                 org.thoughtcrime.securesms           D  SuperResolution SR initSR mBaseSRWidthSize: 0, mBaseSRHeightSize: 0, mTargetSRWidthSize: 0, mTargetSRHeightSize: 0
+2026-02-03 20:05:34.316 10675-10675 libMiGL                 org.thoughtcrime.securesms           I  EnableDR: 0
+2026-02-03 20:05:34.316 10675-10675 libMiGL                 org.thoughtcrime.securesms           D  mDFIInterval: -1
+2026-02-03 20:05:34.319 10675-10675 AdrenoGLES-0            org.thoughtcrime.securesms           I  QUALCOMM build                   : 40e1860a19, I92acee8328
+                                                                                                    Build Date                       : 06/19/25
+                                                                                                    OpenGL ES Shader Compiler Version: E031.47.18.36
+                                                                                                    Local Branch                     : 
+                                                                                                    Remote Branch                    : refs/tags/AU_LINUX_ANDROID_LA.VENDOR.15.4.0.11.00.00.1088.677
+                                                                                                    Remote Branch                    : NONE
+                                                                                                    Reconstruct Branch               : NOTHING
+2026-02-03 20:05:34.319 10675-10675 AdrenoGLES-0            org.thoughtcrime.securesms           I  Build Config                     : S P 18.0.0 AArch64
+2026-02-03 20:05:34.319 10675-10675 AdrenoGLES-0            org.thoughtcrime.securesms           I  Driver Path                      : /vendor/lib64/egl/libGLESv2_adreno.so
+2026-02-03 20:05:34.319 10675-10675 AdrenoGLES-0            org.thoughtcrime.securesms           I  Driver Version                   : 0800.46
+2026-02-03 20:05:34.319 10675-10675 AdrenoGLES-0            org.thoughtcrime.securesms           I  Process Name                     : org.thoughtcrime.securesms
+2026-02-03 20:05:34.321 10675-10675 AdrenoGLES-0            org.thoughtcrime.securesms           I  PFP: 0x01500077, ME: 0x01500014
+2026-02-03 20:05:34.323 10675-10675 EglBaseWrapper          org.thoughtcrime.securesms           D  Acquire EGL org.thoughtcrime.securesms.components.webrtc.EglBaseWrapper@a42e2fc with holder: -2
+2026-02-03 20:05:34.323 10675-10675 CameraManagerGlobal     org.thoughtcrime.securesms           I  Connecting to camera service
+2026-02-03 20:05:34.325 10675-10675 CameraInjector          org.thoughtcrime.securesms           D  updateCloudCameraControllerInfoAsync: has aleardy start update task.
+2026-02-03 20:05:34.325 10675-10675 CameraInjector          org.thoughtcrime.securesms           D  waitForResult: 
+2026-02-03 20:05:34.325 10675-10675 libc                    org.thoughtcrime.securesms           W  Access denied finding property "vendor.camera.aux.packagelist"
+2026-02-03 20:05:34.325 10675-10675 libc                    org.thoughtcrime.securesms           W  Access denied finding property "vendor.camera.aux.packagelistext"
+2026-02-03 20:05:34.325 10675-10675 CameraExtImplXiaoMi     org.thoughtcrime.securesms           W  ignore the status update of camera: 2
+2026-02-03 20:05:34.325 10675-10675 CameraInjector          org.thoughtcrime.securesms           D  updateCloudCameraControllerInfoAsync: has aleardy start update task.
+2026-02-03 20:05:34.325 10675-10675 CameraInjector          org.thoughtcrime.securesms           D  waitForResult: 
+2026-02-03 20:05:34.326 10675-10675 libc                    org.thoughtcrime.securesms           W  Access denied finding property "vendor.camera.aux.packagelist"
+2026-02-03 20:05:34.326 10675-10675 libc                    org.thoughtcrime.securesms           W  Access denied finding property "vendor.camera.aux.packagelistext"
+2026-02-03 20:05:34.326 10675-10675 CameraExtImplXiaoMi     org.thoughtcrime.securesms           W  ignore the status update of camera: 3
+2026-02-03 20:05:34.326 10675-10675 CameraInjector          org.thoughtcrime.securesms           D  updateCloudCameraControllerInfoAsync: has aleardy start update task.
+2026-02-03 20:05:34.326 10675-10675 CameraInjector          org.thoughtcrime.securesms           D  waitForResult: 
+2026-02-03 20:05:34.326 10675-10675 libc                    org.thoughtcrime.securesms           W  Access denied finding property "vendor.camera.aux.packagelist"
+2026-02-03 20:05:34.326 10675-10675 libc                    org.thoughtcrime.securesms           W  Access denied finding property "vendor.camera.aux.packagelistext"
+2026-02-03 20:05:34.326 10675-10675 CameraExtImplXiaoMi     org.thoughtcrime.securesms           W  ignore the status update of camera: 4
+2026-02-03 20:05:34.326 10675-10675 CameraInjector          org.thoughtcrime.securesms           D  updateCloudCameraControllerInfoAsync: has aleardy start update task.
+2026-02-03 20:05:34.326 10675-10675 CameraInjector          org.thoughtcrime.securesms           D  waitForResult: 
+2026-02-03 20:05:34.326 10675-10675 libc                    org.thoughtcrime.securesms           W  Access denied finding property "vendor.camera.aux.packagelist"
+2026-02-03 20:05:34.326 10675-10675 libc                    org.thoughtcrime.securesms           W  Access denied finding property "vendor.camera.aux.packagelistext"
+2026-02-03 20:05:34.326 10675-10675 CameraExtImplXiaoMi     org.thoughtcrime.securesms           W  ignore the status update of camera: 5
+2026-02-03 20:05:34.326 10675-10675 CameraInjector          org.thoughtcrime.securesms           D  updateCloudCameraControllerInfoAsync: has aleardy start update task.
+2026-02-03 20:05:34.326 10675-10675 CameraInjector          org.thoughtcrime.securesms           D  waitForResult: 
+2026-02-03 20:05:34.326 10675-10675 libc                    org.thoughtcrime.securesms           W  Access denied finding property "vendor.camera.aux.packagelist"
+2026-02-03 20:05:34.326 10675-10675 libc                    org.thoughtcrime.securesms           W  Access denied finding property "vendor.camera.aux.packagelistext"
+2026-02-03 20:05:34.326 10675-10675 CameraExtImplXiaoMi     org.thoughtcrime.securesms           W  ignore the status update of camera: 6
+2026-02-03 20:05:34.326 10675-10675 CameraInjector          org.thoughtcrime.securesms           D  updateCloudCameraControllerInfoAsync: has aleardy start update task.
+2026-02-03 20:05:34.326 10675-10675 CameraInjector          org.thoughtcrime.securesms           D  waitForResult: 
+2026-02-03 20:05:34.326 10675-10675 libc                    org.thoughtcrime.securesms           W  Access denied finding property "vendor.camera.aux.packagelist"
+2026-02-03 20:05:34.326 10675-10675 libc                    org.thoughtcrime.securesms           W  Access denied finding property "vendor.camera.aux.packagelistext"
+2026-02-03 20:05:34.326 10675-12006 CameraInjector          org.thoughtcrime.securesms           D  updateCloudCameraControllerInfoAsync: has aleardy start update task.
+2026-02-03 20:05:34.326 10675-12006 CameraInjector          org.thoughtcrime.securesms           D  waitForResult: 
+2026-02-03 20:05:34.326 10675-12006 libc                    org.thoughtcrime.securesms           W  Access denied finding property "vendor.camera.aux.packagelist"
+2026-02-03 20:05:34.326 10675-12006 libc                    org.thoughtcrime.securesms           W  Access denied finding property "vendor.camera.aux.packagelistext"
+2026-02-03 20:05:34.326 10675-12006 CameraManagerGlobal     org.thoughtcrime.securesms           W  ignore the torch status update of camera: 2
+2026-02-03 20:05:34.326 10675-12221 CameraInjector          org.thoughtcrime.securesms           D  updateCloudCameraControllerInfoAsync: has aleardy start update task.
+2026-02-03 20:05:34.326 10675-12221 CameraInjector          org.thoughtcrime.securesms           D  waitForResult: 
+2026-02-03 20:05:34.326 10675-12221 libc                    org.thoughtcrime.securesms           W  Access denied finding property "vendor.camera.aux.packagelist"
+2026-02-03 20:05:34.326 10675-12221 libc                    org.thoughtcrime.securesms           W  Access denied finding property "vendor.camera.aux.packagelistext"
+2026-02-03 20:05:34.326 10675-12221 CameraManagerGlobal     org.thoughtcrime.securesms           W  ignore the torch status update of camera: 3
+2026-02-03 20:05:34.326 10675-12221 CameraInjector          org.thoughtcrime.securesms           D  updateCloudCameraControllerInfoAsync: has aleardy start update task.
+2026-02-03 20:05:34.326 10675-12221 CameraInjector          org.thoughtcrime.securesms           D  waitForResult: 
+2026-02-03 20:05:34.326 10675-12221 libc                    org.thoughtcrime.securesms           W  Access denied finding property "vendor.camera.aux.packagelist"
+2026-02-03 20:05:34.326 10675-12221 libc                    org.thoughtcrime.securesms           W  Access denied finding property "vendor.camera.aux.packagelistext"
+2026-02-03 20:05:34.326 10675-12221 CameraManagerGlobal     org.thoughtcrime.securesms           W  ignore the torch status update of camera: 4
+2026-02-03 20:05:34.326 10675-12221 CameraInjector          org.thoughtcrime.securesms           D  updateCloudCameraControllerInfoAsync: has aleardy start update task.
+2026-02-03 20:05:34.326 10675-12221 CameraInjector          org.thoughtcrime.securesms           D  waitForResult: 
+2026-02-03 20:05:34.326 10675-12221 libc                    org.thoughtcrime.securesms           W  Access denied finding property "vendor.camera.aux.packagelist"
+2026-02-03 20:05:34.326 10675-12221 libc                    org.thoughtcrime.securesms           W  Access denied finding property "vendor.camera.aux.packagelistext"
+2026-02-03 20:05:34.326 10675-12221 CameraManagerGlobal     org.thoughtcrime.securesms           W  ignore the torch status update of camera: 5
+2026-02-03 20:05:34.326 10675-12221 CameraInjector          org.thoughtcrime.securesms           D  updateCloudCameraControllerInfoAsync: has aleardy start update task.
+2026-02-03 20:05:34.326 10675-12221 CameraInjector          org.thoughtcrime.securesms           D  waitForResult: 
+2026-02-03 20:05:34.326 10675-12221 libc                    org.thoughtcrime.securesms           W  Access denied finding property "vendor.camera.aux.packagelist"
+2026-02-03 20:05:34.326 10675-12221 libc                    org.thoughtcrime.securesms           W  Access denied finding property "vendor.camera.aux.packagelistext"
+2026-02-03 20:05:34.326 10675-12221 CameraManagerGlobal     org.thoughtcrime.securesms           W  ignore the torch status update of camera: 6
+2026-02-03 20:05:34.328 10675-10675 Camera                  org.thoughtcrime.securesms           I  Camera2 enumerator supported: true
+2026-02-03 20:05:34.328 10675-10675 CameraInjector          org.thoughtcrime.securesms           D  updateCloudCameraControllerInfoAsync: has aleardy start update task.
+2026-02-03 20:05:34.328 10675-10675 CameraInjector          org.thoughtcrime.securesms           D  waitForResult: 
+2026-02-03 20:05:34.328 10675-10675 libc                    org.thoughtcrime.securesms           W  Access denied finding property "vendor.camera.aux.packagelist"
+2026-02-03 20:05:34.328 10675-10675 libc                    org.thoughtcrime.securesms           W  Access denied finding property "vendor.camera.aux.packagelistext"
+2026-02-03 20:05:34.330 10675-10675 CameraInjector          org.thoughtcrime.securesms           D  updateCloudCameraControllerInfoAsync: has aleardy start update task.
+2026-02-03 20:05:34.330 10675-10675 CameraInjector          org.thoughtcrime.securesms           D  waitForResult: 
+2026-02-03 20:05:34.330 10675-10675 libc                    org.thoughtcrime.securesms           W  Access denied finding property "vendor.camera.aux.packagelist"
+2026-02-03 20:05:34.330 10675-10675 libc                    org.thoughtcrime.securesms           W  Access denied finding property "vendor.camera.aux.packagelistext"
+2026-02-03 20:05:34.332 10675-11899 ContentCatcher          org.thoughtcrime.securesms           I  SettingTrigger : unregister status observer org.thoughtcrime.securesms.conversation.v2.ConversationActivity
+2026-02-03 20:05:34.333  3454-9311  WindowManager           system_server                        E  setClientVisible ActivityRecord{7ab007e u0 org.thoughtcrime.securesms/.WebRtcCallActivity t288} true
+2026-02-03 20:05:34.334  3454-9311  WindowManager           system_server                        E  setClientVisible ActivityRecord{7ab007e u0 org.thoughtcrime.securesms/.WebRtcCallActivity t288} true
+2026-02-03 20:05:34.335 10675-11864 Job                     org.thoughtcrime.securesms           I  [JOB::6f6f2bf0-eb7b-4dad-942d-655eaf99c140][ConversationShortcutUpdateJob] onSubmit() (Time Since Submission: 2 ms, Lifespan: 900000 ms, Run Attempt: 1/1, Queue: ConversationShortcutUpdateJob)
+2026-02-03 20:05:34.335  3454-9311  WindowManager           system_server                        E  setClientVisible ActivityRecord{7ab007e u0 org.thoughtcrime.securesms/.WebRtcCallActivity t288} true
+2026-02-03 20:05:34.335 10675-12500 Camera                  org.thoughtcrime.securesms           I  setEnabled(): true
+2026-02-03 20:05:34.335 10675-11880 JobSchedulerScheduler   org.thoughtcrime.securesms           I  JobScheduler enqueue of  (0)
+2026-02-03 20:05:34.335 10675-12500 Camera                  org.thoughtcrime.securesms           I  setEnabled(): starting capture
+2026-02-03 20:05:34.336 10675-11904 JobRunner               org.thoughtcrime.securesms           I  [JOB::6f6f2bf0-eb7b-4dad-942d-655eaf99c140][ConversationShortcutUpdateJob][4] Running job. (Time Since Submission: 3 ms, Lifespan: 900000 ms, Run Attempt: 1/1, Queue: ConversationShortcutUpdateJob)
+2026-02-03 20:05:34.336 10675-12500 GroupPreJoinActionProce org.thoughtcrime.securesms           I  handlePreJoinCall():
+2026-02-03 20:05:34.340 10675-12500 CallManager             org.thoughtcrime.securesms           I  createPeerConnectionFactory(): useHardware: true useOboe: false
+2026-02-03 20:05:34.340 10675-12255 sqlcipher               org.thoughtcrime.securesms           D  ERROR MEMORY sqlcipher_mlock: mlock() returned -1 errno=12
+2026-02-03 20:05:34.340 10675-12255 sqlcipher               org.thoughtcrime.securesms           D  ERROR MEMORY sqlcipher_mlock: mlock() returned -1 errno=12
+2026-02-03 20:05:34.340 10675-12255 sqlcipher               org.thoughtcrime.securesms           D  ERROR MEMORY sqlcipher_mlock: mlock() returned -1 errno=12
+2026-02-03 20:05:34.340 10675-12255 sqlcipher               org.thoughtcrime.securesms           D  ERROR MEMORY sqlcipher_mlock: mlock() returned -1 errno=12
+2026-02-03 20:05:34.340 10675-12255 sqlcipher               org.thoughtcrime.securesms           D  ERROR MEMORY sqlcipher_mlock: mlock() returned -1 errno=12
+2026-02-03 20:05:34.340 10675-12255 sqlcipher               org.thoughtcrime.securesms           D  ERROR MEMORY sqlcipher_mlock: mlock() returned -1 errno=12
+2026-02-03 20:05:34.340 10675-12255 sqlcipher               org.thoughtcrime.securesms           D  ERROR MEMORY sqlcipher_mlock: mlock() returned -1 errno=12
+2026-02-03 20:05:34.340 10675-12255 sqlcipher               org.thoughtcrime.securesms           D  ERROR MEMORY sqlcipher_mlock: mlock() returned -1 errno=12
+2026-02-03 20:05:34.340 10675-12255 sqlcipher               org.thoughtcrime.securesms           D  ERROR MEMORY sqlcipher_mlock: mlock() returned -1 errno=12
+2026-02-03 20:05:34.340 10675-12255 sqlcipher               org.thoughtcrime.securesms           D  ERROR MEMORY sqlcipher_mlock: mlock() returned -1 errno=12
+2026-02-03 20:05:34.340 10675-12255 sqlcipher               org.thoughtcrime.securesms           D  ERROR MEMORY sqlcipher_mlock: mlock() returned -1 errno=12
+2026-02-03 20:05:34.340 10675-12255 sqlcipher               org.thoughtcrime.securesms           D  ERROR MEMORY sqlcipher_mlock: mlock() returned -1 errno=12
+2026-02-03 20:05:34.340 10675-12255 sqlcipher               org.thoughtcrime.securesms           D  ERROR MEMORY sqlcipher_mlock: mlock() returned -1 errno=12
+2026-02-03 20:05:34.340 10675-12255 SQLiteConnection        org.thoughtcrime.securesms           I  Database keying operation returned:0
+2026-02-03 20:05:34.340 10675-12255 sqlcipher               org.thoughtcrime.securesms           D  ERROR MEMORY sqlcipher_mlock: mlock() returned -1 errno=12
+2026-02-03 20:05:34.340 10675-12255 sqlcipher               org.thoughtcrime.securesms           D  ERROR MEMORY sqlcipher_mlock: mlock() returned -1 errno=12
+2026-02-03 20:05:34.340 10675-12255 sqlcipher               org.thoughtcrime.securesms           D  ERROR MEMORY sqlcipher_mlock: mlock() returned -1 errno=12
+2026-02-03 20:05:34.340 10675-12255 sqlcipher               org.thoughtcrime.securesms           D  ERROR MEMORY sqlcipher_mlock: mlock() returned -1 errno=12
+2026-02-03 20:05:34.340 10675-12255 sqlcipher               org.thoughtcrime.securesms           D  ERROR MEMORY sqlcipher_mlock: mlock() returned -1 errno=12
+2026-02-03 20:05:34.342 10675-11827 ActivityThread          org.thoughtcrime.securesms           I  HardwareRenderer preload  done
+2026-02-03 20:05:34.344 10675-10675 WebRtcCallActivity      org.thoughtcrime.securesms           I  onCreate(false)
+2026-02-03 20:05:34.344 10675-10675 BaseActivity            org.thoughtcrime.securesms           D  [WebRtcCallActivity] onCreate()
+2026-02-03 20:05:34.345 10675-11943 ConversationListDataSou org.thoughtcrime.securesms           D  [size(), UnarchivedConversationListDataSource, OFF] 5 ms
+2026-02-03 20:05:34.347 10675-12505 EpFrameworkFactory      org.thoughtcrime.securesms           W  activated: false jar exist: false
+2026-02-03 20:05:34.347 10675-12505 EpFrameworkFactory      org.thoughtcrime.securesms           W  activated: false jar exist: false
+2026-02-03 20:05:34.347 10675-11899 ViewContentFactory      org.thoughtcrime.securesms           D  initViewContentFetcherClass
+2026-02-03 20:05:34.347 10675-11899 ContentCatcher          org.thoughtcrime.securesms           I  ViewContentFetcher : ViewContentFetcher
+2026-02-03 20:05:34.347 10675-11899 ViewContentFactory      org.thoughtcrime.securesms           D  createInterceptor took 0ms
+2026-02-03 20:05:34.348 10675-10675 ScrollerOp...ionManager org.thoughtcrime.securesms           D  registerConfigChangedListener
+2026-02-03 20:05:34.348 10675-11899 ContentCatcherManager   org.thoughtcrime.securesms           E  failed to get ContentCatcherService.
+2026-02-03 20:05:34.348 10675-11899 ContentCatcherManager   org.thoughtcrime.securesms           E  failed to get ContentCatcherService.
+2026-02-03 20:05:34.349 10675-12505 libc                    org.thoughtcrime.securesms           W  Access denied finding property "persist.vendor.camera.privapp.list"
+2026-02-03 20:05:34.349 10675-12505 CameraExtImplXiaoMi     org.thoughtcrime.securesms           D  initCameraDevice: 1
+2026-02-03 20:05:34.349 10675-11904 AppIconUtility          org.thoughtcrime.securesms           D  Found ComponentInfo{org.thoughtcrime.securesms/org.thoughtcrime.securesms.RoutingActivity} with state of 0
+2026-02-03 20:05:34.350 10675-10675 ScrollerOp...ionManager org.thoughtcrime.securesms           D  registerConfigChangedListener
+2026-02-03 20:05:34.351 10675-12505 CameraManager           org.thoughtcrime.securesms           I  Open camera top activityName is org.thoughtcrime.securesms.WebRtcCallActivity
+2026-02-03 20:05:34.356 10675-11944 ConversationListDataSou org.thoughtcrime.securesms           D  [load(0, 2), UnarchivedConversationListDataSource, OFF] cursor: 6.24, cache-recipients: 0.92, recipient-resolve: 2.56, total: 9.72
+2026-02-03 20:05:34.362 10675-10675 ScrollerOp...ionManager org.thoughtcrime.securesms           D  registerConfigChangedListener
+2026-02-03 20:05:34.364 10675-11904 JobRunner               org.thoughtcrime.securesms           I  [JOB::6f6f2bf0-eb7b-4dad-942d-655eaf99c140][ConversationShortcutUpdateJob][4] Job finished with result SUCCESS in 28 ms. (Time Since Submission: 31 ms, Lifespan: 900000 ms, Run Attempt: 1/1, Queue: ConversationShortcutUpdateJob)
+2026-02-03 20:05:34.366 10675-12500 GroupCall               org.thoughtcrime.securesms           I  create():
+2026-02-03 20:05:34.368 10675-12500 ringrtc                 org.thoughtcrime.securesms           I  call_manager.rs:2754: create_group_call_client():
+2026-02-03 20:05:34.368 10675-12500 ringrtc                 org.thoughtcrime.securesms           I  call_manager.rs:2823: Group Client created with id: 1
+2026-02-03 20:05:34.368 10675-12500 GroupCall               org.thoughtcrime.securesms           I  setOutgoingAudioMuted():
+2026-02-03 20:05:34.371 10675-12505 CameraDevice-JV-1       org.thoughtcrime.securesms           D  waitUntilIdle: E. id = 1
+2026-02-03 20:05:34.371 10675-12505 CameraDevice-JV-1       org.thoughtcrime.securesms           D  waitUntilIdle: X
+2026-02-03 20:05:34.376 10675-12500 ringrtc                 org.thoughtcrime.securesms           I  call_manager.rs:2994: set_outgoing_audio_muted(): id: 1
+2026-02-03 20:05:34.376 10675-12500 GroupCall               org.thoughtcrime.securesms           I  setOutgoingVideoMuted():
+2026-02-03 20:05:34.376 10675-12536 ringrtc                 org.thoughtcrime.securesms           I  group_call.rs:1202: ringrtc_stats!,sfu,recv,target_send_rate,ideal_send_rate,allocated_send_rate
+2026-02-03 20:05:34.376 10675-12536 ringrtc                 org.thoughtcrime.securesms           I  stats_observer.rs:62: ringrtc_stats!,connection,call_id,timestamp_us,current_round_trip_time,available_outgoing_bitrate
+2026-02-03 20:05:34.376 10675-12536 ringrtc                 org.thoughtcrime.securesms           I  stats_observer.rs:70: ringrtc_stats!,system,cpu_usage_pct
+2026-02-03 20:05:34.376 10675-12536 ringrtc                 org.thoughtcrime.securesms           I  stats_observer.rs:75: ringrtc_stats!,audio,send,ssrc,packets_per_second,average_packet_size,bitrate,remote_packets_lost_pct,remote_jitter,remote_round_trip_time,audio_energy
+2026-02-03 20:05:34.376 10675-12536 ringrtc                 org.thoughtcrime.securesms           I  stats_observer.rs:88: ringrtc_stats!,video,send,ssrc,packets_per_second,average_packet_size,bitrate,framerate,key_frames_encoded,encode_time_per_frame,resolution,retransmitted_packets_sent,retransmitted_bitrate,send_delay_per_packet,nack_count,pli_count,quality_limitation_reason,quality_limitation_resolution_changes,remote_packets_lost_pct,remote_jitter,remote_round_trip_time
+2026-02-03 20:05:34.376 10675-12536 ringrtc                 org.thoughtcrime.securesms           I  stats_observer.rs:111: ringrtc_stats!,audio,recv,ssrc,packets_per_second,packets_lost_pct,bitrate,jitter,audio_energy,jitter_buffer_delay
+2026-02-03 20:05:34.376 10675-12536 ringrtc                 org.thoughtcrime.securesms           I  stats_observer.rs:123: ringrtc_stats!,video,recv,ssrc,packets_per_second,packets_lost_pct,bitrate,framerate,key_frames_decoded,decode_time_per_frame,resolution
+2026-02-03 20:05:34.376 10675-12500 ringrtc                 org.thoughtcrime.securesms           I  call_manager.rs:2995: set_outgoing_video_muted(): id: 1
+2026-02-03 20:05:34.377 10675-12500 GroupCall               org.thoughtcrime.securesms           I  setDataMode():
+2026-02-03 20:05:34.377 10675-12500 ringrtc                 org.thoughtcrime.securesms           I  call_manager.rs:2999: set_data_mode(): id: 1
+2026-02-03 20:05:34.377 10675-12500 GroupPreJoinActionProce org.thoughtcrime.securesms           I  Connecting to group call: RecipientId::4
+2026-02-03 20:05:34.377 10675-12500 GroupCall               org.thoughtcrime.securesms           I  connect():
+2026-02-03 20:05:34.377 10675-12500 ringrtc                 org.thoughtcrime.securesms           I  call_manager.rs:2988: connect(): id: 1
+2026-02-03 20:05:34.378 10675-12536 ringrtc                 org.thoughtcrime.securesms           I  call_manager.rs:2532: handle_connection_state_changed():
+2026-02-03 20:05:34.378 10675-12536 ringrtc                 org.thoughtcrime.securesms           I  android_platform.rs:964: handle_connection_state_changed():
+2026-02-03 20:05:34.378 10675-12536 CallManager             org.thoughtcrime.securesms           I  handleConnectionStateChanged():
+2026-02-03 20:05:34.378 10675-12536 GroupCall               org.thoughtcrime.securesms           I  handleConnectionStateChanged():
+2026-02-03 20:05:34.378 10675-12536 SignalCallManager       org.thoughtcrime.securesms           I  onLocalDeviceStateChanged: localAdapterType: UNKNOWN
+2026-02-03 20:05:34.378 10675-12500 SignalCallManager       org.thoughtcrime.securesms           V  Processing action: onLocalDeviceStateChanged, handler: GroupPreJoinActionProce
+2026-02-03 20:05:34.378 10675-12500 GroupPreJoinActionProce org.thoughtcrime.securesms           I  handleGroupLocalDeviceStateChanged():
+2026-02-03 20:05:34.378 10675-12500 GroupPreJoinActionProce org.thoughtcrime.securesms           I  local device changed: CONNECTING NOT_JOINED
+2026-02-03 20:05:34.378 10675-12536 ringrtc                 org.thoughtcrime.securesms           I  call_manager.rs:2518: request_membership_proof():
+2026-02-03 20:05:34.378 10675-12536 ringrtc                 org.thoughtcrime.securesms           I  android_platform.rs:950: request_membership_proof():
+2026-02-03 20:05:34.378 10675-12536 CallManager             org.thoughtcrime.securesms           I  requestMembershipProof():
+2026-02-03 20:05:34.378 10675-12536 GroupCall               org.thoughtcrime.securesms           I  requestMembershipProof():
+2026-02-03 20:05:34.378 10675-12536 SignalCallManager       org.thoughtcrime.securesms           I  requestMembershipProof():
+2026-02-03 20:05:34.379 10675-12536 ringrtc                 org.thoughtcrime.securesms           I  call_manager.rs:2523: request_group_members():
+2026-02-03 20:05:34.379 10675-12536 ringrtc                 org.thoughtcrime.securesms           I  android_platform.rs:955: request_group_members():
+2026-02-03 20:05:34.379 10675-12536 CallManager             org.thoughtcrime.securesms           I  requestGroupMembers():
+2026-02-03 20:05:34.379 10675-12536 GroupCall               org.thoughtcrime.securesms           I  handleGroupMembers():
+2026-02-03 20:05:34.379 10675-12500 SignalCallManager       org.thoughtcrime.securesms           V  Processing action: requestMembershipProof, handler: GroupPreJoinActionProce
+2026-02-03 20:05:34.379 10675-12500 GroupPreJoinActionProce org.thoughtcrime.securesms           I  handleGroupRequestMembershipProof():
+2026-02-03 20:05:34.379 10675-12500 SignalCallManager       org.thoughtcrime.securesms           V  Processing action: requestGroupMembers, handler: GroupPreJoinActionProce
+2026-02-03 20:05:34.379 10675-12500 GroupPreJoinActionProce org.thoughtcrime.securesms           I  handleGroupRequestUpdateMembers():
+2026-02-03 20:05:34.382 10675-11881 EmojiPageCache          org.thoughtcrime.securesms           I  Loading page EmojiPageRequest(emojiPage=Asset(uri=file:///android_asset/emoji/People_0.webp), inSampleSize=1)
+2026-02-03 20:05:34.385 10675-11880 EmojiPageCache          org.thoughtcrime.securesms           I  Loading page EmojiPageRequest(emojiPage=Asset(uri=file:///android_asset/emoji/People_1.webp), inSampleSize=1)
+2026-02-03 20:05:34.385 10675-12190 System.out              org.thoughtcrime.securesms           I  --CALL LINK AUTH CREDENTIAL RESPONSE--
+2026-02-03 20:05:34.386 10675-10675 WebRtcCallActivity      org.thoughtcrime.securesms           D  CallIntent
+                                                                                                    Action - VIEW
+                                                                                                    Enable video if available? true
+                                                                                                    Started from full screen? false
+                                                                                                    Started from call link? false
+                                                                                                    Launch in pip? false
+2026-02-03 20:05:34.387 10675-10675 WindowExtensionsImpl    org.thoughtcrime.securesms           I  Initializing Window Extensions, vendor API level=6, activity embedding enabled=true
+2026-02-03 20:05:34.390 10675-10675 BaseActivity            org.thoughtcrime.securesms           D  [WebRtcCallActivity] onStart()
+2026-02-03 20:05:34.391 10675-10675 WebRtcCallActivity      org.thoughtcrime.securesms           I  onResume()
+2026-02-03 20:05:34.392 10675-10675 SecurityManager         org.thoughtcrime.securesms           D  checkAccessControl flag0
+2026-02-03 20:05:34.393 10675-10675 WebRtcCallActivity      org.thoughtcrime.securesms           I  Got message from service: WebRtcViewModel {
+                                                                                                     state=CALL_PRE_JOIN,
+                                                                                                     recipient=RecipientId::4,
+                                                                                                     isRemoteVideoOffer=false,
+                                                                                                     callConnectedTime=-1,
+                                                                                                     localParticipant=CallParticipant(callParticipantId=CallParticipantId(demuxId=-1, recipientId=RecipientId::2), isForwardingVideo=true, isVideoEnabled=true, isMicrophoneEnabled=true, handRaisedTimestamp=-1, isMediaKeysReceived=true, isScreenSharing=false),
+                                                                                                     remoteParticipants=[],
+                                                                                                     identityChangedRecipients=[],
+                                                                                                     remoteDevicesCount=OptionalLong.empty,
+                                                                                                     participantLimit=null,
+                                                                                                     activeDevice=NONE,
+                                                                                                     availableDevices=[],
+                                                                                                     bluetoothPermissionDenied=false,
+                                                                                                     ringGroup=true
+                                                                                                    }
+2026-02-03 20:05:34.399 10675-12500 GroupCall               org.thoughtcrime.securesms           I  setGroupMembers():
+2026-02-03 20:05:34.400 10675-12500 ringrtc                 org.thoughtcrime.securesms           I  call_manager.rs:3008: set_group_members(): id: 1
+2026-02-03 20:05:34.400 10675-12500 SignalCallManager       org.thoughtcrime.securesms           V  Processing action: orientationChanged, handler: GroupPreJoinActionProce
+2026-02-03 20:05:34.400 10675-12536 ringrtc                 org.thoughtcrime.securesms           I  group_call.rs:2300: known group members changed
+2026-02-03 20:05:34.400 10675-12536 ringrtc                 org.thoughtcrime.securesms           I  group_call.rs:659: SfuClient set_group_members: 2 members
+2026-02-03 20:05:34.400 10675-12500 SignalCallManager       org.thoughtcrime.securesms           V  Processing action: setEnableVideo, handler: GroupPreJoinActionProce
+2026-02-03 20:05:34.400 10675-12500 GroupPreJoinActionProce org.thoughtcrime.securesms           I  handleSetEnableVideo(): Changing for pre-join group call. enable: true
+2026-02-03 20:05:34.400 10675-12500 Camera                  org.thoughtcrime.securesms           I  setEnabled(): true
+2026-02-03 20:05:34.400 10675-12500 Camera                  org.thoughtcrime.securesms           I  setEnabled(): starting capture
+2026-02-03 20:05:34.400 10675-12500 CameraCapturer          org.thoughtcrime.securesms           W  Session already open
+2026-02-03 20:05:34.400 10675-10675 DecorViewImmersiveImpl  org.thoughtcrime.securesms           D  onAttachedToWindow:org.thoughtcrime.securesms/org.thoughtcrime.securesms.WebRtcCallActivity
+2026-02-03 20:05:34.400 10675-10675 DecorViewImmersiveImpl  org.thoughtcrime.securesms           D  getWindowType: 1 title:org.thoughtcrime.securesms/org.thoughtcrime.securesms.WebRtcCallActivity
+2026-02-03 20:05:34.400 10675-10675 DecorViewImmersiveImpl  org.thoughtcrime.securesms           D  window type: 1
+2026-02-03 20:05:34.400 10675-10675 MiuiNBIManagerImpl      org.thoughtcrime.securesms           D  mRemote has create
+2026-02-03 20:05:34.400 10675-10675 DecorViewImmersiveImpl  org.thoughtcrime.securesms           D  isNBIEnable=false
+2026-02-03 20:05:34.402 10675-11899 ContentCatcher          org.thoughtcrime.securesms           I  SettingTrigger : register screen QA status observer org.thoughtcrime.securesms.WebRtcCallActivity
+2026-02-03 20:05:34.402 10675-11899 ContentCatcher          org.thoughtcrime.securesms           I  SettingTrigger : register global collect status observer org.thoughtcrime.securesms.WebRtcCallActivity
+2026-02-03 20:05:34.420 10675-10675 WebRtcAudioOutputToggle org.thoughtcrime.securesms           D  Switching button drawable to SPEAKER
+2026-02-03 20:05:34.441  5185-6243  ActivityManagerWrapper  com.miui.home                        E  getRecentTasksForceIncludingTaskIdIfValid: getRecentTasks: size=8
+                                                                                                     mainTaskId=288   userId=0   windowMode=1   baseIntent=Intent { act=CallIntent.android.intent.action.VIEW flag=276824064 cmp=ComponentInfo{org.thoughtcrime.securesms/org.thoughtcrime.securesms.WebRtcCallActivity} }
+                                                                                                     mainTaskId=287   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{org.thoughtcrime.securesms/org.thoughtcrime.securesms.RoutingActivity} }
+                                                                                                     mainTaskId=200   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.dragon.read/com.dragon.read.pages.splash.SplashActivity} }
+                                                                                                     mainTaskId=273   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.jinse.app/com.example.flutter_client.MainActivity} }
+                                                                                                     mainTaskId=269   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.ss.android.ugc.aweme/com.ss.android.ugc.aweme.splash.SplashActivity} }
+                                                                                                     mainTaskId=41   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=271581184 cmp=ComponentInfo{com.tencent.mm/com.tencent.mm.ui.LauncherUI} }
+                                                                                                     mainTaskId=211   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.tencent.qqmusic/com.tencent.qqmusic.activity.AppStarterActivity} }
+                                                                                                     mainTaskId=143   userId=0   windowMode=1   baseIntent=Intent { act=com.tencent.QQBrowser.action.VIEW flag=268435456 cmp=ComponentInfo{com.tencent.mtt/com.tencent.mtt.MainActivity} }
+2026-02-03 20:05:34.447  5185-6243  ActivityManagerWrapper  com.miui.home                        E  getRecentTasksForceIncludingTaskIdIfValid: getRecentTasks: size=8
+                                                                                                     mainTaskId=288   userId=0   windowMode=1   baseIntent=Intent { act=CallIntent.android.intent.action.VIEW flag=276824064 cmp=ComponentInfo{org.thoughtcrime.securesms/org.thoughtcrime.securesms.WebRtcCallActivity} }
+                                                                                                     mainTaskId=287   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{org.thoughtcrime.securesms/org.thoughtcrime.securesms.RoutingActivity} }
+                                                                                                     mainTaskId=200   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.dragon.read/com.dragon.read.pages.splash.SplashActivity} }
+                                                                                                     mainTaskId=273   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.jinse.app/com.example.flutter_client.MainActivity} }
+                                                                                                     mainTaskId=269   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.ss.android.ugc.aweme/com.ss.android.ugc.aweme.splash.SplashActivity} }
+                                                                                                     mainTaskId=41   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=271581184 cmp=ComponentInfo{com.tencent.mm/com.tencent.mm.ui.LauncherUI} }
+                                                                                                     mainTaskId=211   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.tencent.qqmusic/com.tencent.qqmusic.activity.AppStarterActivity} }
+                                                                                                     mainTaskId=143   userId=0   windowMode=1   baseIntent=Intent { act=com.tencent.QQBrowser.action.VIEW flag=268435456 cmp=ComponentInfo{com.tencent.mtt/com.tencent.mtt.MainActivity} }
+2026-02-03 20:05:34.464 10675-12190 System.out              org.thoughtcrime.securesms           I  make storage request url:http://47.242.157.99:11008/v2/groups/token
+2026-02-03 20:05:34.466 10675-12190 System.out              org.thoughtcrime.securesms           I  -okhttpClient wait newCall-
+2026-02-03 20:05:34.466 10675-12190 System.out              org.thoughtcrime.securesms           I  wait call execute
+2026-02-03 20:05:34.466 10675-12190 System.out              org.thoughtcrime.securesms           I  DeprecatedClientPreventionInterceptor - START
+2026-02-03 20:05:34.466 10675-12190 System.out              org.thoughtcrime.securesms           I  Request URL: http://47.242.157.99:11008/v2/groups/token
+2026-02-03 20:05:34.466 10675-12190 System.out              org.thoughtcrime.securesms           I  isClientDeprecated:  false
+2026-02-03 20:05:34.466 10675-12190 System.out              org.thoughtcrime.securesms           I  DeprecatedClientPreventionInterceptor - PROCEEDING
+2026-02-03 20:05:34.469 10675-12500 SignalCallManager       org.thoughtcrime.securesms           V  Processing action: onFullyInitialized, handler: GroupPreJoinActionProce
+2026-02-03 20:05:34.475 10675-10675 ScrollerOp...ionManager org.thoughtcrime.securesms           D  registerConfigChangedListener
+2026-02-03 20:05:34.483 10675-10675 VRI[WebRtcCallActivity] org.thoughtcrime.securesms           D  vri.reportNextDraw android.view.ViewRootImpl.performTraversals:4955 android.view.ViewRootImpl.doTraversal:3555 android.view.ViewRootImpl$TraversalRunnable.run:11583 android.view.Choreographer$CallbackRecord.run:1721 android.view.Choreographer$CallbackRecord.run:1730 
+2026-02-03 20:05:34.483 10675-10675 VRI[WebRtcCallActivity] org.thoughtcrime.securesms           D  vri.Setup new sync=wmsSync-VRI[WebRtcCallActivity]#4
+2026-02-03 20:05:34.486 10675-11896 HWUI                    org.thoughtcrime.securesms           D  makeCurrent grContext:0xb400006ee38efe30 reset mTextureAvailable
+2026-02-03 20:05:34.496 10675-10675 VRI[WebRtcCallActivity] org.thoughtcrime.securesms           D  vri.reportDrawFinished
+2026-02-03 20:05:34.497 10675-10675 JobManager              org.thoughtcrime.securesms           I  onConstraintMet(NotInCallConstraintObse)
+2026-02-03 20:05:34.497 10675-10675 JobManager              org.thoughtcrime.securesms           I  onConstraintMet(NotInCallConstraintObse)
+2026-02-03 20:05:34.497 10675-10675 JobManager              org.thoughtcrime.securesms           I  onConstraintMet(NotInCallConstraintObse)
+2026-02-03 20:05:34.497 10675-10675 WebRtcCallActivity      org.thoughtcrime.securesms           I  Got message from service: <no change>
+2026-02-03 20:05:34.501 10675-10675 JobManager              org.thoughtcrime.securesms           I  onConstraintMet(NotInCallConstraintObse)
+2026-02-03 20:05:34.501 10675-10675 WebRtcCallActivity      org.thoughtcrime.securesms           I  Got message from service: WebRtcViewModel {
+                                                                                                     localParticipant=CallParticipant(callParticipantId=CallParticipantId(demuxId=-1, recipientId=RecipientId::2), isForwardingVideo=true, isVideoEnabled=true, isMicrophoneEnabled=true, handRaisedTimestamp=-1, isMediaKeysReceived=true, isScreenSharing=false)
+                                                                                                    }
+2026-02-03 20:05:34.502 10675-10675 JobManager              org.thoughtcrime.securesms           I  onConstraintMet(NotInCallConstraintObse)
+2026-02-03 20:05:34.502 10675-10675 WebRtcCallActivity      org.thoughtcrime.securesms           I  Got message from service: <no change>
+2026-02-03 20:05:34.507 10675-10675 System.out              org.thoughtcrime.securesms           I  request set Avatar Image View ???? 3
+2026-02-03 20:05:34.507 10675-10675 System.out              org.thoughtcrime.securesms           I  request set Avatar Image View ???? 4
+2026-02-03 20:05:34.507 10675-10675 System.out              org.thoughtcrime.securesms           I  request set Avatar Image View ???? 3
+2026-02-03 20:05:34.508 10675-10675 System.out              org.thoughtcrime.securesms           I  request set Avatar Image View ???? 4
+2026-02-03 20:05:34.512 10675-10675 System.out              org.thoughtcrime.securesms           I  request set Avatar Image View ???? 1
+2026-02-03 20:05:34.512 10675-10675 System.out              org.thoughtcrime.securesms           I  contactPhoto = org.thoughtcrime.securesms.contacts.avatars.ProfileContactPhoto@7be1
+2026-02-03 20:05:34.512 10675-10675 System.out              org.thoughtcrime.securesms           I  request set Avatar Image View ???? 2
+2026-02-03 20:05:34.512 10675-10675 System.out              org.thoughtcrime.securesms           I  set Avatar Image View ????
+2026-02-03 20:05:34.512 10675-10675 System.out              org.thoughtcrime.securesms           I  request set Avatar Image View ???? 4
+2026-02-03 20:05:34.512 10675-10675 RenderScri...Adaptation org.thoughtcrime.securesms           D  IRenderScriptDevice::getService()
+2026-02-03 20:05:34.512 10675-10675 HidlServiceManagement   org.thoughtcrime.securesms           W  hwservicemanager is not supported on the device.
+2026-02-03 20:05:34.512 10675-10675 HidlServiceManagement   org.thoughtcrime.securesms           I  Trying to get transport of android.hardware.renderscript@1.0::IDevice/default without hwservicemanager
+2026-02-03 20:05:34.512 10675-10675 RenderScri...Adaptation org.thoughtcrime.securesms           D  IRenderScriptDevice::getService() returned 0x0
+2026-02-03 20:05:34.512 10675-10675 RenderScri...Adaptation org.thoughtcrime.securesms           D  Using Fallback Path.
+2026-02-03 20:05:34.514 10675-11987 System.out              org.thoughtcrime.securesms           I  >>> AvatarHelper.getAvatar() path: /data/user/0/org.thoughtcrime.securesms/app_avatars/2
+2026-02-03 20:05:34.514 10675-11987 System.out              org.thoughtcrime.securesms           I  >>> Avatar file exists: false
+2026-02-03 20:05:34.514 10675-11987 System.out              org.thoughtcrime.securesms           I  >>> Avatar file length: 0
+2026-02-03 20:05:34.516 10675-11987 TrafficStats            org.thoughtcrime.securesms           D  tagSocket(268) with statsTag=0xffffffff, statsUid=-1
+2026-02-03 20:05:34.522 10675-10675 crime.securesms         org.thoughtcrime.securesms           D  Successfully queried cache dir: /data/user_de/0/org.thoughtcrime.securesms/code_cache
+2026-02-03 20:05:34.522 10675-10675 RenderScript            org.thoughtcrime.securesms           D  Setting cache dir: /data/user_de/0/org.thoughtcrime.securesms/code_cache
+2026-02-03 20:05:34.527 10675-11996 System.out              org.thoughtcrime.securesms           I  >>> AvatarHelper.getAvatar() path: /data/user/0/org.thoughtcrime.securesms/app_avatars/2
+2026-02-03 20:05:34.527 10675-11996 System.out              org.thoughtcrime.securesms           I  >>> Avatar file exists: false
+2026-02-03 20:05:34.527 10675-11996 System.out              org.thoughtcrime.securesms           I  >>> Avatar file length: 0
+2026-02-03 20:05:34.529 10675-11879 WebRtcCallActivity      org.thoughtcrime.securesms           D  On WindowLayoutInfo accepted: WindowLayoutInfo{ DisplayFeatures[] }
+2026-02-03 20:05:34.544 10675-10675 System.out              org.thoughtcrime.securesms           I  request set Avatar Image View ???? 3
+2026-02-03 20:05:34.544 10675-10675 System.out              org.thoughtcrime.securesms           I  request set Avatar Image View ???? 4
+2026-02-03 20:05:34.556 10675-12190 System.out              org.thoughtcrime.securesms           I  DeprecatedClientPreventionInterceptor - Response: 200
+2026-02-03 20:05:34.557 10675-12190 SignalCallManager       org.thoughtcrime.securesms           I  Got group membership token. Length: 165, Token: 2:81adde5ffde3f30591b20229d2848652c57d0978d58cec5409177700335764cd:28687dc5b1223712a3e8ac3013aa0d65c57184712fa08febfaf9c0cc11de81fd:1770120334:1:60a803fa733995e679e2
+2026-02-03 20:05:34.557 10675-12190 SignalCallManager       org.thoughtcrime.securesms           W  DEBUG_CALL: Identity Key (ACI) (Hex): 056ce03d7173c46f95d7f010cc4284738fe6e8321f63121da7ba9a6abf0824a6c956e9ab4bd29c9e303babe41d6273bf138b727f673627130812bcefa368e602e5
+2026-02-03 20:05:34.557 10675-12190 SignalCallManager       org.thoughtcrime.securesms           W  DEBUG_CALL: Identity Key (PNI) (Hex): 0522685f3aec73841a222f69920af2d89855f52a70b2620026eb8c3c5c3e74955c3bfc6fdfcadf4110f10dc7237996095fedec4553e0984de0076e6879ae66dd50
+2026-02-03 20:05:34.557 10675-12190 SignalCallManager       org.thoughtcrime.securesms           W  DEBUG_CALL: SM3 digest not available: SM3 MessageDigest not available
+2026-02-03 20:05:34.557 10675-12190 SignalCallManager       org.thoughtcrime.securesms           W  DEBUG_CALL: Calc SHA256(Key): 5e9154504b68585a243387a44bfa985206be0281a68ec28c6aee991c5c7ae39d
+2026-02-03 20:05:34.557 10675-12500 SignalCallManager       org.thoughtcrime.securesms           V  Processing action: lambda$requestGroupMembershipToken$50, handler: GroupPreJoinActionProce
+2026-02-03 20:05:34.557 10675-12500 GroupPreJoinActionProce org.thoughtcrime.securesms           I  handleGroupMembershipProofResponse():
+2026-02-03 20:05:34.557 10675-12500 GroupCall               org.thoughtcrime.securesms           I  setMembershipProof():
+2026-02-03 20:05:34.558 10675-12500 ringrtc                 org.thoughtcrime.securesms           I  call_manager.rs:3009: set_membership_proof(): id: 1
+2026-02-03 20:05:34.558 10675-12536 ringrtc                 org.thoughtcrime.securesms           I  http.rs:201: http:DelegatingClient:make_request()
+2026-02-03 20:05:34.558 10675-12536 ringrtc                 org.thoughtcrime.securesms           I  android_platform.rs:1649: send_request(): request_id: 2
+2026-02-03 20:05:34.558 10675-12536 CallManager             org.thoughtcrime.securesms           I  sendHttpRequest():
+2026-02-03 20:05:34.558 10675-12536 SignalCallManager       org.thoughtcrime.securesms           I  onSendHttpRequest(): request_id: 2
+2026-02-03 20:05:34.558 10675-12190 System.out              org.thoughtcrime.securesms           I  群组视频服务
+2026-02-03 20:05:34.559 10675-12190 System.out              org.thoughtcrime.securesms           I  DeprecatedClientPreventionInterceptor - START
+2026-02-03 20:05:34.559 10675-12190 System.out              org.thoughtcrime.securesms           I  Request URL: http://47.242.157.99:11101/v2/conference/participants
+2026-02-03 20:05:34.559 10675-12190 System.out              org.thoughtcrime.securesms           I  isClientDeprecated:  false
+2026-02-03 20:05:34.559 10675-12190 System.out              org.thoughtcrime.securesms           I  DeprecatedClientPreventionInterceptor - PROCEEDING
+2026-02-03 20:05:34.559 10675-10675 JobSchedulerScheduler   org.thoughtcrime.securesms           I  Waking due to job: 0
+2026-02-03 20:05:34.560 10675-10675 WebRtcAudioOutputToggle org.thoughtcrime.securesms           D  Switching button drawable to SPEAKER
+2026-02-03 20:05:34.560 10675-10675 HandWritingStubImpl     org.thoughtcrime.securesms           I  refreshLastKeyboardType: 1
+2026-02-03 20:05:34.560 10675-10675 HandWritingStubImpl     org.thoughtcrime.securesms           I  getCurrentKeyboardType: 1
+2026-02-03 20:05:34.563 10675-11881 Job                     org.thoughtcrime.securesms           I  [JOB::65f35663-e9cd-44fd-9128-c043c28b00aa][RetrieveProfileAvatarJob] onSubmit() (Time Since Submission: 1 ms, Lifespan: 3600000 ms, Run Attempt: 1/1, Queue: RetrieveProfileAvatarJob::RecipientId::2)
+2026-02-03 20:05:34.564 10675-11881 JobSchedulerScheduler   org.thoughtcrime.securesms           I  JobScheduler enqueue of NETWORK (-1733499378)
+2026-02-03 20:05:34.565 10675-12500 SignalCallManager       org.thoughtcrime.securesms           V  Processing action: setRingGroup, handler: GroupPreJoinActionProce
+2026-02-03 20:05:34.565 10675-12500 GroupPreJoinActionProce org.thoughtcrime.securesms           I  handleSetRingGroup(): ring: true
+2026-02-03 20:05:34.567 10675-11987 TrafficStats            org.thoughtcrime.securesms           D  tagSocket(268) with statsTag=0xffffffff, statsUid=-1
+2026-02-03 20:05:34.567 10675-11904 JobRunner               org.thoughtcrime.securesms           I  [JOB::65f35663-e9cd-44fd-9128-c043c28b00aa][RetrieveProfileAvatarJob][4] Running job. (Time Since Submission: 5 ms, Lifespan: 3600000 ms, Run Attempt: 1/1, Queue: RetrieveProfileAvatarJob::RecipientId::2)
+2026-02-03 20:05:34.569 10675-11904 JobRunner               org.thoughtcrime.securesms           I  [JOB::65f35663-e9cd-44fd-9128-c043c28b00aa][RetrieveProfileAvatarJob][4] Job finished with result SUCCESS in 1 ms. (Time Since Submission: 7 ms, Lifespan: 3600000 ms, Run Attempt: 1/1, Queue: RetrieveProfileAvatarJob::RecipientId::2)
+2026-02-03 20:05:34.575 10675-10675 System.out              org.thoughtcrime.securesms           I  request set Avatar Image View ???? 3
+2026-02-03 20:05:34.575 10675-10675 System.out              org.thoughtcrime.securesms           I  request set Avatar Image View ???? 4
+2026-02-03 20:05:34.583 10675-10675 JobSchedulerScheduler   org.thoughtcrime.securesms           I  Waking due to job: -1733499378
+2026-02-03 20:05:34.590 10675-11862 System.out              org.thoughtcrime.securesms           I  会话列表 组织架构
+2026-02-03 20:05:34.625 10675-12190 System.out              org.thoughtcrime.securesms           I  DeprecatedClientPreventionInterceptor - Response: 200
+2026-02-03 20:05:34.625 10675-12190 CallManager             org.thoughtcrime.securesms           I  receivedHttpResponse(): requestId: 2
+2026-02-03 20:05:34.625 10675-12190 ringrtc                 org.thoughtcrime.securesms           I  call_manager.rs:727: API:CallManager:handle_received_http_response():
+2026-02-03 20:05:34.625 10675-12189 ringrtc                 org.thoughtcrime.securesms           I  call_manager.rs:1822: handle_received_http_response(): request_id: 2
+2026-02-03 20:05:34.625 10675-12189 ringrtc                 org.thoughtcrime.securesms           I  http.rs:165: http:DelegatingClient:received_response(): request_id: 2
+2026-02-03 20:05:34.625 10675-12189 ringrtc                 org.thoughtcrime.securesms           I  http.rs:172:   status_code: 200
+2026-02-03 20:05:34.625 10675-12189 ringrtc                 org.thoughtcrime.securesms           I  sfu.rs:449: Got group call peek result with device count = 1, pending count = 0
+2026-02-03 20:05:34.625 10675-12536 ringrtc                 org.thoughtcrime.securesms           I  call_manager.rs:2600: handle_peek_changed():
+2026-02-03 20:05:34.625 10675-12536 ringrtc                 org.thoughtcrime.securesms           I  android_platform.rs:1440: handle_peek_changed():
+2026-02-03 20:05:34.626 10675-12536 PeekInfo                org.thoughtcrime.securesms           I  fromNative(): joinedMembers.size = 0
+2026-02-03 20:05:34.626 10675-12536 GroupCall               org.thoughtcrime.securesms           I  handlePeekChanged():
+2026-02-03 20:05:34.626 10675-12500 SignalCallManager       org.thoughtcrime.securesms           V  Processing action: onPeekChanged, handler: GroupPreJoinActionProce
+2026-02-03 20:05:34.626 10675-12500 GroupPreJoinActionProce org.thoughtcrime.securesms           I  handleGroupJoinedMembershipChanged():
+2026-02-03 20:05:34.626 10675-12500 GroupCall               org.thoughtcrime.securesms           I  getPeekInfo():
+2026-02-03 20:05:34.631 10675-10675 JobManager              org.thoughtcrime.securesms           I  onConstraintMet(NotInCallConstraintObse)
+2026-02-03 20:05:34.631 10675-10675 WebRtcCallActivity      org.thoughtcrime.securesms           I  Got message from service: WebRtcViewModel {
+                                                                                                     remoteDevicesCount=OptionalLong[1]
+                                                                                                     participantLimit=8
+                                                                                                    }
+2026-02-03 20:05:34.633 10675-12500 SignalCallManager       org.thoughtcrime.securesms           V  Processing action: setRingGroup, handler: GroupPreJoinActionProce
+2026-02-03 20:05:34.634 10675-12500 GroupPreJoinActionProce org.thoughtcrime.securesms           I  handleSetRingGroup(): ring: false
+2026-02-03 20:05:34.634 10675-12500 SignalCallManager       org.thoughtcrime.securesms           V  Processing action: setRingGroup, handler: GroupPreJoinActionProce
+2026-02-03 20:05:34.634 10675-12500 GroupPreJoinActionProce org.thoughtcrime.securesms           I  handleSetRingGroup(): ring: false
+2026-02-03 20:05:34.644 10675-10675 JobManager              org.thoughtcrime.securesms           I  onConstraintMet(NotInCallConstraintObse)
+2026-02-03 20:05:34.644 10675-10675 WebRtcCallActivity      org.thoughtcrime.securesms           I  Got message from service: WebRtcViewModel {
+                                                                                                     ringGroup=false
+                                                                                                    }
+2026-02-03 20:05:34.721 10675-12665 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:34.729 10675-12664 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:34.733 10675-12505 crime.securesms         org.thoughtcrime.securesms           I  EglImage dataspace changed, need recreate
+2026-02-03 20:05:34.734 10675-12505 SurfaceTextureEglRender org.thoughtcrime.securesms           D  Reporting first rendered frame.
+2026-02-03 20:05:34.734 10675-12505 SurfaceTextureEglRender org.thoughtcrime.securesms           D  Reporting frame resolution changed to 1280x720 with rotation 270
+2026-02-03 20:05:34.734 10675-12505 SurfaceTextureEglRender org.thoughtcrime.securesms           D  Reporting first rendered frame.
+2026-02-03 20:05:34.734 10675-12505 SurfaceTextureEglRender org.thoughtcrime.securesms           D  Reporting frame resolution changed to 1280x720 with rotation 270
+2026-02-03 20:05:34.737 10675-12665 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:34.745 10675-12665 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:34.752 10675-12505 crime.securesms         org.thoughtcrime.securesms           I  EglImage dataspace changed, need recreate
+2026-02-03 20:05:34.753 10675-12665 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:34.762 10675-12665 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:34.769 10675-12505 crime.securesms         org.thoughtcrime.securesms           I  EglImage dataspace changed, need recreate
+2026-02-03 20:05:34.770 10675-12665 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:34.779 10675-12664 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:34.787 10675-12665 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:34.795 10675-12665 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:34.801 10675-12505 crime.securesms         org.thoughtcrime.securesms           I  EglImage dataspace changed, need recreate
+2026-02-03 20:05:34.803 10675-12665 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:34.812 10675-12665 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:34.820 10675-12665 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:34.828 10675-12665 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:34.834 10675-12505 crime.securesms         org.thoughtcrime.securesms           I  EglImage dataspace changed, need recreate
+2026-02-03 20:05:34.837 10675-12665 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:34.845 10675-12665 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:34.853 10675-12664 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:34.861 10675-12664 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:34.867 10675-12505 crime.securesms         org.thoughtcrime.securesms           I  EglImage dataspace changed, need recreate
+2026-02-03 20:05:34.870 10675-12664 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:34.878 10675-11893 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:34.887 10675-12664 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:34.895 10675-12664 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:34.900 10675-12505 crime.securesms         org.thoughtcrime.securesms           I  EglImage dataspace changed, need recreate
+2026-02-03 20:05:34.903 10675-12664 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:34.911 10675-12664 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:34.920 10675-12664 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:34.928 10675-12664 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:34.934 10675-12505 crime.securesms         org.thoughtcrime.securesms           I  EglImage dataspace changed, need recreate
+2026-02-03 20:05:34.937 10675-12664 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:34.945 10675-12664 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:34.953 10675-12664 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:34.961 10675-12664 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:34.969 10675-12664 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:34.978 10675-12664 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:34.986 10675-12664 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:34.994 10675-12664 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:35.003 10675-12664 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:35.011 10675-12664 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:35.020 10675-11893 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:35.028 10675-12221 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:35.036 10675-12221 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:35.044 10675-12221 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:35.053 10675-11828 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:35.061 10675-11828 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:35.069 10675-11828 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:35.078 10675-11828 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:35.086 10675-11828 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:35.094 10675-11828 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:35.100 10675-12505 crime.securesms         org.thoughtcrime.securesms           I  EglImage dataspace changed, need recreate
+2026-02-03 20:05:35.103 10675-11828 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:35.111 10675-11828 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:35.119 10675-11828 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:35.127 10675-11828 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:35.136 10675-11828 FrameEvents             org.thoughtcrime.securesms           E  addRelease: Did not find frame.
+2026-02-03 20:05:35.155  3454-9311  WindowManager           system_server                        E  setClientVisible ActivityRecord{13bcb47 u0 org.thoughtcrime.securesms/.conversation.v2.ConversationActivity t287} false
+2026-02-03 20:05:35.155 10675-10675 VRI[Conver...nActivity] org.thoughtcrime.securesms           D  visibilityChanged oldVisibility=true newVisibility=false
+2026-02-03 20:05:35.166  5185-6243  ActivityManagerWrapper  com.miui.home                        E  getRecentTasksForceIncludingTaskIdIfValid: getRecentTasks: size=8
+                                                                                                     mainTaskId=288   userId=0   windowMode=1   baseIntent=Intent { act=CallIntent.android.intent.action.VIEW flag=276824064 cmp=ComponentInfo{org.thoughtcrime.securesms/org.thoughtcrime.securesms.WebRtcCallActivity} }
+                                                                                                     mainTaskId=287   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{org.thoughtcrime.securesms/org.thoughtcrime.securesms.RoutingActivity} }
+                                                                                                     mainTaskId=200   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.dragon.read/com.dragon.read.pages.splash.SplashActivity} }
+                                                                                                     mainTaskId=273   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.jinse.app/com.example.flutter_client.MainActivity} }
+                                                                                                     mainTaskId=269   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.ss.android.ugc.aweme/com.ss.android.ugc.aweme.splash.SplashActivity} }
+                                                                                                     mainTaskId=41   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=271581184 cmp=ComponentInfo{com.tencent.mm/com.tencent.mm.ui.LauncherUI} }
+                                                                                                     mainTaskId=211   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.tencent.qqmusic/com.tencent.qqmusic.activity.AppStarterActivity} }
+                                                                                                     mainTaskId=143   userId=0   windowMode=1   baseIntent=Intent { act=com.tencent.QQBrowser.action.VIEW flag=268435456 cmp=ComponentInfo{com.tencent.mtt/com.tencent.mtt.MainActivity} }
+2026-02-03 20:05:35.167 10675-10675 BaseActivity            org.thoughtcrime.securesms           D  [ConversationActivity] onStop()
+2026-02-03 20:05:35.169 10675-10675 LoggingFragment         org.thoughtcrime.securesms           D  [ConversationFragment] onStop()
+2026-02-03 20:05:35.174 10675-10675 ExoPlayerImpl           org.thoughtcrime.securesms           I  Release e6b7e1f [AndroidXMedia3/1.3.1] [haotian, 2410DPN6CC, Xiaomi, 35] [media3.common, media3.exoplayer, media3.decoder, media3.session]
+2026-02-03 20:05:35.301 10675-12505 crime.securesms         org.thoughtcrime.securesms           I  EglImage dataspace changed, need recreate
+2026-02-03 20:05:35.833 10675-11805 crime.securesms         org.thoughtcrime.securesms           W  Cleared Reference was only reachable from finalizer (only reported once)
+2026-02-03 20:05:35.838 10675-11805 crime.securesms         org.thoughtcrime.securesms           I  This is non sticky GC, maxfree is 16777216 minfree is 8388608
+2026-02-03 20:05:35.838 10675-11805 crime.securesms         org.thoughtcrime.securesms           I  NativeAlloc concurrent copying GC freed 18MB AllocSpace bytes, 7(132KB) LOS objects, 62% free, 29MB/77MB, paused 8.352ms,21us total 89.639ms

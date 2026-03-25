@@ -10,7 +10,17 @@ echo "Server Port: $SERVER_PORT"
 echo "Connected to Backend at: $CALLING_SERVER_URL"
 echo "Connected to DB at: $STORAGE_ENDPOINT"
 
-./target/release/calling_frontend \
+# Check if running in development (cargo target dir exists) or deployment (bin dir)
+if [ -f "./target/release/calling_frontend" ]; then
+    BINARY="./target/release/calling_frontend"
+elif [ -f "./bin/calling_frontend" ]; then
+    BINARY="./bin/calling_frontend"
+else
+    echo "Error: calling_frontend binary not found in ./target/release/ or ./bin/"
+    exit 1
+fi
+
+exec "$BINARY" \
   --server-ip "$SERVER_IP" \
   --server-port "$SERVER_PORT" \
   --calling-server-url "$CALLING_SERVER_URL" \

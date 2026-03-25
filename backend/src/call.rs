@@ -189,7 +189,7 @@ impl Display for LoggableCallId {
 ///
 /// UserId deliberately does not implement Display or Debug; it will be consistent across calls in
 /// the same group and is thus considered sensitive.
-#[derive(Clone, PartialEq, Eq, Hash, Serialize)]
+#[derive(Clone, PartialEq, Eq, Hash, Serialize, Debug)]
 #[serde(transparent)]
 pub struct UserId(String);
 
@@ -610,6 +610,27 @@ impl Call {
             self.default_requested_max_send_rate,
             now,
         ));
+
+        // --- Log current call info ---
+        // Log basic info
+        info!(
+            "promote_client: call_id={} total_clients={} pending_clients={}",
+            self.loggable_call_id(),
+            self.clients.len(),
+            self.pending_clients.len()
+        );
+        
+        // Log details of each active client
+        for (i, c) in self.clients.iter().enumerate() {
+            info!(
+                "  Client[{}]: demux_id={} user_id={}", 
+                i, 
+                c.demux_id.as_u32(), 
+                c.user_id.0
+            );
+        }
+        // -----------------------------
+
         self.allocate_video_layers(
             demux_id,
             self.initial_target_send_rate,

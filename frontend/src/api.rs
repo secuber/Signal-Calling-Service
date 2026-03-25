@@ -354,6 +354,7 @@ async fn unknown_request_handler() -> impl IntoResponse {
     StatusCode::SERVICE_UNAVAILABLE
 }
 
+// 前端
 fn app(frontend: Arc<Frontend>) -> Router {
     let health_route = Router::new().route("/health", get(get_health));
 

@@ -1,0 +1,837 @@
+2026-02-03 19:55:17.002  6610-6610  MIUIInput               org.thoughtcrime.securesms           I  [MotionEvent] ViewRootImpl windowName 'org.thoughtcrime.securesms/org.thoughtcrime.securesms.WebRtcCallActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=149035348, downTime=149035348, phoneEventTime=19:55:16.998 } moveCount:0
+2026-02-03 19:55:17.044  6610-6610  MIUIInput               org.thoughtcrime.securesms           I  [MotionEvent] ViewRootImpl windowName 'org.thoughtcrime.securesms/org.thoughtcrime.securesms.WebRtcCallActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=149035391, downTime=149035348, phoneEventTime=19:55:17.041 } moveCount:0
+2026-02-03 19:55:17.060  6610-26463 SignalCallManager       org.thoughtcrime.securesms           V  Processing action: startOutgoingVideoCall, handler: GroupPreJoinActionProce
+2026-02-03 19:55:17.060  6610-26463 GroupPreJoinActionProce org.thoughtcrime.securesms           I  handleOutgoingCall():
+2026-02-03 19:55:17.066  6610-6610  Camera                  org.thoughtcrime.securesms           I  setEnabled(): false
+2026-02-03 19:55:17.066  6610-6610  Camera                  org.thoughtcrime.securesms           I  setEnabled(): stopping capture
+2026-02-03 19:55:17.066  6610-6610  CameraInjector          org.thoughtcrime.securesms           D  updateCloudCameraControllerInfoAsync: has aleardy start update task.
+2026-02-03 19:55:17.066  6610-6610  CameraInjector          org.thoughtcrime.securesms           D  waitForResult: 
+2026-02-03 19:55:17.067  6610-6610  libc                    org.thoughtcrime.securesms           W  Access denied finding property "vendor.camera.aux.packagelist"
+2026-02-03 19:55:17.067  6610-6610  libc                    org.thoughtcrime.securesms           W  Access denied finding property "vendor.camera.aux.packagelistext"
+2026-02-03 19:55:17.067  6610-27304 CameraExtImplXiaoMi     org.thoughtcrime.securesms           D  releaseCameraDevice: 1
+2026-02-03 19:55:17.068  6610-27304 CameraDevice-JV-1       org.thoughtcrime.securesms           D  close: E. id = 1
+2026-02-03 19:55:17.069  6610-6610  Camera                  org.thoughtcrime.securesms           I  Camera2 enumerator supported: true
+2026-02-03 19:55:17.069  6610-6610  CameraInjector          org.thoughtcrime.securesms           D  updateCloudCameraControllerInfoAsync: has aleardy start update task.
+2026-02-03 19:55:17.069  6610-6610  CameraInjector          org.thoughtcrime.securesms           D  waitForResult: 
+2026-02-03 19:55:17.069  6610-6610  libc                    org.thoughtcrime.securesms           W  Access denied finding property "vendor.camera.aux.packagelist"
+2026-02-03 19:55:17.069  6610-6610  libc                    org.thoughtcrime.securesms           W  Access denied finding property "vendor.camera.aux.packagelistext"
+2026-02-03 19:55:17.074  6610-6610  CameraInjector          org.thoughtcrime.securesms           D  updateCloudCameraControllerInfoAsync: has aleardy start update task.
+2026-02-03 19:55:17.074  6610-6610  CameraInjector          org.thoughtcrime.securesms           D  waitForResult: 
+2026-02-03 19:55:17.074  6610-6610  libc                    org.thoughtcrime.securesms           W  Access denied finding property "vendor.camera.aux.packagelist"
+2026-02-03 19:55:17.074  6610-6610  libc                    org.thoughtcrime.securesms           W  Access denied finding property "vendor.camera.aux.packagelistext"
+2026-02-03 19:55:17.077  6610-25981 CameraDevice-JV-1       org.thoughtcrime.securesms           W  Device error received, code 4, frame number 151, request ID 0, subseq ID 0
+2026-02-03 19:55:17.078  6610-26463 ActiveCallManager       org.thoughtcrime.securesms           I  update 2 RecipientId::4 true
+2026-02-03 19:55:17.079  6610-26463 SafeForegroundService   org.thoughtcrime.securesms           D  [update] Current state: STOPPED
+2026-02-03 19:55:17.079  6610-26463 SafeForegroundService   org.thoughtcrime.securesms           D  [update] Service cannot be updated. Current state: STOPPED
+2026-02-03 19:55:17.079  6610-26463 SafeForegroundService   org.thoughtcrime.securesms           D  [start] Current state: STOPPED
+2026-02-03 19:55:17.079  6610-26463 SafeForegroundService   org.thoughtcrime.securesms           D  [start] Starting service.
+2026-02-03 19:55:17.081  6610-26463 AudioManager            org.thoughtcrime.securesms           I  In isSpeakerphoneOn() calling application: org.thoughtcrime.securesms
+2026-02-03 19:55:17.083  6610-6610  ActiveCallManager       org.thoughtcrime.securesms           D  [onCreate]
+2026-02-03 19:55:17.083  6610-26463 AccelerometerListener   org.thoughtcrime.securesms           D  enable(true)
+2026-02-03 19:55:17.084  6610-6610  ActiveCallManager       org.thoughtcrime.securesms           W  Failed to listen to PSTN call answers! (Ask Gemini)
+                                                                                                    java.lang.SecurityException: listen
+                                                                                                    	at android.os.Parcel.createExceptionOrNull(Parcel.java:3256)
+                                                                                                    	at android.os.Parcel.createException(Parcel.java:3240)
+                                                                                                    	at android.os.Parcel.readException(Parcel.java:3223)
+                                                                                                    	at android.os.Parcel.readException(Parcel.java:3165)
+                                                                                                    	at com.android.internal.telephony.ITelephonyRegistry$Stub$Proxy.listenWithEventList(ITelephonyRegistry.java:1236)
+                                                                                                    	at android.telephony.TelephonyRegistryManager.listenFromListener(TelephonyRegistryManager.java:297)
+                                                                                                    	at android.telephony.TelephonyManager.listen(TelephonyManager.java:6886)
+                                                                                                    	at org.thoughtcrime.securesms.service.webrtc.ActiveCallManager$ActiveCallForegroundService.onCreate(ActiveCallManager.kt:318)
+                                                                                                    	at android.app.ActivityThread.handleCreateService(ActivityThread.java:5379)
+                                                                                                    	at android.app.ActivityThread.-$$Nest$mhandleCreateService(Unknown Source:0)
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2680)
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:107)
+                                                                                                    	at android.os.Looper.loopOnce(Looper.java:249)
+                                                                                                    	at android.os.Looper.loop(Looper.java:337)
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:9586)
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method)
+                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:593)
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:936)
+                                                                                                    Caused by: android.os.RemoteException: Remote stack trace:
+                                                                                                    	at com.android.internal.telephony.TelephonyPermissions.enforceCarrierPrivilege(TelephonyPermissions.java:740)
+                                                                                                    	at com.android.internal.telephony.TelephonyPermissions.checkReadPhoneState(TelephonyPermissions.java:193)
+                                                                                                    	at com.android.internal.telephony.TelephonyPermissions.checkCallingOrSelfReadPhoneState(TelephonyPermissions.java:99)
+                                                                                                    	at com.android.server.TelephonyRegistry.checkListenerPermission(TelephonyRegistry.java:4178)
+                                                                                                    	at com.android.server.TelephonyRegistry.listen(TelephonyRegistry.java:1173)
+2026-02-03 19:55:17.084  6610-6610  ActiveCallManager       org.thoughtcrime.securesms           D  [onStartCommand] action: start
+2026-02-03 19:55:17.088  6610-26463 LockManager             org.thoughtcrime.securesms           D  Entered Lock State: PROXIMITY
+2026-02-03 19:55:17.092  6610-26463 ActiveCallManager       org.thoughtcrime.securesms           I  Sending audio command [Initialize] to FullSignalAudioManagerApi31
+2026-02-03 19:55:17.092  6610-26463 GroupCall               org.thoughtcrime.securesms           I  setOutgoingVideoSource():
+2026-02-03 19:55:17.092  6610-27714 AudioManager            org.thoughtcrime.securesms           D  getMode: mode=0, callApp=org.thoughtcrime.securesms
+2026-02-03 19:55:17.092  6610-27714 AudioManager            org.thoughtcrime.securesms           I  In isSpeakerphoneOn() calling application: org.thoughtcrime.securesms
+2026-02-03 19:55:17.094  6610-27714 SignalAudioManager31    org.thoughtcrime.securesms           D  Switching to new device of type 1 from 1
+2026-02-03 19:55:17.094  6610-27718 MediaCodecList          org.thoughtcrime.securesms           D  codecHandlesFormat: no format, so no extra checks
+2026-02-03 19:55:17.095  6610-27714 SignalAudioManager31    org.thoughtcrime.securesms           W  Succeeded in setting 2 (type: 1) as communication device.
+2026-02-03 19:55:17.095  6610-26463 GroupCall               org.thoughtcrime.securesms           I  setOutgoingVideoMuted():
+2026-02-03 19:55:17.095  6610-27714 SignalAudioManager31    org.thoughtcrime.securesms           D  Initialized
+2026-02-03 19:55:17.095  6610-27718 MediaCodec              org.thoughtcrime.securesms           I  The process name is org.thoughtcrime.securesms
+2026-02-03 19:55:17.095  6610-26463 ringrtc                 org.thoughtcrime.securesms           I  call_manager.rs:2995: set_outgoing_video_muted(): id: 2
+2026-02-03 19:55:17.095  6610-26463 GroupCall               org.thoughtcrime.securesms           I  setOutgoingAudioMuted():
+2026-02-03 19:55:17.095  6610-26463 ringrtc                 org.thoughtcrime.securesms           I  call_manager.rs:2994: set_outgoing_audio_muted(): id: 2
+2026-02-03 19:55:17.095  6610-27717 MediaCodecList          org.thoughtcrime.securesms           D  codecHandlesFormat: no format, so no extra checks
+2026-02-03 19:55:17.095  6610-26463 GroupCall               org.thoughtcrime.securesms           I  setDataMode():
+2026-02-03 19:55:17.095  6610-26463 ringrtc                 org.thoughtcrime.securesms           I  call_manager.rs:2999: set_data_mode(): id: 2
+2026-02-03 19:55:17.095  6610-26463 GroupCall               org.thoughtcrime.securesms           I  join():
+2026-02-03 19:55:17.096  6610-27717 MediaCodec              org.thoughtcrime.securesms           I  The process name is org.thoughtcrime.securesms
+2026-02-03 19:55:17.096  6610-27718 VideoBox                org.thoughtcrime.securesms           I  VideoBox::VideoBox
+2026-02-03 19:55:17.096  6610-27718 VideoBox                org.thoughtcrime.securesms           I  [mId: 0] video-debug initVideobox: return false for videobox is not enabled
+2026-02-03 19:55:17.096  6610-27718 MediaCodec              org.thoughtcrime.securesms           I  init video box disabled for init not supported
+2026-02-03 19:55:17.096  6610-27718 VideoBox                org.thoughtcrime.securesms           I  VideoBox::~VideoBox
+2026-02-03 19:55:17.096  6610-26463 ringrtc                 org.thoughtcrime.securesms           I  call_manager.rs:2989: join(): id: 2
+2026-02-03 19:55:17.097  6610-27348 ringrtc                 org.thoughtcrime.securesms           I  call_manager.rs:2555: handle_join_state_changed():
+2026-02-03 19:55:17.097  6610-27348 ringrtc                 org.thoughtcrime.securesms           I  android_platform.rs:1228: handle_join_state_changed():
+2026-02-03 19:55:17.097  6610-27348 CallManager             org.thoughtcrime.securesms           I  handleJoinStateChanged():
+2026-02-03 19:55:17.097  6610-27348 GroupCall               org.thoughtcrime.securesms           I  handleJoinStateChanged():
+2026-02-03 19:55:17.097  6610-27348 SignalCallManager       org.thoughtcrime.securesms           I  onLocalDeviceStateChanged: localAdapterType: UNKNOWN
+2026-02-03 19:55:17.097  6610-6610  JobManager              org.thoughtcrime.securesms           I  onConstraintMet(NotInCallConstraintObse)
+2026-02-03 19:55:17.097  6610-27348 ringrtc                 org.thoughtcrime.securesms           I  call_manager.rs:2518: request_membership_proof():
+2026-02-03 19:55:17.097  6610-27348 ringrtc                 org.thoughtcrime.securesms           I  android_platform.rs:950: request_membership_proof():
+2026-02-03 19:55:17.097  6610-6610  WebRtcCallActivity      org.thoughtcrime.securesms           I  Got message from service: WebRtcViewModel {
+                                                                                                     state=CALL_OUTGOING
+                                                                                                     localParticipant=CallParticipant(callParticipantId=CallParticipantId(demuxId=-1, recipientId=RecipientId::2), isForwardingVideo=true, isVideoEnabled=false, isMicrophoneEnabled=true, handRaisedTimestamp=-1, isMediaKeysReceived=true, isScreenSharing=false)
+                                                                                                    }
+2026-02-03 19:55:17.097  6610-27348 CallManager             org.thoughtcrime.securesms           I  requestMembershipProof():
+2026-02-03 19:55:17.097  6610-27348 GroupCall               org.thoughtcrime.securesms           I  requestMembershipProof():
+2026-02-03 19:55:17.097  6610-27348 SignalCallManager       org.thoughtcrime.securesms           I  requestMembershipProof():
+2026-02-03 19:55:17.097  6610-26463 SignalCallManager       org.thoughtcrime.securesms           V  Processing action: networkChange, handler: GroupJoiningActionProce
+2026-02-03 19:55:17.097  6610-27720 MediaCodec              org.thoughtcrime.securesms           I  [mId: 0] [audio-debug-dec] setState: INITIALIZING
+2026-02-03 19:55:17.098  6610-27720 CCodec                  org.thoughtcrime.securesms           D  allocate(c2.android.mp3.decoder)
+2026-02-03 19:55:17.098  6610-27714 SignalAudioManager31    org.thoughtcrime.securesms           D  Switching to new device of type 1 from 1
+2026-02-03 19:55:17.098  6610-27348 ringrtc                 org.thoughtcrime.securesms           I  sfu.rs:514: sfu:Join(): 
+2026-02-03 19:55:17.098  6610-27720 Codec2Client            org.thoughtcrime.securesms           I  Available Codec2 services: "default" "default2" "default9" "software"
+2026-02-03 19:55:17.098  6610-27348 ringrtc                 org.thoughtcrime.securesms           I  http.rs:201: http:DelegatingClient:make_request()
+2026-02-03 19:55:17.098  6610-27348 ringrtc                 org.thoughtcrime.securesms           I  android_platform.rs:1649: send_request(): request_id: 11
+2026-02-03 19:55:17.098  6610-27348 CallManager             org.thoughtcrime.securesms           I  sendHttpRequest():
+2026-02-03 19:55:17.098  6610-27714 SignalAudioManager31    org.thoughtcrime.securesms           W  Succeeded in setting 2 (type: 1) as communication device.
+2026-02-03 19:55:17.098  6610-27348 SignalCallManager       org.thoughtcrime.securesms           I  onSendHttpRequest(): request_id: 11
+2026-02-03 19:55:17.098  6610-26463 GroupJoiningActionProce org.thoughtcrime.securesms           I  handleNetworkChanged not processed
+2026-02-03 19:55:17.098  6610-26463 SignalCallManager       org.thoughtcrime.securesms           V  Processing action: dataModeUpdate, handler: GroupJoiningActionProce
+2026-02-03 19:55:17.099  6610-27720 CCodec                  org.thoughtcrime.securesms           I  setting up 'default' as default (vendor) store
+2026-02-03 19:55:17.099  6610-26235 System.out              org.thoughtcrime.securesms           I  群组视频服务
+2026-02-03 19:55:17.100  6610-26235 System.out              org.thoughtcrime.securesms           I  DeprecatedClientPreventionInterceptor - START
+2026-02-03 19:55:17.100  6610-26235 System.out              org.thoughtcrime.securesms           I  Request URL: http://47.242.157.99:11101/v2/conference/participants
+2026-02-03 19:55:17.100  6610-26235 System.out              org.thoughtcrime.securesms           I  isClientDeprecated:  false
+2026-02-03 19:55:17.100  6610-26235 System.out              org.thoughtcrime.securesms           I  DeprecatedClientPreventionInterceptor - PROCEEDING
+2026-02-03 19:55:17.100  6610-27717 VideoBox                org.thoughtcrime.securesms           I  VideoBox::VideoBox
+2026-02-03 19:55:17.100  6610-27717 VideoBox                org.thoughtcrime.securesms           I  [mId: 1] video-debug initVideobox: return false for videobox is not enabled
+2026-02-03 19:55:17.100  6610-27717 MediaCodec              org.thoughtcrime.securesms           I  init video box disabled for init not supported
+2026-02-03 19:55:17.100  6610-27717 VideoBox                org.thoughtcrime.securesms           I  VideoBox::~VideoBox
+2026-02-03 19:55:17.101  6610-6610  WebRtcAudioOutputToggle org.thoughtcrime.securesms           D  Switching button drawable to SPEAKER
+2026-02-03 19:55:17.101  6610-26463 ringrtc                 org.thoughtcrime.securesms           I  call_manager.rs:782: active_connection():
+2026-02-03 19:55:17.101  6610-26463 GroupJoiningActionProce org.thoughtcrime.securesms           I  handleDataModeUpdate: could not update data mode.
+2026-02-03 19:55:17.101  6610-26463 SignalCallManager       org.thoughtcrime.securesms           V  Processing action: onAudioDeviceChanged, handler: GroupJoiningActionProce
+2026-02-03 19:55:17.101  6610-26463 GroupJoiningActionProce org.thoughtcrime.securesms           I  handleAudioDeviceChanged(): active: EARPIECE available: [EARPIECE, SPEAKER_PHONE]
+2026-02-03 19:55:17.101  6610-26463 GroupJoiningActionProce org.thoughtcrime.securesms           I  handleAudioDeviceChanged(): call not connected, not updating phone state
+2026-02-03 19:55:17.101  6610-6610  WebRtcAudioOutputToggle org.thoughtcrime.securesms           D  Switching button drawable to HANDSET
+2026-02-03 19:55:17.101  6610-26463 SignalCallManager       org.thoughtcrime.securesms           V  Processing action: onLocalDeviceStateChanged, handler: GroupJoiningActionProce
+2026-02-03 19:55:17.101  6610-26463 GroupJoiningActionProce org.thoughtcrime.securesms           I  handleGroupLocalDeviceStateChanged():
+2026-02-03 19:55:17.101  6610-26463 GroupJoiningActionProce org.thoughtcrime.securesms           I  local device changed: CONNECTING JOINING
+2026-02-03 19:55:17.101  6610-26463 SignalCallManager       org.thoughtcrime.securesms           V  Processing action: requestMembershipProof, handler: GroupJoiningActionProce
+2026-02-03 19:55:17.101  6610-26463 GroupJoiningActionProce org.thoughtcrime.securesms           I  handleGroupRequestMembershipProof():
+2026-02-03 19:55:17.101  6610-26463 SignalCallManager       org.thoughtcrime.securesms           V  Processing action: onAudioDeviceChanged, handler: GroupJoiningActionProce
+2026-02-03 19:55:17.101  6610-27721 MediaCodec              org.thoughtcrime.securesms           I  [mId: 1] [audio-debug-dec] setState: INITIALIZING
+2026-02-03 19:55:17.101  6610-27721 CCodec                  org.thoughtcrime.securesms           D  allocate(c2.android.mp3.decoder)
+2026-02-03 19:55:17.101  6610-26463 GroupJoiningActionProce org.thoughtcrime.securesms           I  handleAudioDeviceChanged(): active: EARPIECE available: [EARPIECE, SPEAKER_PHONE]
+2026-02-03 19:55:17.101  6610-26463 GroupJoiningActionProce org.thoughtcrime.securesms           I  handleAudioDeviceChanged(): call not connected, not updating phone state
+2026-02-03 19:55:17.102  6610-27721 CCodec                  org.thoughtcrime.securesms           I  setting up 'default' as default (vendor) store
+2026-02-03 19:55:17.104  6610-27721 crime.securesms         org.thoughtcrime.securesms           W  AIBinder_linkToDeath is being called with a non-null cookie and no onUnlink callback set. This might not be intended. AIBinder_DeathRecipient_setOnUnlinked should be called first.
+2026-02-03 19:55:17.104  6610-27720 CCodec                  org.thoughtcrime.securesms           I  Created component [c2.android.mp3.decoder]
+2026-02-03 19:55:17.104  6610-27721 CCodec                  org.thoughtcrime.securesms           I  Created component [c2.android.mp3.decoder]
+2026-02-03 19:55:17.105  6610-27720 CCodecConfig            org.thoughtcrime.securesms           D  read media type: audio/mpeg
+2026-02-03 19:55:17.105  6610-27721 CCodecConfig            org.thoughtcrime.securesms           D  read media type: audio/mpeg
+2026-02-03 19:55:17.106  6610-27720 ReflectedParamUpdater   org.thoughtcrime.securesms           D  extent() != 1 for single value type: algo.buffers.max-count.values
+2026-02-03 19:55:17.106  6610-27720 ReflectedParamUpdater   org.thoughtcrime.securesms           D  extent() != 1 for single value type: output.subscribed-indices.values
+2026-02-03 19:55:17.106  6610-27720 ReflectedParamUpdater   org.thoughtcrime.securesms           D  extent() != 1 for single value type: input.buffers.allocator-ids.values
+2026-02-03 19:55:17.106  6610-6610  JobManager              org.thoughtcrime.securesms           I  onConstraintMet(NotInCallConstraintObse)
+2026-02-03 19:55:17.106  6610-27720 ReflectedParamUpdater   org.thoughtcrime.securesms           D  extent() != 1 for single value type: output.buffers.allocator-ids.values
+2026-02-03 19:55:17.106  6610-27721 ReflectedParamUpdater   org.thoughtcrime.securesms           D  extent() != 1 for single value type: algo.buffers.max-count.values
+2026-02-03 19:55:17.106  6610-27720 ReflectedParamUpdater   org.thoughtcrime.securesms           D  extent() != 1 for single value type: algo.buffers.allocator-ids.values
+2026-02-03 19:55:17.106  6610-6610  WebRtcCallActivity      org.thoughtcrime.securesms           I  Got message from service: WebRtcViewModel {
+                                                                                                     activeDevice=EARPIECE
+                                                                                                     availableDevices=[EARPIECE, SPEAKER_PHONE]
+                                                                                                    }
+2026-02-03 19:55:17.106  6610-26463 SignalCallManager       org.thoughtcrime.securesms           V  Processing action: setEnableVideo, handler: GroupJoiningActionProce
+2026-02-03 19:55:17.106  6610-26463 GroupCall               org.thoughtcrime.securesms           I  setOutgoingVideoMuted():
+2026-02-03 19:55:17.107  6610-26463 ringrtc                 org.thoughtcrime.securesms           I  call_manager.rs:2995: set_outgoing_video_muted(): id: 2
+2026-02-03 19:55:17.107  6610-27720 ReflectedParamUpdater   org.thoughtcrime.securesms           D  extent() != 1 for single value type: output.buffers.pool-ids.values
+2026-02-03 19:55:17.107  6610-26463 Camera                  org.thoughtcrime.securesms           I  setEnabled(): true
+2026-02-03 19:55:17.107  6610-26463 Camera                  org.thoughtcrime.securesms           I  setEnabled(): starting capture
+2026-02-03 19:55:17.107  6610-27720 ReflectedParamUpdater   org.thoughtcrime.securesms           D  extent() != 1 for single value type: algo.buffers.pool-ids.values
+2026-02-03 19:55:17.107  6610-27721 ReflectedParamUpdater   org.thoughtcrime.securesms           D  extent() != 1 for single value type: output.subscribed-indices.values
+2026-02-03 19:55:17.107  6610-26463 ActiveCallManager       org.thoughtcrime.securesms           I  Sending audio command [SetDefaultDevice] to FullSignalAudioManagerApi31
+2026-02-03 19:55:17.107  6610-27721 ReflectedParamUpdater   org.thoughtcrime.securesms           D  extent() != 1 for single value type: input.buffers.allocator-ids.values
+2026-02-03 19:55:17.107  6610-27721 ReflectedParamUpdater   org.thoughtcrime.securesms           D  extent() != 1 for single value type: output.buffers.allocator-ids.values
+2026-02-03 19:55:17.107  6610-27721 ReflectedParamUpdater   org.thoughtcrime.securesms           D  extent() != 1 for single value type: algo.buffers.allocator-ids.values
+2026-02-03 19:55:17.107  6610-27721 ReflectedParamUpdater   org.thoughtcrime.securesms           D  extent() != 1 for single value type: output.buffers.pool-ids.values
+2026-02-03 19:55:17.107  6610-27720 CCodecConfig            org.thoughtcrime.securesms           I  query failed after returning 8 values (BAD_INDEX)
+2026-02-03 19:55:17.107  6610-27720 CCodecConfig            org.thoughtcrime.securesms           D  c2 config diff is Dict {
+                                                                                                      c2::u32 coded.bitrate.value = 64000
+                                                                                                      c2::u32 input.buffers.max-size.value = 8192
+                                                                                                      c2::u32 input.delay.value = 0
+                                                                                                      string input.media-type.value = "audio/mpeg"
+                                                                                                      c2::u32 output.large-frame.max-size = 0
+                                                                                                      c2::u32 output.large-frame.threshold-size = 0
+                                                                                                      string output.media-type.value = "audio/raw"
+                                                                                                      c2::u32 raw.channel-count.value = 2
+                                                                                                      c2::u32 raw.sample-rate.value = 44100
+                                                                                                    }
+2026-02-03 19:55:17.107  6610-27721 ReflectedParamUpdater   org.thoughtcrime.securesms           D  extent() != 1 for single value type: algo.buffers.pool-ids.values
+2026-02-03 19:55:17.107  6610-27720 MediaCodec              org.thoughtcrime.securesms           I  [mId: 0] [audio-debug-dec] setState: INITIALIZED
+2026-02-03 19:55:17.107  6610-6610  WebRtcAudioOutputToggle org.thoughtcrime.securesms           D  Switching button drawable to HANDSET
+2026-02-03 19:55:17.108  6610-27714 SignalAudioManager31    org.thoughtcrime.securesms           D  setDefaultAudioDevice(): currentDefault: EARPIECE device: SPEAKER_PHONE clearUser: true
+2026-02-03 19:55:17.108  6610-27714 SignalAudioManager31    org.thoughtcrime.securesms           D  New default: SPEAKER_PHONE userSelected: null of type null
+2026-02-03 19:55:17.108  6610-27721 CCodecConfig            org.thoughtcrime.securesms           I  query failed after returning 8 values (BAD_INDEX)
+2026-02-03 19:55:17.108  6610-27721 CCodecConfig            org.thoughtcrime.securesms           D  c2 config diff is Dict {
+                                                                                                      c2::u32 coded.bitrate.value = 64000
+                                                                                                      c2::u32 input.buffers.max-size.value = 8192
+                                                                                                      c2::u32 input.delay.value = 0
+                                                                                                      string input.media-type.value = "audio/mpeg"
+                                                                                                      c2::u32 output.large-frame.max-size = 0
+                                                                                                      c2::u32 output.large-frame.threshold-size = 0
+                                                                                                      string output.media-type.value = "audio/raw"
+                                                                                                      c2::u32 raw.channel-count.value = 2
+                                                                                                      c2::u32 raw.sample-rate.value = 44100
+                                                                                                    }
+2026-02-03 19:55:17.108  6610-27721 MediaCodec              org.thoughtcrime.securesms           I  [mId: 1] [audio-debug-dec] setState: INITIALIZED
+2026-02-03 19:55:17.109  6610-27714 SignalAudioManager31    org.thoughtcrime.securesms           D  Switching to new device of type 2 from 1
+2026-02-03 19:55:17.109  6610-27714 SignalAudioManager31    org.thoughtcrime.securesms           W  Succeeded in setting 3 (type: 2) as communication device.
+2026-02-03 19:55:17.109  6610-27718 MediaCodec              org.thoughtcrime.securesms           I  [mId: 0] [audio-debug-dec] configure: ClientName: org.thoughtcrime.securesms ComponentName: c2.android.mp3.decoder
+2026-02-03 19:55:17.109  6610-27718 MediaCodec              org.thoughtcrime.securesms           I  [mId: 0] [audio-debug-dec] configure: ClientFormat: AMessage(what = 0x00000000) = {
+                                                                                                      string mime = "audio/mpeg"
+                                                                                                      int64_t durationUs = 966530
+                                                                                                      int32_t track-id = 1
+                                                                                                      int32_t bitrate = 160000
+                                                                                                      int32_t channel-count = 2
+                                                                                                      int32_t sample-rate = 44100
+                                                                                                      int32_t encoder-delay = 576
+                                                                                                      int32_t encoder-padding = 576
+                                                                                                    }
+2026-02-03 19:55:17.109  6610-27718 MediaCodec              org.thoughtcrime.securesms           D  currery video type audio/mpeg
+2026-02-03 19:55:17.109  6610-27720 MediaCodec              org.thoughtcrime.securesms           I  [mId: 0] [audio-debug-dec] setState: CONFIGURING
+2026-02-03 19:55:17.109  6610-27720 CCodec                  org.thoughtcrime.securesms           D  [c2.android.mp3.decoder] buffers are bound to CCodec for this session
+2026-02-03 19:55:17.109  6610-27720 CCodecConfig            org.thoughtcrime.securesms           D  no c2 equivalents for durationUs
+2026-02-03 19:55:17.109  6610-27720 CCodecConfig            org.thoughtcrime.securesms           D  no c2 equivalents for track-id
+2026-02-03 19:55:17.109  6610-27720 CCodecConfig            org.thoughtcrime.securesms           D  no c2 equivalents for encoder-delay
+2026-02-03 19:55:17.109  6610-27720 CCodecConfig            org.thoughtcrime.securesms           D  no c2 equivalents for encoder-padding
+2026-02-03 19:55:17.109  6610-27720 CCodecConfig            org.thoughtcrime.securesms           D  no c2 equivalents for flags
+2026-02-03 19:55:17.109  6610-27717 MediaCodec              org.thoughtcrime.securesms           I  [mId: 1] [audio-debug-dec] configure: ClientName: org.thoughtcrime.securesms ComponentName: c2.android.mp3.decoder
+2026-02-03 19:55:17.109  6610-27717 MediaCodec              org.thoughtcrime.securesms           I  [mId: 1] [audio-debug-dec] configure: ClientFormat: AMessage(what = 0x00000000) = {
+                                                                                                      string mime = "audio/mpeg"
+                                                                                                      int64_t durationUs = 862040
+                                                                                                      int32_t track-id = 1
+                                                                                                      int32_t bitrate = 160000
+                                                                                                      int32_t channel-count = 2
+                                                                                                      int32_t sample-rate = 44100
+                                                                                                      int32_t encoder-delay = 576
+                                                                                                      int32_t encoder-padding = 576
+                                                                                                    }
+2026-02-03 19:55:17.109  6610-27717 MediaCodec              org.thoughtcrime.securesms           D  currery video type audio/mpeg
+2026-02-03 19:55:17.109  6610-27721 MediaCodec              org.thoughtcrime.securesms           I  [mId: 1] [audio-debug-dec] setState: CONFIGURING
+2026-02-03 19:55:17.109  6610-27721 CCodec                  org.thoughtcrime.securesms           D  [c2.android.mp3.decoder] buffers are bound to CCodec for this session
+2026-02-03 19:55:17.109  6610-27721 CCodecConfig            org.thoughtcrime.securesms           D  no c2 equivalents for durationUs
+2026-02-03 19:55:17.109  6610-27721 CCodecConfig            org.thoughtcrime.securesms           D  no c2 equivalents for track-id
+2026-02-03 19:55:17.109  6610-27721 CCodecConfig            org.thoughtcrime.securesms           D  no c2 equivalents for encoder-delay
+2026-02-03 19:55:17.109  6610-27721 CCodecConfig            org.thoughtcrime.securesms           D  no c2 equivalents for encoder-padding
+2026-02-03 19:55:17.109  6610-27721 CCodecConfig            org.thoughtcrime.securesms           D  no c2 equivalents for flags
+2026-02-03 19:55:17.109  6610-27720 CCodecConfig            org.thoughtcrime.securesms           D  c2 config diff is   c2::u32 coded.bitrate.value = 160000
+2026-02-03 19:55:17.110  6610-27720 CCodec                  org.thoughtcrime.securesms           D  encoding statistics level = 0
+2026-02-03 19:55:17.110  6610-27720 CCodec                  org.thoughtcrime.securesms           D  setup formats input: AMessage(what = 0x00000000) = {
+                                                                                                      int32_t bitrate = 160000
+                                                                                                      int32_t channel-count = 2
+                                                                                                      int32_t max-input-size = 8192
+                                                                                                      string mime = "audio/mpeg"
+                                                                                                      int32_t sample-rate = 44100
+                                                                                                    }
+2026-02-03 19:55:17.110  6610-27720 CCodec                  org.thoughtcrime.securesms           D  setup formats output: AMessage(what = 0x00000000) = {
+                                                                                                      int32_t buffer-batch-max-output-size = 0
+                                                                                                      int32_t buffer-batch-threshold-output-size = 0
+                                                                                                      int32_t channel-count = 2
+                                                                                                      string mime = "audio/raw"
+                                                                                                      int32_t sample-rate = 44100
+                                                                                                      int32_t encoder-delay = 576
+                                                                                                      int32_t encoder-padding = 576
+                                                                                                      int32_t android._config-pcm-encoding = 2
+                                                                                                    }
+2026-02-03 19:55:17.110  6610-27720 CCodecConfig            org.thoughtcrime.securesms           I  query failed after returning 8 values (BAD_INDEX)
+2026-02-03 19:55:17.110  6610-27720 MediaCodec              org.thoughtcrime.securesms           I  [mId: 0] [audio-debug-dec] setState: CONFIGURED
+2026-02-03 19:55:17.110  6610-27718 MediaCodec              org.thoughtcrime.securesms           D  updateVppSurFpsValue :  0
+2026-02-03 19:55:17.110  6610-26463 SignalCallManager       org.thoughtcrime.securesms           V  Processing action: onAudioDeviceChanged, handler: GroupJoiningActionProce
+2026-02-03 19:55:17.110  6610-26463 GroupJoiningActionProce org.thoughtcrime.securesms           I  handleAudioDeviceChanged(): active: SPEAKER_PHONE available: [EARPIECE, SPEAKER_PHONE]
+2026-02-03 19:55:17.110  6610-27720 MediaCodec              org.thoughtcrime.securesms           I  [mId: 0] [audio-debug-dec] setState: STARTING
+2026-02-03 19:55:17.110  6610-27721 CCodecConfig            org.thoughtcrime.securesms           D  c2 config diff is   c2::u32 coded.bitrate.value = 160000
+2026-02-03 19:55:17.110  6610-27721 CCodec                  org.thoughtcrime.securesms           D  encoding statistics level = 0
+2026-02-03 19:55:17.110  6610-27721 CCodec                  org.thoughtcrime.securesms           D  setup formats input: AMessage(what = 0x00000000) = {
+                                                                                                      int32_t bitrate = 160000
+                                                                                                      int32_t channel-count = 2
+                                                                                                      int32_t max-input-size = 8192
+                                                                                                      string mime = "audio/mpeg"
+                                                                                                      int32_t sample-rate = 44100
+                                                                                                    }
+2026-02-03 19:55:17.110  6610-27721 CCodec                  org.thoughtcrime.securesms           D  setup formats output: AMessage(what = 0x00000000) = {
+                                                                                                      int32_t buffer-batch-max-output-size = 0
+                                                                                                      int32_t buffer-batch-threshold-output-size = 0
+                                                                                                      int32_t channel-count = 2
+                                                                                                      string mime = "audio/raw"
+                                                                                                      int32_t sample-rate = 44100
+                                                                                                      int32_t encoder-delay = 576
+                                                                                                      int32_t encoder-padding = 576
+                                                                                                      int32_t android._config-pcm-encoding = 2
+                                                                                                    }
+2026-02-03 19:55:17.110  6610-27721 CCodecConfig            org.thoughtcrime.securesms           I  query failed after returning 8 values (BAD_INDEX)
+2026-02-03 19:55:17.110  6610-27721 MediaCodec              org.thoughtcrime.securesms           I  [mId: 1] [audio-debug-dec] setState: CONFIGURED
+2026-02-03 19:55:17.110  6610-27717 MediaCodec              org.thoughtcrime.securesms           D  updateVppSurFpsValue :  0
+2026-02-03 19:55:17.110  6610-27721 MediaCodec              org.thoughtcrime.securesms           I  [mId: 1] [audio-debug-dec] setState: STARTING
+2026-02-03 19:55:17.110  6610-27720 C2Store                 org.thoughtcrime.securesms           D  debug.c2.use_dmabufheaps set, forcing DMABUF Heaps
+2026-02-03 19:55:17.110  6610-27720 C2Store                 org.thoughtcrime.securesms           D  Using DMABUF Heaps
+2026-02-03 19:55:17.112  6610-27720 CCodecBufferChannel     org.thoughtcrime.securesms           D  [c2.android.mp3.decoder#631] Created input block pool with allocatorID 16 => poolID 17 - OK (0)
+2026-02-03 19:55:17.112  6610-27720 CCodecBufferChannel     org.thoughtcrime.securesms           I  [mId: 0] [audio-debug-dec] start: inputFormat: AMessage(what = 0x00000000) = {
+                                                                                                      int32_t bitrate = 160000
+                                                                                                      int32_t channel-count = 2
+                                                                                                      int32_t max-input-size = 8192
+                                                                                                      string mime = "audio/mpeg"
+                                                                                                      int32_t sample-rate = 44100
+                                                                                                    }
+2026-02-03 19:55:17.112  6610-27721 CCodecBufferChannel     org.thoughtcrime.securesms           D  [c2.android.mp3.decoder#265] Created input block pool with allocatorID 16 => poolID 18 - OK (0)
+2026-02-03 19:55:17.112  6610-27721 CCodecBufferChannel     org.thoughtcrime.securesms           I  [mId: 1] [audio-debug-dec] start: inputFormat: AMessage(what = 0x00000000) = {
+                                                                                                      int32_t bitrate = 160000
+                                                                                                      int32_t channel-count = 2
+                                                                                                      int32_t max-input-size = 8192
+                                                                                                      string mime = "audio/mpeg"
+                                                                                                      int32_t sample-rate = 44100
+                                                                                                    }
+2026-02-03 19:55:17.112  6610-27720 CCodecBufferChannel     org.thoughtcrime.securesms           I  [c2.android.mp3.decoder#631] Created output block pool with allocatorID 16 => poolID 460 - OK
+2026-02-03 19:55:17.112  6610-27720 CCodecBufferChannel     org.thoughtcrime.securesms           D  [c2.android.mp3.decoder#631] Configured output block pool ids 460 => OK
+2026-02-03 19:55:17.112  6610-27720 CCodecBufferChannel     org.thoughtcrime.securesms           I  [mId: 0] [audio-debug-dec] start: outputFormat: AMessage(what = 0x00000000) = {
+                                                                                                      int32_t buffer-batch-max-output-size = 0
+                                                                                                      int32_t buffer-batch-threshold-output-size = 0
+                                                                                                      int32_t channel-count = 2
+                                                                                                      string mime = "audio/raw"
+                                                                                                      int32_t sample-rate = 44100
+                                                                                                      int32_t encoder-delay = 576
+                                                                                                      int32_t encoder-padding = 576
+                                                                                                      int32_t android._config-pcm-encoding = 2
+                                                                                                    }
+2026-02-03 19:55:17.113  6610-27720 CCodecBufferChannel     org.thoughtcrime.securesms           D  [c2.android.mp3.decoder#631] start: updating output delay 0
+2026-02-03 19:55:17.113  6610-27720 DMABUFHEAPS             org.thoughtcrime.securesms           I  Using DMA-BUF heap named: system
+2026-02-03 19:55:17.113  6610-27721 CCodecBufferChannel     org.thoughtcrime.securesms           I  [c2.android.mp3.decoder#265] Created output block pool with allocatorID 16 => poolID 461 - OK
+2026-02-03 19:55:17.113  6610-27721 CCodecBufferChannel     org.thoughtcrime.securesms           D  [c2.android.mp3.decoder#265] Configured output block pool ids 461 => OK
+2026-02-03 19:55:17.113  6610-27721 CCodecBufferChannel     org.thoughtcrime.securesms           I  [mId: 1] [audio-debug-dec] start: outputFormat: AMessage(what = 0x00000000) = {
+                                                                                                      int32_t buffer-batch-max-output-size = 0
+                                                                                                      int32_t buffer-batch-threshold-output-size = 0
+                                                                                                      int32_t channel-count = 2
+                                                                                                      string mime = "audio/raw"
+                                                                                                      int32_t sample-rate = 44100
+                                                                                                      int32_t encoder-delay = 576
+                                                                                                      int32_t encoder-padding = 576
+                                                                                                      int32_t android._config-pcm-encoding = 2
+                                                                                                    }
+2026-02-03 19:55:17.113  6610-27721 CCodecBufferChannel     org.thoughtcrime.securesms           D  [c2.android.mp3.decoder#265] start: updating output delay 0
+2026-02-03 19:55:17.113  6610-27720 MediaCodec              org.thoughtcrime.securesms           I  [mId: 0] [audio-debug-dec] setState: STARTED
+2026-02-03 19:55:17.113  6610-27721 MediaCodec              org.thoughtcrime.securesms           I  [mId: 1] [audio-debug-dec] setState: STARTED
+2026-02-03 19:55:17.114  6610-27719 libc                    org.thoughtcrime.securesms           W  Access denied finding property "persist.vendor.camera.privapp.list"
+2026-02-03 19:55:17.114  6610-27719 CameraExtImplXiaoMi     org.thoughtcrime.securesms           D  initCameraDevice: 1
+2026-02-03 19:55:17.114  6610-27718 MediaCodec              org.thoughtcrime.securesms           I  [mId: 0] [audio-debug-dec] queueInputBuffer: index: 0 pts: 0 timediff: 0
+2026-02-03 19:55:17.115  6610-27717 MediaCodec              org.thoughtcrime.securesms           I  [mId: 1] [audio-debug-dec] queueInputBuffer: index: 0 pts: 0 timediff: 0
+2026-02-03 19:55:17.115  6610-27721 crime.securesms         org.thoughtcrime.securesms           W  AIBinder_linkToDeath is being called with a non-null cookie and no onUnlink callback set. This might not be intended. AIBinder_DeathRecipient_setOnUnlinked should be called first.
+2026-02-03 19:55:17.116  6610-27719 CameraManager           org.thoughtcrime.securesms           I  Open camera top activityName is org.thoughtcrime.securesms.WebRtcCallActivity
+2026-02-03 19:55:17.116  6610-27720 crime.securesms         org.thoughtcrime.securesms           W  AIBinder_linkToDeath is being called with a non-null cookie and no onUnlink callback set. This might not be intended. AIBinder_DeathRecipient_setOnUnlinked should be called first.
+2026-02-03 19:55:17.116  6610-27717 MediaCodec              org.thoughtcrime.securesms           I  [mId: 1] [audio-debug-dec] queueInputBuffer: index: 1 pts: 26122 timediff: 1
+2026-02-03 19:55:17.117  6610-27717 MediaCodec              org.thoughtcrime.securesms           I  [mId: 1] [audio-debug-dec] queueInputBuffer: index: 2 pts: 52244 timediff: 1
+2026-02-03 19:55:17.119  6610-27718 MediaCodec              org.thoughtcrime.securesms           I  [mId: 0] [audio-debug-dec] queueInputBuffer: index: 1 pts: 26122 timediff: 5
+2026-02-03 19:55:17.119  6610-27718 MediaCodec              org.thoughtcrime.securesms           I  [mId: 0] [audio-debug-dec] queueInputBuffer: index: 2 pts: 52244 timediff: 0
+2026-02-03 19:55:17.132  6610-6610  JobManager              org.thoughtcrime.securesms           I  onConstraintMet(NotInCallConstraintObse)
+2026-02-03 19:55:17.133  6610-6610  WebRtcCallActivity      org.thoughtcrime.securesms           I  Got message from service: <no change>
+2026-02-03 19:55:17.135  6610-6610  WebRtcAudioOutputToggle org.thoughtcrime.securesms           D  Switching button drawable to HANDSET
+2026-02-03 19:55:17.135  6610-26102 System.out              org.thoughtcrime.securesms           I  >>> AvatarHelper.getAvatar() path: /data/user/0/org.thoughtcrime.securesms/app_avatars/2
+2026-02-03 19:55:17.135  6610-26102 System.out              org.thoughtcrime.securesms           I  >>> Avatar file exists: false
+2026-02-03 19:55:17.135  6610-6610  JobManager              org.thoughtcrime.securesms           I  onConstraintMet(NotInCallConstraintObse)
+2026-02-03 19:55:17.135  6610-6610  WebRtcCallActivity      org.thoughtcrime.securesms           I  Got message from service: <no change>
+2026-02-03 19:55:17.135  6610-26102 System.out              org.thoughtcrime.securesms           I  >>> Avatar file length: 0
+2026-02-03 19:55:17.137  6610-6610  WebRtcAudioOutputToggle org.thoughtcrime.securesms           D  Switching button drawable to HANDSET
+2026-02-03 19:55:17.137  6610-6610  JobManager              org.thoughtcrime.securesms           I  onConstraintMet(NotInCallConstraintObse)
+2026-02-03 19:55:17.137  6610-6610  WebRtcCallActivity      org.thoughtcrime.securesms           I  Got message from service: WebRtcViewModel {
+                                                                                                     localParticipant=CallParticipant(callParticipantId=CallParticipantId(demuxId=-1, recipientId=RecipientId::2), isForwardingVideo=true, isVideoEnabled=true, isMicrophoneEnabled=true, handRaisedTimestamp=-1, isMediaKeysReceived=true, isScreenSharing=false)
+                                                                                                    }
+2026-02-03 19:55:17.139  6610-6610  JobManager              org.thoughtcrime.securesms           I  onConstraintMet(NotInCallConstraintObse)
+2026-02-03 19:55:17.139  6610-6610  WebRtcCallActivity      org.thoughtcrime.securesms           I  Got message from service: WebRtcViewModel {
+                                                                                                     activeDevice=SPEAKER_PHONE
+                                                                                                    }
+2026-02-03 19:55:17.160  6610-26235 System.out              org.thoughtcrime.securesms           I  DeprecatedClientPreventionInterceptor - Response: 200
+2026-02-03 19:55:17.160  6610-26235 CallManager             org.thoughtcrime.securesms           I  receivedHttpResponse(): requestId: 11
+2026-02-03 19:55:17.160  6610-26235 ringrtc                 org.thoughtcrime.securesms           I  call_manager.rs:727: API:CallManager:handle_received_http_response():
+2026-02-03 19:55:17.160  6610-26234 ringrtc                 org.thoughtcrime.securesms           I  call_manager.rs:1822: handle_received_http_response(): request_id: 11
+2026-02-03 19:55:17.160  6610-26234 ringrtc                 org.thoughtcrime.securesms           I  http.rs:165: http:DelegatingClient:received_response(): request_id: 11
+2026-02-03 19:55:17.160  6610-26234 ringrtc                 org.thoughtcrime.securesms           I  http.rs:172:   status_code: 200
+2026-02-03 19:55:17.165  6610-26235 System.out              org.thoughtcrime.securesms           I  --CALL LINK AUTH CREDENTIAL RESPONSE--
+2026-02-03 19:55:17.167  6610-27717 MediaCodec              org.thoughtcrime.securesms           I  [mId: 1] [audio-debug-dec] stop
+2026-02-03 19:55:17.167  6610-27721 MediaCodec              org.thoughtcrime.securesms           I  [mId: 1] [audio-debug-dec] Stats over last 57ms:
+2026-02-03 19:55:17.167  6610-27721 MediaCodec              org.thoughtcrime.securesms           I  [mId: 1] [audio-debug-dec] ClientName: org.thoughtcrime.securesms ComponentName: c2.android.mp3.decoder
+2026-02-03 19:55:17.167  6610-27721 MediaCodec              org.thoughtcrime.securesms           I  [mId: 1] [audio-debug-dec] Qinput: 34, DQinput: 34 success out of 34 tries
+2026-02-03 19:55:17.167  6610-27721 MediaCodec              org.thoughtcrime.securesms           I  [mId: 1] [audio-debug-dec] Render: 0, Drop: 34, DQoutput: 34 success out of 37 tries
+2026-02-03 19:55:17.167  6610-27721 MediaCodec              org.thoughtcrime.securesms           I  [mId: 1] [audio-debug-dec] setState: STOPPING
+2026-02-03 19:55:17.167  6610-27721 CCodecBufferChannel     org.thoughtcrime.securesms           D  [c2.android.mp3.decoder#265] MediaCodec discarded an unknown buffer
+2026-02-03 19:55:17.167  6610-27721 CCodecBufferChannel     org.thoughtcrime.securesms           D  [c2.android.mp3.decoder#265] MediaCodec discarded an unknown buffer
+2026-02-03 19:55:17.168  6610-27721 CCodecBufferChannel     org.thoughtcrime.securesms           D  [c2.android.mp3.decoder#265] MediaCodec discarded an unknown buffer
+2026-02-03 19:55:17.168  6610-27718 MediaCodec              org.thoughtcrime.securesms           I  [mId: 0] [audio-debug-dec] stop
+2026-02-03 19:55:17.168  6610-27720 MediaCodec              org.thoughtcrime.securesms           I  [mId: 0] [audio-debug-dec] Stats over last 58ms:
+2026-02-03 19:55:17.168  6610-27720 MediaCodec              org.thoughtcrime.securesms           I  [mId: 0] [audio-debug-dec] ClientName: org.thoughtcrime.securesms ComponentName: c2.android.mp3.decoder
+2026-02-03 19:55:17.168  6610-26478 ringrtc                 org.thoughtcrime.securesms           I  sdp_observer.rs:492: csd_observer_OnSuccess()
+2026-02-03 19:55:17.168  6610-27721 MediaCodec              org.thoughtcrime.securesms           I  [mId: 1] [audio-debug-dec] setState: INITIALIZED
+2026-02-03 19:55:17.168  6610-27720 MediaCodec              org.thoughtcrime.securesms           I  [mId: 0] [audio-debug-dec] Qinput: 38, DQinput: 38 success out of 40 tries
+2026-02-03 19:55:17.168  6610-27720 MediaCodec              org.thoughtcrime.securesms           I  [mId: 0] [audio-debug-dec] Render: 0, Drop: 38, DQoutput: 38 success out of 43 tries
+2026-02-03 19:55:17.168  6610-27720 MediaCodec              org.thoughtcrime.securesms           I  [mId: 0] [audio-debug-dec] setState: STOPPING
+2026-02-03 19:55:17.168  6610-27720 CCodecBufferChannel     org.thoughtcrime.securesms           D  [c2.android.mp3.decoder#631] MediaCodec discarded an unknown buffer
+2026-02-03 19:55:17.168  6610-26478 ringrtc                 org.thoughtcrime.securesms           I  sdp_observer.rs:416: on_create_success()
+2026-02-03 19:55:17.168  6610-27720 CCodecBufferChannel     org.thoughtcrime.securesms           D  [c2.android.mp3.decoder#631] MediaCodec discarded an unknown buffer
+2026-02-03 19:55:17.168  6610-27720 CCodecBufferChannel     org.thoughtcrime.securesms           D  [c2.android.mp3.decoder#631] MediaCodec discarded an unknown buffer
+2026-02-03 19:55:17.169  6610-27720 MediaCodec              org.thoughtcrime.securesms           I  [mId: 0] [audio-debug-dec] setState: INITIALIZED
+2026-02-03 19:55:17.169  6610-27720 MediaCodec              org.thoughtcrime.securesms           I  [mId: 0] [audio-debug-dec] setState: RELEASING
+2026-02-03 19:55:17.169  6610-27721 MediaCodec              org.thoughtcrime.securesms           I  [mId: 1] [audio-debug-dec] setState: RELEASING
+2026-02-03 19:55:17.169  6610-27720 MediaCodec              org.thoughtcrime.securesms           I  [mId: 0] [audio-debug-dec] setState: UNINITIALIZED
+2026-02-03 19:55:17.170  6610-27720 MediaCodec              org.thoughtcrime.securesms           I  MediaStub sendHdrInfo/sendFrameRateFloatCal/updateFrcAieAisState
+2026-02-03 19:55:17.170  6610-27721 MediaCodec              org.thoughtcrime.securesms           I  [mId: 1] [audio-debug-dec] setState: UNINITIALIZED
+2026-02-03 19:55:17.170  6610-27721 MediaCodec              org.thoughtcrime.securesms           I  MediaStub sendHdrInfo/sendFrameRateFloatCal/updateFrcAieAisState
+2026-02-03 19:55:17.175  6610-27304 CameraDevice-JV-1       org.thoughtcrime.securesms           D  close: X
+2026-02-03 19:55:17.175  6610-25981 CameraDevice-JV-1       org.thoughtcrime.securesms           W  Device error received, code 4, frame number 152, request ID 0, subseq ID 0
+2026-02-03 19:55:17.175  6610-25981 CameraDevice-JV-1       org.thoughtcrime.securesms           W  Device error received, code 4, frame number 153, request ID 0, subseq ID 0
+2026-02-03 19:55:17.175  6610-25981 CameraDevice-JV-1       org.thoughtcrime.securesms           W  Device error received, code 4, frame number 154, request ID 0, subseq ID 0
+2026-02-03 19:55:17.175  6610-25981 CameraDevice-JV-1       org.thoughtcrime.securesms           W  Device error received, code 4, frame number 149, request ID 0, subseq ID 0
+2026-02-03 19:55:17.175  6610-25981 CameraDevice-JV-1       org.thoughtcrime.securesms           W  Device error received, code 4, frame number 150, request ID 0, subseq ID 0
+2026-02-03 19:55:17.175  6610-25981 CameraDevice-JV-1       org.thoughtcrime.securesms           W  Device error received, code 5, frame number 149, request ID 0, subseq ID 0
+2026-02-03 19:55:17.176  6610-25981 CameraDevice-JV-1       org.thoughtcrime.securesms           W  Device error received, code 5, frame number 150, request ID 0, subseq ID 0
+2026-02-03 19:55:17.176  6610-26412 CameraDevice-JV-1       org.thoughtcrime.securesms           W  Device error received, code 5, frame number 151, request ID 0, subseq ID 0
+2026-02-03 19:55:17.176  6610-26412 CameraDevice-JV-1       org.thoughtcrime.securesms           W  Device error received, code 5, frame number 152, request ID 0, subseq ID 0
+2026-02-03 19:55:17.176  6610-26412 CameraDevice-JV-1       org.thoughtcrime.securesms           W  Device error received, code 5, frame number 153, request ID 0, subseq ID 0
+2026-02-03 19:55:17.176  6610-26412 CameraDevice-JV-1       org.thoughtcrime.securesms           W  Device error received, code 5, frame number 154, request ID 0, subseq ID 0
+2026-02-03 19:55:17.177  6610-26412 CameraDevice-JV-1       org.thoughtcrime.securesms           W  Device error received, code 0, frame number 0, request ID -1, subseq ID 0
+2026-02-03 19:55:17.181  6610-27720 MediaStub               org.thoughtcrime.securesms           V  MediaStub::GetImplInstance for debug create,0x6d2650b9c4
+2026-02-03 19:55:17.181  6610-27721 MediaImpl               org.thoughtcrime.securesms           D  FRC switch off: valueSupport : true, valueOn : false
+2026-02-03 19:55:17.181  6610-27721 MediaImpl               org.thoughtcrime.securesms           D  AIE switch off: valueSupport : true, valueOn : false
+2026-02-03 19:55:17.181  6610-27721 MediaImpl               org.thoughtcrime.securesms           D  AIS switch off: valueSupport : true, valueOn : false
+2026-02-03 19:55:17.181  6610-27720 MediaImpl               org.thoughtcrime.securesms           D  FRC switch off: valueSupport : true, valueOn : false
+2026-02-03 19:55:17.182  6610-27720 MediaImpl               org.thoughtcrime.securesms           D  AIE switch off: valueSupport : true, valueOn : false
+2026-02-03 19:55:17.182  6610-27720 MediaImpl               org.thoughtcrime.securesms           D  AIS switch off: valueSupport : true, valueOn : false
+2026-02-03 19:55:17.182  6610-26478 ringrtc                 org.thoughtcrime.securesms           I  sdp_observer.rs:667: ssd_observer_OnSuccess()
+2026-02-03 19:55:17.185  6610-27717 MediaCodecList          org.thoughtcrime.securesms           D  codecHandlesFormat: no format, so no extra checks
+2026-02-03 19:55:17.186  6610-27717 MediaCodec              org.thoughtcrime.securesms           I  The process name is org.thoughtcrime.securesms
+2026-02-03 19:55:17.187  6610-27717 VideoBox                org.thoughtcrime.securesms           I  VideoBox::VideoBox
+2026-02-03 19:55:17.187  6610-27717 VideoBox                org.thoughtcrime.securesms           I  [mId: 2] video-debug initVideobox: return false for videobox is not enabled
+2026-02-03 19:55:17.187  6610-27717 MediaCodec              org.thoughtcrime.securesms           I  init video box disabled for init not supported
+2026-02-03 19:55:17.187  6610-27717 VideoBox                org.thoughtcrime.securesms           I  VideoBox::~VideoBox
+2026-02-03 19:55:17.187  6610-27922 MediaCodec              org.thoughtcrime.securesms           I  [mId: 2] [audio-debug-dec] setState: INITIALIZING
+2026-02-03 19:55:17.187  6610-27922 CCodec                  org.thoughtcrime.securesms           D  allocate(c2.android.vorbis.decoder)
+2026-02-03 19:55:17.187  6610-27922 CCodec                  org.thoughtcrime.securesms           I  setting up 'default' as default (vendor) store
+2026-02-03 19:55:17.189  6610-27922 crime.securesms         org.thoughtcrime.securesms           W  AIBinder_linkToDeath is being called with a non-null cookie and no onUnlink callback set. This might not be intended. AIBinder_DeathRecipient_setOnUnlinked should be called first.
+2026-02-03 19:55:17.189  6610-27922 CCodec                  org.thoughtcrime.securesms           I  Created component [c2.android.vorbis.decoder]
+2026-02-03 19:55:17.189  6610-27922 CCodecConfig            org.thoughtcrime.securesms           D  read media type: audio/vorbis
+2026-02-03 19:55:17.190  6610-27922 ReflectedParamUpdater   org.thoughtcrime.securesms           D  extent() != 1 for single value type: algo.buffers.max-count.values
+2026-02-03 19:55:17.190  6610-27922 ReflectedParamUpdater   org.thoughtcrime.securesms           D  extent() != 1 for single value type: output.subscribed-indices.values
+2026-02-03 19:55:17.190  6610-27922 ReflectedParamUpdater   org.thoughtcrime.securesms           D  extent() != 1 for single value type: input.buffers.allocator-ids.values
+2026-02-03 19:55:17.190  6610-27922 ReflectedParamUpdater   org.thoughtcrime.securesms           D  extent() != 1 for single value type: output.buffers.allocator-ids.values
+2026-02-03 19:55:17.190  6610-27922 ReflectedParamUpdater   org.thoughtcrime.securesms           D  extent() != 1 for single value type: algo.buffers.allocator-ids.values
+2026-02-03 19:55:17.190  6610-27922 ReflectedParamUpdater   org.thoughtcrime.securesms           D  extent() != 1 for single value type: output.buffers.pool-ids.values
+2026-02-03 19:55:17.190  6610-27922 ReflectedParamUpdater   org.thoughtcrime.securesms           D  extent() != 1 for single value type: algo.buffers.pool-ids.values
+2026-02-03 19:55:17.191  6610-27922 CCodecConfig            org.thoughtcrime.securesms           I  query failed after returning 8 values (BAD_INDEX)
+2026-02-03 19:55:17.191  6610-27922 CCodecConfig            org.thoughtcrime.securesms           D  c2 config diff is Dict {
+                                                                                                      c2::u32 coded.bitrate.value = 64000
+                                                                                                      c2::u32 input.buffers.max-size.value = 32768
+                                                                                                      c2::u32 input.delay.value = 0
+                                                                                                      string input.media-type.value = "audio/vorbis"
+                                                                                                      c2::u32 output.large-frame.max-size = 0
+                                                                                                      c2::u32 output.large-frame.threshold-size = 0
+                                                                                                      string output.media-type.value = "audio/raw"
+                                                                                                      c2::u32 raw.channel-count.value = 1
+                                                                                                      c2::u32 raw.sample-rate.value = 48000
+                                                                                                    }
+2026-02-03 19:55:17.191  6610-27922 MediaCodec              org.thoughtcrime.securesms           I  [mId: 2] [audio-debug-dec] setState: INITIALIZED
+2026-02-03 19:55:17.192  6610-27717 MediaCodec              org.thoughtcrime.securesms           I  [mId: 2] [audio-debug-dec] configure: ClientName: org.thoughtcrime.securesms ComponentName: c2.android.vorbis.decoder
+2026-02-03 19:55:17.192  6610-27717 MediaCodec              org.thoughtcrime.securesms           I  [mId: 2] [audio-debug-dec] configure: ClientFormat: AMessage(what = 0x00000000) = {
+                                                                                                      string mime = "audio/vorbis"
+                                                                                                      int64_t durationUs = 816645
+                                                                                                      int32_t track-id = 1
+                                                                                                      Buffer csd-0 = {
+                                                                                                        00000000:  01 76 6f 72 62 69 73 00  00 00 00 02 80 bb 00 00  .vorbis.........
+                                                                                                        00000010:  ff ff ff ff 00 6b 03 00  ff ff ff ff b8 01        .....k........
+                                                                                                      }
+                                                                                                      Buffer *csd-1 = 0xb400006f439e6df0
+                                                                                                      int32_t bitrate = 224000
+                                                                                                      int32_t channel-count = 2
+                                                                                                      int32_t sample-rate = 48000
+                                                                                                      int32_t channel-mask = 3
+                                                                                                    }
+2026-02-03 19:55:17.192  6610-27717 MediaCodec              org.thoughtcrime.securesms           D  currery video type audio/vorbis
+2026-02-03 19:55:17.193  6610-27719 CameraDevice-JV-1       org.thoughtcrime.securesms           D  waitUntilIdle: E. id = 1
+2026-02-03 19:55:17.193  6610-27922 MediaCodec              org.thoughtcrime.securesms           I  [mId: 2] [audio-debug-dec] setState: CONFIGURING
+2026-02-03 19:55:17.193  6610-27922 CCodec                  org.thoughtcrime.securesms           D  [c2.android.vorbis.decoder] buffers are bound to CCodec for this session
+2026-02-03 19:55:17.193  6610-27922 CCodecConfig            org.thoughtcrime.securesms           D  no c2 equivalents for durationUs
+2026-02-03 19:55:17.193  6610-27922 CCodecConfig            org.thoughtcrime.securesms           D  no c2 equivalents for track-id
+2026-02-03 19:55:17.193  6610-27922 CCodecConfig            org.thoughtcrime.securesms           D  no c2 equivalents for csd-1
+2026-02-03 19:55:17.193  6610-27922 CCodecConfig            org.thoughtcrime.securesms           D  no c2 equivalents for flags
+2026-02-03 19:55:17.193  6610-27719 CameraDevice-JV-1       org.thoughtcrime.securesms           D  waitUntilIdle: X
+2026-02-03 19:55:17.193  6610-27922 CCodecConfig            org.thoughtcrime.securesms           D  c2 config diff is   c2::u32 coded.bitrate.value = 224000
+                                                                                                      c2::u32 raw.channel-count.value = 2
+2026-02-03 19:55:17.193  6610-27922 CCodec                  org.thoughtcrime.securesms           D  encoding statistics level = 0
+2026-02-03 19:55:17.193  6610-27922 CCodec                  org.thoughtcrime.securesms           D  setup formats input: AMessage(what = 0x00000000) = {
+                                                                                                      int32_t bitrate = 224000
+                                                                                                      int32_t channel-count = 2
+                                                                                                      int32_t max-input-size = 32768
+                                                                                                      string mime = "audio/vorbis"
+                                                                                                      int32_t sample-rate = 48000
+                                                                                                    }
+2026-02-03 19:55:17.193  6610-26478 ringrtc                 org.thoughtcrime.securesms           I  peer_connection_observer.rs:276: ringrtc!	1770119717193	rtc -> conn: ice_connection_change(Checking)	2
+2026-02-03 19:55:17.193  6610-27922 CCodec                  org.thoughtcrime.securesms           D  setup formats output: AMessage(what = 0x00000000) = {
+                                                                                                      int32_t buffer-batch-max-output-size = 0
+                                                                                                      int32_t buffer-batch-threshold-output-size = 0
+                                                                                                      int32_t channel-count = 2
+                                                                                                      string mime = "audio/raw"
+                                                                                                      int32_t sample-rate = 48000
+                                                                                                      int32_t channel-mask = 3
+                                                                                                      int32_t android._config-pcm-encoding = 2
+                                                                                                    }
+2026-02-03 19:55:17.193  6610-27922 CCodecConfig            org.thoughtcrime.securesms           I  query failed after returning 8 values (BAD_INDEX)
+2026-02-03 19:55:17.193  6610-27922 MediaCodec              org.thoughtcrime.securesms           I  [mId: 2] [audio-debug-dec] setState: CONFIGURED
+2026-02-03 19:55:17.193  6610-27717 MediaCodec              org.thoughtcrime.securesms           D  updateVppSurFpsValue :  0
+2026-02-03 19:55:17.193  6610-27922 MediaCodec              org.thoughtcrime.securesms           I  [mId: 2] [audio-debug-dec] setState: STARTING
+2026-02-03 19:55:17.194  6610-26478 ringrtc                 org.thoughtcrime.securesms           I  peer_connection_observer.rs:200: pc_observer_OnIceCandidate: 2
+2026-02-03 19:55:17.194  6610-26478 ringrtc                 org.thoughtcrime.securesms           I  peer_connection_observer.rs:200: pc_observer_OnIceCandidate: 2
+2026-02-03 19:55:17.194  6610-26478 ringrtc                 org.thoughtcrime.securesms           I  peer_connection_observer.rs:200: pc_observer_OnIceCandidate: 2
+2026-02-03 19:55:17.194  6610-26478 ringrtc                 org.thoughtcrime.securesms           I  peer_connection_observer.rs:200: pc_observer_OnIceCandidate: 2
+2026-02-03 19:55:17.194  6610-26478 ringrtc                 org.thoughtcrime.securesms           I  sdp_observer.rs:667: ssd_observer_OnSuccess()
+2026-02-03 19:55:17.194  6610-27348 ringrtc                 org.thoughtcrime.securesms           I  group_call.rs:2652: Connecting to group call SFU via UDP with ip=[47, 242, 157, 99] port=11102
+2026-02-03 19:55:17.194  6610-27348 ringrtc                 org.thoughtcrime.securesms           I  group_call.rs:2669: Connecting to group call SFU via TCP with ip=[47, 242, 157, 99] port=11102
+2026-02-03 19:55:17.194  6610-27922 CCodecBufferChannel     org.thoughtcrime.securesms           D  [c2.android.vorbis.decoder#947] Created input block pool with allocatorID 16 => poolID 19 - OK (0)
+2026-02-03 19:55:17.194  6610-27922 CCodecBufferChannel     org.thoughtcrime.securesms           I  [mId: 2] [audio-debug-dec] start: inputFormat: AMessage(what = 0x00000000) = {
+                                                                                                      int32_t bitrate = 224000
+                                                                                                      int32_t channel-count = 2
+                                                                                                      int32_t max-input-size = 32768
+                                                                                                      string mime = "audio/vorbis"
+                                                                                                      int32_t sample-rate = 48000
+                                                                                                    }
+2026-02-03 19:55:17.195  6610-27922 CCodecBufferChannel     org.thoughtcrime.securesms           I  [c2.android.vorbis.decoder#947] Created output block pool with allocatorID 16 => poolID 463 - OK
+2026-02-03 19:55:17.195  6610-27922 CCodecBufferChannel     org.thoughtcrime.securesms           D  [c2.android.vorbis.decoder#947] Configured output block pool ids 463 => OK
+2026-02-03 19:55:17.195  6610-27922 CCodecBufferChannel     org.thoughtcrime.securesms           I  [mId: 2] [audio-debug-dec] start: outputFormat: AMessage(what = 0x00000000) = {
+                                                                                                      int32_t buffer-batch-max-output-size = 0
+                                                                                                      int32_t buffer-batch-threshold-output-size = 0
+                                                                                                      int32_t channel-count = 2
+                                                                                                      string mime = "audio/raw"
+                                                                                                      int32_t sample-rate = 48000
+                                                                                                      int32_t channel-mask = 3
+                                                                                                      int32_t android._config-pcm-encoding = 2
+                                                                                                    }
+2026-02-03 19:55:17.195  6610-27922 CCodecBufferChannel     org.thoughtcrime.securesms           D  [c2.android.vorbis.decoder#947] start: updating output delay 0
+2026-02-03 19:55:17.195  6610-27922 MediaCodec              org.thoughtcrime.securesms           I  [mId: 2] [audio-debug-dec] setState: STARTED
+2026-02-03 19:55:17.196  6610-27922 crime.securesms         org.thoughtcrime.securesms           W  AIBinder_linkToDeath is being called with a non-null cookie and no onUnlink callback set. This might not be intended. AIBinder_DeathRecipient_setOnUnlinked should be called first.
+2026-02-03 19:55:17.196  6610-27717 MediaCodec              org.thoughtcrime.securesms           I  [mId: 2] [audio-debug-dec] queueInputBuffer: index: 2 pts: 0 timediff: 0
+2026-02-03 19:55:17.197  6610-27717 MediaCodec              org.thoughtcrime.securesms           I  [mId: 2] [audio-debug-dec] queueInputBuffer: index: 3 pts: 0 timediff: 1
+2026-02-03 19:55:17.197  6610-27717 MediaCodec              org.thoughtcrime.securesms           I  [mId: 2] [audio-debug-dec] queueInputBuffer: index: 0 pts: 2666 timediff: 0
+2026-02-03 19:55:17.198  6610-26476 rtp_transport.cc        org.thoughtcrime.securesms           W  (line 316): RtpTransport::SetIncomingRtpEnabled(1) was 0
+2026-02-03 19:55:17.198  6610-27348 ringrtc                 org.thoughtcrime.securesms           I  group_call.rs:2044: Disable audio and outgoing media because there are no other devices.
+2026-02-03 19:55:17.199  6610-27348 ringrtc                 org.thoughtcrime.securesms           I  group_call.rs:2063: Setting send rates to SendRates { min: None, start: None, max: Some(DataRate { size_per_second: DataSize { bits: 1000 } }) }
+2026-02-03 19:55:17.200  6610-27348 ringrtc                 org.thoughtcrime.securesms           I  http.rs:201: http:DelegatingClient:make_request()
+2026-02-03 19:55:17.200  6610-27348 ringrtc                 org.thoughtcrime.securesms           I  android_platform.rs:1649: send_request(): request_id: 12
+2026-02-03 19:55:17.200  6610-27348 CallManager             org.thoughtcrime.securesms           I  sendHttpRequest():
+2026-02-03 19:55:17.200  6610-27348 SignalCallManager       org.thoughtcrime.securesms           I  onSendHttpRequest(): request_id: 12
+2026-02-03 19:55:17.200  6610-27348 ringrtc                 org.thoughtcrime.securesms           I  call_manager.rs:2565: handle_remote_devices_changed(): DemuxIdsChanged
+2026-02-03 19:55:17.200  6610-27348 ringrtc                 org.thoughtcrime.securesms           I  android_platform.rs:1276: handle_remote_devices_changed():
+2026-02-03 19:55:17.200  6610-27348 CallManager             org.thoughtcrime.securesms           I  handleRemoteDevicesChanged(): remoteDeviceStates.size = 0
+2026-02-03 19:55:17.200  6610-27348 GroupCall               org.thoughtcrime.securesms           I  handleRemoteDevicesChanged():
+2026-02-03 19:55:17.200  6610-27348 ringrtc                 org.thoughtcrime.securesms           I  call_manager.rs:2555: handle_join_state_changed():
+2026-02-03 19:55:17.200  6610-27348 ringrtc                 org.thoughtcrime.securesms           I  android_platform.rs:1228: handle_join_state_changed():
+2026-02-03 19:55:17.200  6610-26463 SignalCallManager       org.thoughtcrime.securesms           V  Processing action: onRemoteDeviceStatesChanged, handler: GroupJoiningActionProce
+2026-02-03 19:55:17.200  6610-27348 CallManager             org.thoughtcrime.securesms           I  handleJoinStateChanged():
+2026-02-03 19:55:17.200  6610-26463 GroupJoiningActionProce org.thoughtcrime.securesms           I  handleGroupRemoteDeviceStateChanged():
+2026-02-03 19:55:17.200  6610-27348 GroupCall               org.thoughtcrime.securesms           I  handleJoinStateChanged():
+2026-02-03 19:55:17.200  6610-27348 SignalCallManager       org.thoughtcrime.securesms           I  onLocalDeviceStateChanged: localAdapterType: UNKNOWN
+2026-02-03 19:55:17.200  6610-27348 ringrtc                 org.thoughtcrime.securesms           I  peer_connection.rs:361: PeerConnection.configure_audio_encoders(AudioEncoderConfig { initial_packet_size_ms: 60, min_packet_size_ms: 60, max_packet_size_ms: 60, initial_bitrate_bps: 32000, min_bitrate_bps: 32000, max_bitrate_bps: 32000, bandwidth: Auto, complexity: 9, adaptation: 0, enable_cbr: true, enable_dtx: true, enable_fec: true })
+2026-02-03 19:55:17.200  6610-26463 SignalCallManager       org.thoughtcrime.securesms           V  Processing action: onLocalDeviceStateChanged, handler: GroupJoiningActionProce
+2026-02-03 19:55:17.201  6610-26463 GroupJoiningActionProce org.thoughtcrime.securesms           I  handleGroupLocalDeviceStateChanged():
+2026-02-03 19:55:17.201  6610-26463 GroupJoiningActionProce org.thoughtcrime.securesms           I  local device changed: CONNECTING JOINED
+2026-02-03 19:55:17.201  6610-26463 ActiveCallManager       org.thoughtcrime.securesms           I  update 3 RecipientId::4 true
+2026-02-03 19:55:17.201  6610-26463 SafeForegroundService   org.thoughtcrime.securesms           D  [update] Current state: STARTING
+2026-02-03 19:55:17.201  6610-26463 SafeForegroundService   org.thoughtcrime.securesms           D  [update] Updating service.
+2026-02-03 19:55:17.202  6610-26463 ActiveCallManager       org.thoughtcrime.securesms           I  Sending audio command [Start] to FullSignalAudioManagerApi31
+2026-02-03 19:55:17.202  6610-26463 AccelerometerListener   org.thoughtcrime.securesms           D  enable(false)
+2026-02-03 19:55:17.204  6610-27714 IncomingRinger          org.thoughtcrime.securesms           I  Cancelling vibrator
+2026-02-03 19:55:17.205  6610-27714 AudioManagerCompat      org.thoughtcrime.securesms           W  Trying again to request audio focus
+2026-02-03 19:55:17.208  6610-6610  JobManager              org.thoughtcrime.securesms           I  onConstraintMet(NotInCallConstraintObse)
+2026-02-03 19:55:17.208  6610-6610  WebRtcCallActivity      org.thoughtcrime.securesms           I  Got message from service: <no change>
+2026-02-03 19:55:17.210  6610-6610  ActiveCallManager       org.thoughtcrime.securesms           D  [onStartCommand] action: update
+2026-02-03 19:55:17.210  6610-27714 SignalAudioManager31    org.thoughtcrime.securesms           D  Started
+2026-02-03 19:55:17.211  6610-28031 AudioTrackStub          org.thoughtcrime.securesms           D  AudioTrackStub() create
+2026-02-03 19:55:17.214  6610-28031 AudioTrackImpl          org.thoughtcrime.securesms           I  initAudioTrackImpl()
+2026-02-03 19:55:17.214  6610-28031 AudioTrack              org.thoughtcrime.securesms           D  set(): (sessionId=0), mcallback is 1, streamType -1, sampleRate 44100, format 0x1, channelMask 0x3, frameCount 0, flags 0, notificationFrames 0,transferType 0, mClientAttributionSource AttributionSourceState{pid: -1, uid: -1, deviceId: 0, packageName: org.thoughtcrime.securesms, attributionTag: (null), token: binder:0xb400006fd3c01b90, renouncedPermissions: (null), next: []}
+2026-02-03 19:55:17.222  6610-27717 MediaCodec              org.thoughtcrime.securesms           I  [mId: 2] [audio-debug-dec] stop
+2026-02-03 19:55:17.222  6610-27922 MediaCodec              org.thoughtcrime.securesms           I  [mId: 2] [audio-debug-dec] Stats over last 29ms:
+2026-02-03 19:55:17.222  6610-27922 MediaCodec              org.thoughtcrime.securesms           I  [mId: 2] [audio-debug-dec] ClientName: org.thoughtcrime.securesms ComponentName: c2.android.vorbis.decoder
+2026-02-03 19:55:17.222  6610-27922 MediaCodec              org.thoughtcrime.securesms           I  [mId: 2] [audio-debug-dec] Qinput: 48, DQinput: 48 success out of 48 tries
+2026-02-03 19:55:17.222  6610-27922 MediaCodec              org.thoughtcrime.securesms           I  [mId: 2] [audio-debug-dec] Render: 0, Drop: 47, DQoutput: 47 success out of 51 tries
+2026-02-03 19:55:17.222  6610-27922 MediaCodec              org.thoughtcrime.securesms           I  [mId: 2] [audio-debug-dec] setState: STOPPING
+2026-02-03 19:55:17.223  6610-27922 CCodecBufferChannel     org.thoughtcrime.securesms           D  [c2.android.vorbis.decoder#947] MediaCodec discarded an unknown buffer
+2026-02-03 19:55:17.223  6610-27922 CCodecBufferChannel     org.thoughtcrime.securesms           D  [c2.android.vorbis.decoder#947] MediaCodec discarded an unknown buffer
+2026-02-03 19:55:17.223  6610-27922 CCodecBufferChannel     org.thoughtcrime.securesms           D  [c2.android.vorbis.decoder#947] MediaCodec discarded an unknown buffer
+2026-02-03 19:55:17.223  6610-27922 MediaCodec              org.thoughtcrime.securesms           I  [mId: 2] [audio-debug-dec] setState: INITIALIZED
+2026-02-03 19:55:17.223  6610-27922 MediaCodec              org.thoughtcrime.securesms           I  [mId: 2] [audio-debug-dec] setState: RELEASING
+2026-02-03 19:55:17.224  6610-27922 MediaCodec              org.thoughtcrime.securesms           I  [mId: 2] [audio-debug-dec] setState: UNINITIALIZED
+2026-02-03 19:55:17.224  6610-27922 MediaCodec              org.thoughtcrime.securesms           I  MediaStub sendHdrInfo/sendFrameRateFloatCal/updateFrcAieAisState
+2026-02-03 19:55:17.224  6610-27922 MediaImpl               org.thoughtcrime.securesms           D  FRC switch off: valueSupport : true, valueOn : false
+2026-02-03 19:55:17.224  6610-27922 MediaImpl               org.thoughtcrime.securesms           D  AIE switch off: valueSupport : true, valueOn : false
+2026-02-03 19:55:17.224  6610-27922 MediaImpl               org.thoughtcrime.securesms           D  AIS switch off: valueSupport : true, valueOn : false
+2026-02-03 19:55:17.229  6610-26463 ProximityLock           org.thoughtcrime.securesms           D  Released proximity lock:false
+2026-02-03 19:55:17.229  6610-26463 LockManager             org.thoughtcrime.securesms           D  Entered Lock State: FULL
+2026-02-03 19:55:17.229  6610-26463 GroupCall               org.thoughtcrime.securesms           I  setOutgoingVideoMuted():
+2026-02-03 19:55:17.229  6610-26463 ringrtc                 org.thoughtcrime.securesms           I  call_manager.rs:2995: set_outgoing_video_muted(): id: 2
+2026-02-03 19:55:17.229  6610-26463 GroupCall               org.thoughtcrime.securesms           I  setOutgoingAudioMuted():
+2026-02-03 19:55:17.229  6610-26463 ringrtc                 org.thoughtcrime.securesms           I  call_manager.rs:2994: set_outgoing_audio_muted(): id: 2
+2026-02-03 19:55:17.229  6610-26463 GroupCall               org.thoughtcrime.securesms           I  setDataMode():
+2026-02-03 19:55:17.229  6610-26463 ringrtc                 org.thoughtcrime.securesms           I  call_manager.rs:2999: set_data_mode(): id: 2
+2026-02-03 19:55:17.229  6610-26463 GroupCall               org.thoughtcrime.securesms           I  ring():
+2026-02-03 19:55:17.229  6610-26463 ringrtc                 org.thoughtcrime.securesms           I  call_manager.rs:2993: group_ring(): id: 2
+2026-02-03 19:55:17.229  6610-27348 ringrtc                 org.thoughtcrime.securesms           W  group_call.rs:1914: Failed to send heartbeat after updating video mute state: Unable to send RTP data (if the SFU is running locally, remember to turn off RingRTC-AnyAddressPortsKillSwitch)
+2026-02-03 19:55:17.229  6610-26463 GroupConnectedActionPro org.thoughtcrime.securesms           I  handleGroupJoinedMembershipChanged():
+2026-02-03 19:55:17.229  6610-26463 GroupCall               org.thoughtcrime.securesms           I  getPeekInfo():
+2026-02-03 19:55:17.229  6610-26463 GroupCall               org.thoughtcrime.securesms           I  getPeekInfo():
+2026-02-03 19:55:17.229  6610-26463 SignalCallManager       org.thoughtcrime.securesms           I  sendGroupCallUpdateMessage id: RecipientId::4 era: 7d0b5d2d86d49534 isIncoming: true isJoinEvent: true
+2026-02-03 19:55:17.229  6610-27348 ringrtc                 org.thoughtcrime.securesms           W  group_call.rs:1893: Failed to send heartbeat after updating audio mute state: Unable to send RTP data (if the SFU is running locally, remember to turn off RingRTC-AnyAddressPortsKillSwitch)
+2026-02-03 19:55:17.233  6610-26017 Job                     org.thoughtcrime.securesms           I  [JOB::32015e3e-5ecd-4837-8cc0-3511c9af773f][GroupCallUpdateSendJob] onSubmit() (Time Since Submission: 3 ms, Lifespan: 300000 ms, Run Attempt: 1/3, Queue: RecipientId::4)
+2026-02-03 19:55:17.233  6610-26017 Job                     org.thoughtcrime.securesms           I  [JOB::ff60e170-e6f8-4596-83d6-7594b9ec4e69][CallSyncEventJob] onSubmit() (Time Since Submission: 3 ms, Lifespan: 86400000 ms, Run Attempt: 1/Unlimited, Queue: CallSyncEventJob)
+2026-02-03 19:55:17.233  6610-26018 JobSchedulerScheduler   org.thoughtcrime.securesms           I  JobScheduler enqueue of  (0)
+2026-02-03 19:55:17.234  6610-26030 JobRunner               org.thoughtcrime.securesms           I  [JOB::32015e3e-5ecd-4837-8cc0-3511c9af773f][GroupCallUpdateSendJob][2] Running job. (Time Since Submission: 3 ms, Lifespan: 300000 ms, Run Attempt: 1/3, Queue: RecipientId::4)
+2026-02-03 19:55:17.236  6610-26406 ConversationDataSource  org.thoughtcrime.securesms           D  [size(), thread 2] 0 ms
+2026-02-03 19:55:17.237  6610-26235 System.out              org.thoughtcrime.securesms           I  make storage request url:http://47.242.157.99:11008/v2/groups/token
+2026-02-03 19:55:17.237  6610-26476 tcp_port.cc             org.thoughtcrime.securesms           W  (line 475): Socket is bound to the address:10.28.59.x, rather than an address associated with network:Net[any:0.0.0.x/0:Wildcard:id=0]. Still allowing it since it's the 'any' address, possibly caused by multiple_routes being disabled.
+2026-02-03 19:55:17.238  6610-26235 System.out              org.thoughtcrime.securesms           I  -okhttpClient wait newCall-
+2026-02-03 19:55:17.238  6610-26235 System.out              org.thoughtcrime.securesms           I  wait call execute
+2026-02-03 19:55:17.238  6610-26235 System.out              org.thoughtcrime.securesms           I  DeprecatedClientPreventionInterceptor - START
+2026-02-03 19:55:17.238  6610-26235 System.out              org.thoughtcrime.securesms           I  Request URL: http://47.242.157.99:11008/v2/groups/token
+2026-02-03 19:55:17.238  6610-26235 System.out              org.thoughtcrime.securesms           I  isClientDeprecated:  false
+2026-02-03 19:55:17.238  6610-26235 System.out              org.thoughtcrime.securesms           I  DeprecatedClientPreventionInterceptor - PROCEEDING
+2026-02-03 19:55:17.241  6610-6610  WebRtcCallActivity      org.thoughtcrime.securesms           I  Got message from service: WebRtcViewModel {
+                                                                                                     state=CALL_CONNECTED
+                                                                                                     callConnectedTime=1770119717229
+                                                                                                    }
+2026-02-03 19:55:17.242  6610-26463 SignalCallManager       org.thoughtcrime.securesms           V  Processing action: onFullyInitialized, handler: GroupConnectedActionPro
+2026-02-03 19:55:17.244  6610-26030 GroupSendUtil           org.thoughtcrime.securesms           I  Starting group send. GroupId: __signal_group__v2__!28687dc5b1223712a3e8ac3013aa0d65c57184712fa08febfaf9c0cc11de81fd, DistributionId: b5d2d43b-551f-47a5-9cee-dc90cf293750 RelatedMessageId: none, Targets: 1, RecipientUpdate: false, Operation: DataSendOperation
+2026-02-03 19:55:17.244  6610-26030 SealedSenderAccessUtil  org.thoughtcrime.securesms           I  Unidentified: 1, Other: 0
+2026-02-03 19:55:17.247  6610-26030 GroupSendUtil           org.thoughtcrime.securesms           I  Too few sender-key-capable users (1). Doing all legacy sends.
+2026-02-03 19:55:17.247  6610-26030 GroupSendUtil           org.thoughtcrime.securesms           I  Need to do 1 legacy sends.
+2026-02-03 19:55:17.247  6610-26478 ringrtc                 org.thoughtcrime.securesms           I  peer_connection_observer.rs:306: ringrtc!	1770119717247	rtc -> conn: ice_network_route_change(NetworkRoute { local_adapter_type: Cellular, local_adapter_type_under_vpn: Unknown, local_relayed: false, local_relay_protocol: Unknown, remote_relayed: false })	2
+2026-02-03 19:55:17.247  6610-27337 ConversationDataSource  org.thoughtcrime.securesms           D  [load(0, 6), thread 2] messages: 2.18, extra-data: 4.46, models: 0.08, conversion: 1.90, header: 2.01, total: 10.63 || mentions: 0.98, is-quoted: 0.40, reactions: 0.94, attachments: 1.80, payments: 0.03, calls: 0.31 >> cpuTime: 4.76, wallTime: 2.91
+2026-02-03 19:55:17.248  6610-26478 ringrtc                 org.thoughtcrime.securesms           I  peer_connection_observer.rs:321: ice_network_route_change	2
+                                                                                                     local: candidate:2879229705 1 udp 2122194687 [REDACTED ipv4] 43430 typ host generation 0 ufrag HWND network-id 3 network-cost 900
+                                                                                                    remote: candidate: 1 udp 0 [REDACTED ipv4] 11102 typ host generation 0 ufrag +Azo
+2026-02-03 19:55:17.248  6610-26478 ringrtc                 org.thoughtcrime.securesms           I  peer_connection_observer.rs:276: ringrtc!	1770119717248	rtc -> conn: ice_connection_change(Connected)	2
+2026-02-03 19:55:17.248  6610-27348 ringrtc                 org.thoughtcrime.securesms           I  call_manager.rs:2546: handle_network_route_changed():
+2026-02-03 19:55:17.248  6610-27348 ringrtc                 org.thoughtcrime.securesms           I  android_platform.rs:1001: handle_network_route_changed(): client_id: 2, network_route: NetworkRoute { local_adapter_type: Cellular, local_adapter_type_under_vpn: Unknown, local_relayed: false, local_relay_protocol: Unknown, remote_relayed: false }
+2026-02-03 19:55:17.248  6610-27348 CallManager             org.thoughtcrime.securesms           I  handleNetworkRouteChanged():
+2026-02-03 19:55:17.248  6610-27348 GroupCall               org.thoughtcrime.securesms           I  handleNetworkRouteChanged():
+2026-02-03 19:55:17.248  6610-27348 SignalCallManager       org.thoughtcrime.securesms           I  onLocalDeviceStateChanged: localAdapterType: CELLULAR
+2026-02-03 19:55:17.248  6610-27348 ringrtc                 org.thoughtcrime.securesms           I  call_manager.rs:2532: handle_connection_state_changed():
+2026-02-03 19:55:17.248  6610-26463 SignalCallManager       org.thoughtcrime.securesms           V  Processing action: onLocalDeviceStateChanged, handler: GroupConnectedActionPro
+2026-02-03 19:55:17.248  6610-27348 ringrtc                 org.thoughtcrime.securesms           I  android_platform.rs:964: handle_connection_state_changed():
+2026-02-03 19:55:17.249  6610-26463 GroupConnectedActionPro org.thoughtcrime.securesms           I  handleGroupLocalDeviceStateChanged():
+2026-02-03 19:55:17.249  6610-27348 CallManager             org.thoughtcrime.securesms           I  handleConnectionStateChanged():
+2026-02-03 19:55:17.249  6610-27348 GroupCall               org.thoughtcrime.securesms           I  handleConnectionStateChanged():
+2026-02-03 19:55:17.249  6610-27348 SignalCallManager       org.thoughtcrime.securesms           I  onLocalDeviceStateChanged: localAdapterType: CELLULAR
+2026-02-03 19:55:17.249  6610-26463 GroupConnectedActionPro org.thoughtcrime.securesms           I  local device changed: CONNECTED JOINED
+2026-02-03 19:55:17.249  6610-26463 SignalCallManager       org.thoughtcrime.securesms           V  Processing action: onLocalDeviceStateChanged, handler: GroupConnectedActionPro
+2026-02-03 19:55:17.249  6610-26463 GroupConnectedActionPro org.thoughtcrime.securesms           I  handleGroupLocalDeviceStateChanged():
+2026-02-03 19:55:17.249  6610-26463 GroupConnectedActionPro org.thoughtcrime.securesms           I  local device changed: CONNECTED JOINED
+2026-02-03 19:55:17.253  6610-26030 SignalServ...sageSender org.thoughtcrime.securesms           D  [1770119717235] Sending a data message.
+2026-02-03 19:55:17.253  6610-26030 System.out              org.thoughtcrime.securesms           I  Send msg
+2026-02-03 19:55:17.253  6610-26030 System.out              org.thoughtcrime.securesms           I  get Encrypted msg
+2026-02-03 19:55:17.254  6610-26030 System.out              org.thoughtcrime.securesms           I  get Encrypted msg content:Optional[Content{dataMessage=DataMessage{groupV2=GroupContextV2{masterKey=[hex=74af9643655987414543e630d906a4837214fbb7dc031d32a5460fab43f4af17], revision=0}, expireTimerVersion=1, timestamp=1770119717235, requiredProtocolVersion=0, groupCallUpdate=GroupCallUpdate{eraId=7d0b5d2d86d49534}}}]
+2026-02-03 19:55:17.254  6610-26030 System.out              org.thoughtcrime.securesms           I  消息加密
+2026-02-03 19:55:17.254  6610-26030 System.out              org.thoughtcrime.securesms           I  loadSession 获取对应address 的 会话记录 :742680e3-0557-4aa7-8cfc-18b08d816dae
+2026-02-03 19:55:17.254  6610-26030 System.out              org.thoughtcrime.securesms           I  storeSession 保存会话记录 record : org.signal.libsignal.protocol.state.SessionRecord@49c286b
+2026-02-03 19:55:17.256  6610-26476 ringrtc                 org.thoughtcrime.securesms           I  group_call.rs:3931: ringrtc_stats!,sfu,recv,800,0,0
+2026-02-03 19:55:17.257  6610-27348 ringrtc                 org.thoughtcrime.securesms           I  group_call.rs:4009: SFU notified that a remote device has joined or left, requesting update
+2026-02-03 19:55:17.257  6610-27348 ringrtc                 org.thoughtcrime.securesms           I  http.rs:201: http:DelegatingClient:make_request()
+2026-02-03 19:55:17.257  6610-27348 ringrtc                 org.thoughtcrime.securesms           I  android_platform.rs:1649: send_request(): request_id: 13
+2026-02-03 19:55:17.257  6610-27348 CallManager             org.thoughtcrime.securesms           I  sendHttpRequest():
+2026-02-03 19:55:17.257  6610-27348 SignalCallManager       org.thoughtcrime.securesms           I  onSendHttpRequest(): request_id: 13
+2026-02-03 19:55:17.257  6610-26030 System.out              org.thoughtcrime.securesms           I  loadSession 获取对应address 的 会话记录 :742680e3-0557-4aa7-8cfc-18b08d816dae
+2026-02-03 19:55:17.260  6610-6610  System.out              org.thoughtcrime.securesms           I  request set Avatar Image View ???? 1
+2026-02-03 19:55:17.260  6610-6610  System.out              org.thoughtcrime.securesms           I  contactPhoto = org.thoughtcrime.securesms.contacts.avatars.ProfileContactPhoto@7be1
+2026-02-03 19:55:17.260  6610-6610  System.out              org.thoughtcrime.securesms           I  request set Avatar Image View ???? 2
+2026-02-03 19:55:17.260  6610-6610  System.out              org.thoughtcrime.securesms           I  set Avatar Image View ????
+2026-02-03 19:55:17.260  6610-6610  System.out              org.thoughtcrime.securesms           I  request set Avatar Image View ???? 4
+2026-02-03 19:55:17.264  6610-6610  WebRtcCallActivity      org.thoughtcrime.securesms           I  Got message from service: <no change>
+2026-02-03 19:55:17.265  6610-6610  WebRtcCallActivity      org.thoughtcrime.securesms           I  Got message from service: <no change>
+2026-02-03 19:55:17.265  6610-6610  WebRtcCallActivity      org.thoughtcrime.securesms           I  Got message from service: <no change>
+2026-02-03 19:55:17.266  6610-6610  JobSchedulerScheduler   org.thoughtcrime.securesms           I  Waking due to job: 0
+2026-02-03 19:55:17.275  6610-26095 System.out              org.thoughtcrime.securesms           I  >>> AvatarHelper.getAvatar() path: /data/user/0/org.thoughtcrime.securesms/app_avatars/2
+2026-02-03 19:55:17.275  6610-26095 System.out              org.thoughtcrime.securesms           I  >>> Avatar file exists: false
+2026-02-03 19:55:17.275  6610-26095 System.out              org.thoughtcrime.securesms           I  >>> Avatar file length: 0
+2026-02-03 19:55:17.292  6610-26017 Job                     org.thoughtcrime.securesms           I  [JOB::ed89aaef-b246-489a-95e0-352e95e1d22b][RetrieveProfileAvatarJob] onSubmit() (Time Since Submission: 1 ms, Lifespan: 3600000 ms, Run Attempt: 1/1, Queue: RetrieveProfileAvatarJob::RecipientId::2)
+2026-02-03 19:55:17.292  6610-26018 JobSchedulerScheduler   org.thoughtcrime.securesms           I  JobScheduler enqueue of NETWORK (-1733499378)
+2026-02-03 19:55:17.294  6610-26029 JobRunner               org.thoughtcrime.securesms           I  [JOB::ed89aaef-b246-489a-95e0-352e95e1d22b][RetrieveProfileAvatarJob][1] Running job. (Time Since Submission: 3 ms, Lifespan: 3600000 ms, Run Attempt: 1/1, Queue: RetrieveProfileAvatarJob::RecipientId::2)
+2026-02-03 19:55:17.294  6610-28031 xlog_client             org.thoughtcrime.securesms           V  xlog_check_permission event name audio_track_message level 0
+2026-02-03 19:55:17.294  6610-28031 AudioTrackImpl          org.thoughtcrime.securesms           I  before scaleVolumeForVideo L:0.034836 R:0.034836 and the pakage is org.thoughtcrime.securesms
+2026-02-03 19:55:17.294  6610-28031 AudioTrack              org.thoughtcrime.securesms           I  AudioTrack::setVolume L:0.034836 R:0.034836 sessionid=18497
+2026-02-03 19:55:17.294  6610-28031 AudioTrack              org.thoughtcrime.securesms           I  start(2266): prior state:STATE_STOPPED packageName: org.thoughtcrime.securesms
+2026-02-03 19:55:17.295  6610-26029 JobRunner               org.thoughtcrime.securesms           I  [JOB::ed89aaef-b246-489a-95e0-352e95e1d22b][RetrieveProfileAvatarJob][1] Job finished with result SUCCESS in 1 ms. (Time Since Submission: 4 ms, Lifespan: 3600000 ms, Run Attempt: 1/1, Queue: RetrieveProfileAvatarJob::RecipientId::2)
+2026-02-03 19:55:17.308  6610-6610  JobSchedulerScheduler   org.thoughtcrime.securesms           I  Waking due to job: -1733499378
+2026-02-03 19:55:17.329  6610-26030 System.out              org.thoughtcrime.securesms           I  Send msg
+2026-02-03 19:55:17.329  6610-26030 System.out              org.thoughtcrime.securesms           I  get Encrypted msg
+2026-02-03 19:55:17.329  6610-26030 System.out              org.thoughtcrime.securesms           I  get Encrypted msg content:Optional[Content{syncMessage=SyncMessage{sent=Sent{destinationE164=+8613599665580, destinationServiceId=742680e3-0557-4aa7-8cfc-18b08d816dae, timestamp=1770119717235, message=DataMessage{groupV2=GroupContextV2{masterKey=[hex=74af9643655987414543e630d906a4837214fbb7dc031d32a5460fab43f4af17], revision=0}, expireTimerVersion=1, timestamp=1770119717235, requiredProtocolVersion=0, groupCallUpdate=GroupCallUpdate{eraId=7d0b5d2d86d49534}}, unidentifiedStatus=[UnidentifiedDeliveryStatus{destinationServiceId=742680e3-0557-4aa7-8cfc-18b08d816dae, unidentified=false}], isRecipientUpdate=false}, padding=[size=94 hex=19d2f9a15ef59640ab620e1c0947e4f47bec579d32c19496481798d1ed8db51e4cf8777287eee9175f64fa5f061d91ccd31ce12838c746f4b17839d35e282eb1…]}}]
+2026-02-03 19:55:17.329  6610-26030 SignalServ...sageSender org.thoughtcrime.securesms           D  [sendMessage][1770119717235] Sending a sent sync message to devices: []
+2026-02-03 19:55:17.387  6610-26030 GroupSendUtil           org.thoughtcrime.securesms           D  Successfully sent using 1:1 to 1/1 legacy targets.
+2026-02-03 19:55:17.387  6610-26030 GroupCallUpdateSendJob  org.thoughtcrime.securesms           I  Completed now: 1, Remaining: 0
+2026-02-03 19:55:17.388  6610-26030 JobRunner               org.thoughtcrime.securesms           I  [JOB::32015e3e-5ecd-4837-8cc0-3511c9af773f][GroupCallUpdateSendJob][2] Job finished with result SUCCESS in 154 ms. (Time Since Submission: 157 ms, Lifespan: 300000 ms, Run Attempt: 1/3, Queue: RecipientId::4)
+2026-02-03 19:55:17.389  6610-26030 JobRunner               org.thoughtcrime.securesms           I  [JOB::ff60e170-e6f8-4596-83d6-7594b9ec4e69][CallSyncEventJob][2] Running job. (Time Since Submission: 158 ms, Lifespan: 86400000 ms, Run Attempt: 1/Unlimited, Queue: CallSyncEventJob)
+2026-02-03 19:55:17.390  6610-26030 System.out              org.thoughtcrime.securesms           I  Send msg
+2026-02-03 19:55:17.390  6610-26030 System.out              org.thoughtcrime.securesms           I  get Encrypted msg
+2026-02-03 19:55:17.390  6610-26030 System.out              org.thoughtcrime.securesms           I  get Encrypted msg content:Optional[Content{syncMessage=SyncMessage{padding=[size=170 hex=adc9f74a2c58eebb5306235e62da44f126ba235e5a6b3cbe198ea70c9ec88294b8ca69a1e07d938f28bf5a02e0d34b628b0431412c9fc3680f0c8cb549590ed6…], callEvent=CallEvent{conversationId=[hex=28687dc5b1223712a3e8ac3013aa0d65c57184712fa08febfaf9c0cc11de81fd], id=9010397929601799476, timestamp=1770119717390, type=GROUP_CALL, direction=INCOMING, event=ACCEPTED}}}]
+2026-02-03 19:55:17.449  6610-26030 CallSyncEventJob        org.thoughtcrime.securesms           I  Successfully sent all sync messages.
+2026-02-03 19:55:17.449  6610-26030 JobRunner               org.thoughtcrime.securesms           I  [JOB::ff60e170-e6f8-4596-83d6-7594b9ec4e69][CallSyncEventJob][2] Job finished with result SUCCESS in 60 ms. (Time Since Submission: 218 ms, Lifespan: 86400000 ms, Run Attempt: 1/Unlimited, Queue: CallSyncEventJob)
+2026-02-03 19:55:17.495  6610-27719 crime.securesms         org.thoughtcrime.securesms           I  EglImage dataspace changed, need recreate
+2026-02-03 19:55:17.496  6610-27719 SurfaceTextureEglRender org.thoughtcrime.securesms           D  Reporting frame resolution changed to 640x360 with rotation 270
+2026-02-03 19:55:17.496  6610-27719 SurfaceTextureEglRender org.thoughtcrime.securesms           D  Reporting frame resolution changed to 640x360 with rotation 270
+2026-02-03 19:55:17.521  6610-27719 crime.securesms         org.thoughtcrime.securesms           I  EglImage dataspace changed, need recreate
+2026-02-03 19:55:17.540  6610-27719 crime.securesms         org.thoughtcrime.securesms           I  EglImage dataspace changed, need recreate
+2026-02-03 19:55:17.541  6610-25963 crime.securesms         org.thoughtcrime.securesms           I  This is non sticky GC, maxfree is 16777216 minfree is 8388608
+2026-02-03 19:55:17.557  6610-26235 System.out              org.thoughtcrime.securesms           I  DeprecatedClientPreventionInterceptor - Response: 200
+2026-02-03 19:55:17.557  6610-26235 SignalCallManager       org.thoughtcrime.securesms           I  Got group membership token. Length: 165, Token: 2:81adde5ffde3f30591b20229d2848652c57d0978d58cec5409177700335764cd:28687dc5b1223712a3e8ac3013aa0d65c57184712fa08febfaf9c0cc11de81fd:1770119717:1:3aa10503351d6e982f01
+2026-02-03 19:55:17.557  6610-26235 SignalCallManager       org.thoughtcrime.securesms           W  DEBUG_CALL: Identity Key (ACI) (Hex): 056ce03d7173c46f95d7f010cc4284738fe6e8321f63121da7ba9a6abf0824a6c956e9ab4bd29c9e303babe41d6273bf138b727f673627130812bcefa368e602e5
+2026-02-03 19:55:17.557  6610-26235 SignalCallManager       org.thoughtcrime.securesms           W  DEBUG_CALL: Identity Key (PNI) (Hex): 0522685f3aec73841a222f69920af2d89855f52a70b2620026eb8c3c5c3e74955c3bfc6fdfcadf4110f10dc7237996095fedec4553e0984de0076e6879ae66dd50
+2026-02-03 19:55:17.557  6610-26235 SignalCallManager       org.thoughtcrime.securesms           W  DEBUG_CALL: SM3 digest not available: SM3 MessageDigest not available
+2026-02-03 19:55:17.557  6610-26235 SignalCallManager       org.thoughtcrime.securesms           W  DEBUG_CALL: Calc SHA256(Key): 5e9154504b68585a243387a44bfa985206be0281a68ec28c6aee991c5c7ae39d
+2026-02-03 19:55:17.557  6610-26235 System.out              org.thoughtcrime.securesms           I  群组视频服务
+2026-02-03 19:55:17.557  6610-26463 SignalCallManager       org.thoughtcrime.securesms           V  Processing action: lambda$requestGroupMembershipToken$50, handler: GroupConnectedActionPro
+2026-02-03 19:55:17.557  6610-26463 GroupConnectedActionPro org.thoughtcrime.securesms           I  handleGroupMembershipProofResponse():
+2026-02-03 19:55:17.557  6610-26463 GroupCall               org.thoughtcrime.securesms           I  setMembershipProof():
+2026-02-03 19:55:17.557  6610-26463 ringrtc                 org.thoughtcrime.securesms           I  call_manager.rs:3009: set_membership_proof(): id: 2
+2026-02-03 19:55:17.558  6610-26235 System.out              org.thoughtcrime.securesms           I  DeprecatedClientPreventionInterceptor - START
+2026-02-03 19:55:17.558  6610-26235 System.out              org.thoughtcrime.securesms           I  Request URL: http://47.242.157.99:11101/v2/conference/participants
+2026-02-03 19:55:17.558  6610-26235 System.out              org.thoughtcrime.securesms           I  isClientDeprecated:  false
+2026-02-03 19:55:17.558  6610-26235 System.out              org.thoughtcrime.securesms           I  DeprecatedClientPreventionInterceptor - PROCEEDING
+2026-02-03 19:55:17.573  6610-27719 crime.securesms         org.thoughtcrime.securesms           I  EglImage dataspace changed, need recreate
+2026-02-03 19:55:17.606  6610-27719 crime.securesms         org.thoughtcrime.securesms           I  EglImage dataspace changed, need recreate
+2026-02-03 19:55:17.621  6610-26235 System.out              org.thoughtcrime.securesms           I  DeprecatedClientPreventionInterceptor - Response: 200
+2026-02-03 19:55:17.621  6610-26235 CallManager             org.thoughtcrime.securesms           I  receivedHttpResponse(): requestId: 12
+2026-02-03 19:55:17.621  6610-26235 ringrtc                 org.thoughtcrime.securesms           I  call_manager.rs:727: API:CallManager:handle_received_http_response():
+2026-02-03 19:55:17.622  6610-26235 System.out              org.thoughtcrime.securesms           I  群组视频服务
+2026-02-03 19:55:17.622  6610-26234 ringrtc                 org.thoughtcrime.securesms           I  call_manager.rs:1822: handle_received_http_response(): request_id: 12
+2026-02-03 19:55:17.622  6610-26234 ringrtc                 org.thoughtcrime.securesms           I  http.rs:165: http:DelegatingClient:received_response(): request_id: 12
+2026-02-03 19:55:17.622  6610-26234 ringrtc                 org.thoughtcrime.securesms           I  http.rs:172:   status_code: 200
+2026-02-03 19:55:17.622  6610-26235 System.out              org.thoughtcrime.securesms           I  DeprecatedClientPreventionInterceptor - START
+2026-02-03 19:55:17.622  6610-26235 System.out              org.thoughtcrime.securesms           I  Request URL: http://47.242.157.99:11101/v2/conference/participants
+2026-02-03 19:55:17.622  6610-26235 System.out              org.thoughtcrime.securesms           I  isClientDeprecated:  false
+2026-02-03 19:55:17.622  6610-26234 ringrtc                 org.thoughtcrime.securesms           I  sfu.rs:449: Got group call peek result with device count = 1, pending count = 0
+2026-02-03 19:55:17.622  6610-26235 System.out              org.thoughtcrime.securesms           I  DeprecatedClientPreventionInterceptor - PROCEEDING
+2026-02-03 19:55:17.640  6610-27719 crime.securesms         org.thoughtcrime.securesms           I  EglImage dataspace changed, need recreate
+2026-02-03 19:55:17.673  6610-27719 crime.securesms         org.thoughtcrime.securesms           I  EglImage dataspace changed, need recreate
+2026-02-03 19:55:17.679  6610-26235 System.out              org.thoughtcrime.securesms           I  DeprecatedClientPreventionInterceptor - Response: 200
+2026-02-03 19:55:17.679  6610-26235 CallManager             org.thoughtcrime.securesms           I  receivedHttpResponse(): requestId: 13
+2026-02-03 19:55:17.679  6610-26235 ringrtc                 org.thoughtcrime.securesms           I  call_manager.rs:727: API:CallManager:handle_received_http_response():
+2026-02-03 19:55:17.680  6610-26234 ringrtc                 org.thoughtcrime.securesms           I  call_manager.rs:1822: handle_received_http_response(): request_id: 13
+2026-02-03 19:55:17.680  6610-26234 ringrtc                 org.thoughtcrime.securesms           I  http.rs:165: http:DelegatingClient:received_response(): request_id: 13
+2026-02-03 19:55:17.680  6610-26234 ringrtc                 org.thoughtcrime.securesms           I  http.rs:172:   status_code: 200
+2026-02-03 19:55:17.680  6610-26234 ringrtc                 org.thoughtcrime.securesms           I  sfu.rs:449: Got group call peek result with device count = 1, pending count = 0
+2026-02-03 19:55:17.706  6610-27719 crime.securesms         org.thoughtcrime.securesms           I  EglImage dataspace changed, need recreate
+2026-02-03 19:55:17.873  6610-27719 crime.securesms         org.thoughtcrime.securesms           I  EglImage dataspace changed, need recreate
+2026-02-03 19:55:18.153  6610-28031 AudioTrack              org.thoughtcrime.securesms           I  stop(sessionID=18497), packageName: org.thoughtcrime.securesms
+2026-02-03 19:55:18.153  6610-28031 AudioTrack              org.thoughtcrime.securesms           D  stop(2266): prior state:STATE_ACTIVE
+2026-02-03 19:55:18.269  6610-26476 ringrtc                 org.thoughtcrime.securesms           I  group_call.rs:3931: ringrtc_stats!,sfu,recv,800,0,0
+2026-02-03 19:55:18.791  6610-27719 crime.securesms         org.thoughtcrime.securesms           I  EglImage dataspace changed, need recreate
+2026-02-03 19:55:19.259  6610-26478 ringrtc                 org.thoughtcrime.securesms           I  stats_observer.rs:139: ringrtc_stats!,connection,0x2,1770119719258454,56ms,5000bps
+2026-02-03 19:55:19.259  6610-26478 ringrtc                 org.thoughtcrime.securesms           I  stats_observer.rs:175: ringrtc_stats!,audio,send,3469367712,0.0,0.0,0.0bps,0.0%,0ms,0ms,0.000
+2026-02-03 19:55:19.259  6610-26478 ringrtc                 org.thoughtcrime.securesms           I  stats_observer.rs:198: ringrtc_stats!,video,send,3469367714,0.0,0.0,0bps,0.0fps,0,0.0ms,0x0,0,0.0bps,0.0ms,0,0,other,0,0.0%,0.0ms,0.0ms
+2026-02-03 19:55:19.259  6610-26478 ringrtc                 org.thoughtcrime.securesms           I  stats_observer.rs:198: ringrtc_stats!,video,send,3469367716,0.0,0.0,0bps,0.0fps,0,0.0ms,0x0,0,0.0bps,0.0ms,0,0,other,0,0.0%,0.0ms,0.0ms
+2026-02-03 19:55:19.259  6610-26478 ringrtc                 org.thoughtcrime.securesms           I  stats_observer.rs:198: ringrtc_stats!,video,send,3469367718,0.0,0.0,0bps,0.0fps,0,0.0ms,0x0,0,0.0bps,0.0ms,0,0,other,0,0.0%,0.0ms,0.0ms
+2026-02-03 19:55:19.280  6610-26476 ringrtc                 org.thoughtcrime.securesms           I  group_call.rs:3931: ringrtc_stats!,sfu,recv,800,0,0
+2026-02-03 19:55:19.956  6610-25963 crime.securesms         org.thoughtcrime.securesms           I  This is non sticky GC, maxfree is 16777216 minfree is 8388608
+2026-02-03 19:55:20.292  6610-26476 ringrtc                 org.thoughtcrime.securesms           I  group_call.rs:3931: ringrtc_stats!,sfu,recv,800,0,0
+2026-02-03 19:55:21.006  6610-26013 MemoryTracker           org.thoughtcrime.securesms           D  The system increased our app JVM heap from 80078672 (76.37 MiB) to 80370184 (76.65 MiB)
+2026-02-03 19:55:21.305  6610-26476 ringrtc                 org.thoughtcrime.securesms           I  group_call.rs:3931: ringrtc_stats!,sfu,recv,800,0,0
+2026-02-03 19:55:21.900  6610-26416 TrafficStats            org.thoughtcrime.securesms           D  tagSocket(253) with statsTag=0xffffffff, statsUid=-1
+2026-02-03 19:55:22.112  6610-27765 AidlBufferPool          org.thoughtcrime.securesms           D  bufferpool2 0xb400006e2395ae88 : 0(0 size) total buffers - 0(0 size) used buffers - 0/5 (recycle/alloc) - 4/74 (fetch/transfer)
+2026-02-03 19:55:22.112  6610-27765 AidlBufferPool          org.thoughtcrime.securesms           D  bufferpool2 0xb400006e23a0d8c8 : 0(0 size) total buffers - 0(0 size) used buffers - 0/5 (recycle/alloc) - 4/66 (fetch/transfer)
+2026-02-03 19:55:22.112  6610-27765 AidlBufferPoolAcc       org.thoughtcrime.securesms           D  evictor expired: 2, evicted: 2
+2026-02-03 19:55:22.315  6610-26476 ringrtc                 org.thoughtcrime.securesms           I  group_call.rs:3931: ringrtc_stats!,sfu,recv,800,0,0
+2026-02-03 19:55:22.363  6610-25963 crime.securesms         org.thoughtcrime.securesms           I  This is non sticky GC, maxfree is 16777216 minfree is 8388608
+2026-02-03 19:55:23.112  6610-27765 AidlBufferPool          org.thoughtcrime.securesms           D  bufferpool2 0xb400006e2395c7f8 : 0(0 size) total buffers - 0(0 size) used buffers - 2/7 (recycle/alloc) - 5/98 (fetch/transfer)
+2026-02-03 19:55:23.112  6610-27765 AidlBufferPoolAcc       org.thoughtcrime.securesms           D  evictor expired: 1, evicted: 1
+2026-02-03 19:55:23.328  6610-26476 ringrtc                 org.thoughtcrime.securesms           I  group_call.rs:3931: ringrtc_stats!,sfu,recv,800,0,0
+2026-02-03 19:55:24.352  6610-26476 ringrtc                 org.thoughtcrime.securesms           I  group_call.rs:3931: ringrtc_stats!,sfu,recv,800,0,0
+2026-02-03 19:55:24.826  6610-25963 crime.securesms         org.thoughtcrime.securesms           I  This is non sticky GC, maxfree is 16777216 minfree is 8388608
+2026-02-03 19:55:25.359  6610-26476 ringrtc                 org.thoughtcrime.securesms           I  group_call.rs:3931: ringrtc_stats!,sfu,recv,800,0,0
+2026-02-03 19:55:26.031  6610-26013 MemoryTracker           org.thoughtcrime.securesms           D  The system increased our app JVM heap from 80370184 (76.65 MiB) to 80399752 (76.68 MiB)
+2026-02-03 19:55:26.031  6610-26013 MemoryTracker           org.thoughtcrime.securesms           D  Used memory has decreased from 30449344 (29.04 MiB) to 30446088 (29.04 MiB)
+2026-02-03 19:55:26.373  6610-26476 ringrtc                 org.thoughtcrime.securesms           I  group_call.rs:3931: ringrtc_stats!,sfu,recv,800,0,0
+2026-02-03 19:55:27.263  6610-25963 crime.securesms         org.thoughtcrime.securesms           I  This is non sticky GC, maxfree is 16777216 minfree is 8388608
+2026-02-03 19:55:27.382  6610-26476 ringrtc                 org.thoughtcrime.securesms           I  group_call.rs:3931: ringrtc_stats!,sfu,recv,800,0,0
+2026-02-03 19:55:27.714  6610-27348 ringrtc                 org.thoughtcrime.securesms           I  http.rs:201: http:DelegatingClient:make_request()
+2026-02-03 19:55:27.714  6610-27348 ringrtc                 org.thoughtcrime.securesms           I  android_platform.rs:1649: send_request(): request_id: 14
+2026-02-03 19:55:27.714  6610-27348 CallManager             org.thoughtcrime.securesms           I  sendHttpRequest():
+2026-02-03 19:55:27.714  6610-27348 SignalCallManager       org.thoughtcrime.securesms           I  onSendHttpRequest(): request_id: 14
+2026-02-03 19:55:27.717  6610-26235 System.out              org.thoughtcrime.securesms           I  群组视频服务
+2026-02-03 19:55:27.718  6610-26235 System.out              org.thoughtcrime.securesms           I  DeprecatedClientPreventionInterceptor - START
+2026-02-03 19:55:27.718  6610-26235 System.out              org.thoughtcrime.securesms           I  Request URL: http://47.242.157.99:11101/v2/conference/participants
+2026-02-03 19:55:27.718  6610-26235 System.out              org.thoughtcrime.securesms           I  isClientDeprecated:  false
+2026-02-03 19:55:27.718  6610-26235 System.out              org.thoughtcrime.securesms           I  DeprecatedClientPreventionInterceptor - PROCEEDING
+2026-02-03 19:55:27.798  6610-26235 System.out              org.thoughtcrime.securesms           I  DeprecatedClientPreventionInterceptor - Response: 200
+2026-02-03 19:55:27.799  6610-26235 CallManager             org.thoughtcrime.securesms           I  receivedHttpResponse(): requestId: 14
+2026-02-03 19:55:27.799  6610-26235 ringrtc                 org.thoughtcrime.securesms           I  call_manager.rs:727: API:CallManager:handle_received_http_response():
+2026-02-03 19:55:27.799  6610-26234 ringrtc                 org.thoughtcrime.securesms           I  call_manager.rs:1822: handle_received_http_response(): request_id: 14
+2026-02-03 19:55:27.799  6610-26234 ringrtc                 org.thoughtcrime.securesms           I  http.rs:165: http:DelegatingClient:received_response(): request_id: 14
+2026-02-03 19:55:27.799  6610-26234 ringrtc                 org.thoughtcrime.securesms           I  http.rs:172:   status_code: 200
+2026-02-03 19:55:27.799  6610-26234 ringrtc                 org.thoughtcrime.securesms           I  sfu.rs:449: Got group call peek result with device count = 1, pending count = 0
+2026-02-03 19:55:28.397  6610-26476 ringrtc                 org.thoughtcrime.securesms           I  group_call.rs:3931: ringrtc_stats!,sfu,recv,800,0,0
+2026-02-03 19:55:29.330  6610-26478 ringrtc                 org.thoughtcrime.securesms           I  stats_observer.rs:139: ringrtc_stats!,connection,0x2,1770119729328571,50ms,5000bps
+2026-02-03 19:55:29.330  6610-26478 ringrtc                 org.thoughtcrime.securesms           I  stats_observer.rs:175: ringrtc_stats!,audio,send,3469367712,0.0,0.0,0.0bps,0.0%,0ms,0ms,0.000
+2026-02-03 19:55:29.330  6610-26478 ringrtc                 org.thoughtcrime.securesms           I  stats_observer.rs:198: ringrtc_stats!,video,send,3469367714,0.0,0.0,0bps,0.0fps,0,0.0ms,0x0,0,0.0bps,0.0ms,0,0,other,0,0.0%,0.0ms,0.0ms
+2026-02-03 19:55:29.331  6610-26478 ringrtc                 org.thoughtcrime.securesms           I  stats_observer.rs:198: ringrtc_stats!,video,send,3469367716,0.0,0.0,0bps,0.0fps,0,0.0ms,0x0,0,0.0bps,0.0ms,0,0,other,0,0.0%,0.0ms,0.0ms
+2026-02-03 19:55:29.331  6610-26478 ringrtc                 org.thoughtcrime.securesms           I  stats_observer.rs:198: ringrtc_stats!,video,send,3469367718,0.0,0.0,0bps,0.0fps,0,0.0ms,0x0,0,0.0bps,0.0ms,0,0,other,0,0.0%,0.0ms,0.0ms
+2026-02-03 19:55:29.403  6610-26476 ringrtc                 org.thoughtcrime.securesms           I  group_call.rs:3931: ringrtc_stats!,sfu,recv,800,0,0
+2026-02-03 19:55:29.694  6610-25963 crime.securesms         org.thoughtcrime.securesms           I  This is non sticky GC, maxfree is 16777216 minfree is 8388608
+2026-02-03 19:55:30.415  6610-26476 ringrtc                 org.thoughtcrime.securesms           I  group_call.rs:3931: ringrtc_stats!,sfu,recv,800,0,0
+2026-02-03 19:55:30.581  6610-26050 AlarmSleepTimer         org.thoughtcrime.securesms           D  Setting an exact alarm to wake up in 9993ms.
+2026-02-03 19:55:31.034  6610-26013 MemoryTracker           org.thoughtcrime.securesms           D  The system increased our app JVM heap from 80399752 (76.68 MiB) to 80455560 (76.73 MiB)
+2026-02-03 19:55:31.428  6610-26476 ringrtc                 org.thoughtcrime.securesms           I  group_call.rs:3931: ringrtc_stats!,sfu,recv,800,0,0
+2026-02-03 19:55:32.125  6610-25963 crime.securesms         org.thoughtcrime.securesms           I  This is non sticky GC, maxfree is 16777216 minfree is 8388608
+2026-02-03 19:55:32.439  6610-26476 ringrtc                 org.thoughtcrime.securesms           I  group_call.rs:3931: ringrtc_stats!,sfu,recv,800,0,0
+2026-02-03 19:55:33.448  6610-26476 ringrtc                 org.thoughtcrime.securesms           I  group_call.rs:3931: ringrtc_stats!,sfu,recv,800,0,0
+2026-02-03 19:55:34.463  6610-26476 ringrtc                 org.thoughtcrime.securesms           I  group_call.rs:3931: ringrtc_stats!,sfu,recv,800,0,0
+2026-02-03 19:55:34.577  6610-25963 crime.securesms         org.thoughtcrime.securesms           I  This is non sticky GC, maxfree is 16777216 minfree is 8388608
+2026-02-03 19:55:35.472  6610-26476 ringrtc                 org.thoughtcrime.securesms           I  group_call.rs:3931: ringrtc_stats!,sfu,recv,800,0,0
+2026-02-03 19:55:36.059  6610-26013 MemoryTracker           org.thoughtcrime.securesms           D  The system increased our app JVM heap from 80455560 (76.73 MiB) to 80477360 (76.75 MiB)
+2026-02-03 19:55:36.059  6610-26013 MemoryTracker           org.thoughtcrime.securesms           D  Used memory has decreased from 30534920 (29.12 MiB) to 30507712 (29.09 MiB)
+2026-02-03 19:55:36.484  6610-26476 ringrtc                 org.thoughtcrime.securesms           I  group_call.rs:3931: ringrtc_stats!,sfu,recv,800,0,0
+2026-02-03 19:55:37.006  6610-25963 crime.securesms         org.thoughtcrime.securesms           I  This is non sticky GC, maxfree is 16777216 minfree is 8388608
+2026-02-03 19:55:37.494  6610-26476 ringrtc                 org.thoughtcrime.securesms           I  group_call.rs:3931: ringrtc_stats!,sfu,recv,800,0,0
+2026-02-03 19:55:37.998  6610-27348 ringrtc                 org.thoughtcrime.securesms           I  http.rs:201: http:DelegatingClient:make_request()
+2026-02-03 19:55:37.999  6610-27348 ringrtc                 org.thoughtcrime.securesms           I  android_platform.rs:1649: send_request(): request_id: 15
+2026-02-03 19:55:37.999  6610-27348 CallManager             org.thoughtcrime.securesms           I  sendHttpRequest():
+2026-02-03 19:55:37.999  6610-27348 SignalCallManager       org.thoughtcrime.securesms           I  onSendHttpRequest(): request_id: 15
+2026-02-03 19:55:38.000  6610-26235 System.out              org.thoughtcrime.securesms           I  群组视频服务
+2026-02-03 19:55:38.001  6610-26235 System.out              org.thoughtcrime.securesms           I  DeprecatedClientPreventionInterceptor - START
+2026-02-03 19:55:38.001  6610-26235 System.out              org.thoughtcrime.securesms           I  Request URL: http://47.242.157.99:11101/v2/conference/participants
+2026-02-03 19:55:38.001  6610-26235 System.out              org.thoughtcrime.securesms           I  isClientDeprecated:  false
+2026-02-03 19:55:38.001  6610-26235 System.out              org.thoughtcrime.securesms           I  DeprecatedClientPreventionInterceptor - PROCEEDING
+2026-02-03 19:55:38.075  6610-26235 System.out              org.thoughtcrime.securesms           I  DeprecatedClientPreventionInterceptor - Response: 200
+2026-02-03 19:55:38.075  6610-26235 CallManager             org.thoughtcrime.securesms           I  receivedHttpResponse(): requestId: 15
+2026-02-03 19:55:38.076  6610-26235 ringrtc                 org.thoughtcrime.securesms           I  call_manager.rs:727: API:CallManager:handle_received_http_response():
+2026-02-03 19:55:38.076  6610-26234 ringrtc                 org.thoughtcrime.securesms           I  call_manager.rs:1822: handle_received_http_response(): request_id: 15
+2026-02-03 19:55:38.076  6610-26234 ringrtc                 org.thoughtcrime.securesms           I  http.rs:165: http:DelegatingClient:received_response(): request_id: 15
+2026-02-03 19:55:38.076  6610-26234 ringrtc                 org.thoughtcrime.securesms           I  http.rs:172:   status_code: 200
+2026-02-03 19:55:38.076  6610-26234 ringrtc                 org.thoughtcrime.securesms           I  sfu.rs:449: Got group call peek result with device count = 1, pending count = 0
+2026-02-03 19:55:38.506  6610-26476 ringrtc                 org.thoughtcrime.securesms           I  group_call.rs:3931: ringrtc_stats!,sfu,recv,800,0,0
+2026-02-03 19:55:39.413  6610-26478 ringrtc                 org.thoughtcrime.securesms           I  stats_observer.rs:139: ringrtc_stats!,connection,0x2,1770119739412513,56ms,5000bps
+2026-02-03 19:55:39.414  6610-26478 ringrtc                 org.thoughtcrime.securesms           I  stats_observer.rs:175: ringrtc_stats!,audio,send,3469367712,0.0,0.0,0.0bps,0.0%,0ms,0ms,0.000
+2026-02-03 19:55:39.414  6610-26478 ringrtc                 org.thoughtcrime.securesms           I  stats_observer.rs:198: ringrtc_stats!,video,send,3469367714,0.0,0.0,0bps,0.0fps,0,0.0ms,0x0,0,0.0bps,0.0ms,0,0,other,0,0.0%,0.0ms,0.0ms
+2026-02-03 19:55:39.414  6610-26478 ringrtc                 org.thoughtcrime.securesms           I  stats_observer.rs:198: ringrtc_stats!,video,send,3469367716,0.0,0.0,0bps,0.0fps,0,0.0ms,0x0,0,0.0bps,0.0ms,0,0,other,0,0.0%,0.0ms,0.0ms
+2026-02-03 19:55:39.414  6610-26478 ringrtc                 org.thoughtcrime.securesms           I  stats_observer.rs:198: ringrtc_stats!,video,send,3469367718,0.0,0.0,0bps,0.0fps,0,0.0ms,0x0,0,0.0bps,0.0ms,0,0,other,0,0.0%,0.0ms,0.0ms
+2026-02-03 19:55:39.434  6610-25963 crime.securesms         org.thoughtcrime.securesms           I  This is non sticky GC, maxfree is 16777216 minfree is 8388608
+2026-02-03 19:55:39.523  6610-26476 ringrtc                 org.thoughtcrime.securesms           I  group_call.rs:3931: ringrtc_stats!,sfu,recv,800,0,0
+2026-02-03 19:55:40.538  6610-26476 ringrtc                 org.thoughtcrime.securesms           I  group_call.rs:3931: ringrtc_stats!,sfu,recv,800,0,0
+2026-02-03 19:55:40.577  6610-26050 OkHttpWebS...Connection org.thoughtcrime.securesms           I  [normal:88104253] Sending keep alive...
+2026-02-03 19:55:40.578  6610-26050 OkHttpWebS...Connection org.thoughtcrime.securesms           I  [unidentified:196165134] Sending keep alive...
+2026-02-03 19:55:40.581  6610-26050 AlarmSleepTimer         org.thoughtcrime.securesms           D  Setting an exact alarm to wake up in 19999ms.
+2026-02-03 19:55:41.083  6610-26013 MemoryTracker           org.thoughtcrime.securesms           D  The system increased our app JVM heap from 80477360 (76.75 MiB) to 80565016 (76.83 MiB)
+2026-02-03 19:55:41.547  6610-26476 ringrtc                 org.thoughtcrime.securesms           I  group_call.rs:3931: ringrtc_stats!,sfu,recv,800,0,0
+2026-02-03 19:55:41.876  6610-25963 crime.securesms         org.thoughtcrime.securesms           I  This is non sticky GC, maxfree is 16777216 minfree is 8388608
+2026-02-03 19:55:42.558  6610-26476 ringrtc                 org.thoughtcrime.securesms           I  group_call.rs:3931: ringrtc_stats!,sfu,recv,800,0,0
+2026-02-03 19:55:43.570  6610-26476 ringrtc                 org.thoughtcrime.securesms           I  group_call.rs:3931: ringrtc_stats!,sfu,recv,800,0,0
+2026-02-03 19:55:44.324  6610-25963 crime.securesms         org.thoughtcrime.securesms           I  This is non sticky GC, maxfree is 16777216 minfree is 8388608

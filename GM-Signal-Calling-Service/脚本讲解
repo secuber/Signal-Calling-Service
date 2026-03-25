@@ -9,3 +9,6 @@
 
 3、查看日志：
 tail -f ../logs/*.log
+
+
+cargo build --release --bin calling_frontend

@@ -45,9 +45,12 @@ impl TryFrom<&String> for Address {
 
 impl TryFrom<&str> for Address {
     type Error = Error;
-    fn try_from(ip: &str) -> Result<Self, Error> {
-        let ip: IpAddr = ip.parse().map_err(|_| anyhow!("Can't parse backend ip"))?;
-        Ok(Self((ip, 8080).into()))
+    fn try_from(s: &str) -> Result<Self, Error> {
+        if let Ok(addr) = s.parse::<SocketAddr>() {
+            return Ok(Self(addr));
+        }
+        let ip: IpAddr = s.parse().map_err(|_| anyhow!("Can't parse backend ip"))?;
+        Ok(Self((ip, 11100).into()))
     }
 }
 
@@ -331,10 +334,15 @@ impl Backend for BackendHttpClient {
 
                 Ok(join_response)
             }
-            _ => Err(BackendError::UnexpectedError(anyhow!(format!(
-                "failed `post client` with unexpected status {}",
-                response.status()
-            )))),
+            _ => {
+                let status = response.status();
+                let text = response.text().await.unwrap_or_else(|_| "<failed to read body>".to_string());
+                Err(BackendError::UnexpectedError(anyhow!(format!(
+                    "failed `post client` with unexpected status {}: {}",
+                    status,
+                    text
+                ))))
+            },
         }
     }
 }

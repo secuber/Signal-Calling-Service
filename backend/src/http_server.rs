@@ -157,9 +157,11 @@ fn parse_and_authenticate(
     authorization_header: &Authorization<Basic>,
 ) -> Result<(sfu::UserId, sfu::CallId)> {
     let password = authorization_header.password();
+    info!("客户端认证信息: password={}", password);
     authenticate(config, password)
 }
 
+// SFU资源监控
 async fn get_metrics(
     Extension(sfu): Extension<Arc<Mutex<Sfu>>>,
 ) -> Result<impl IntoResponse, StatusCode> {
@@ -223,6 +225,10 @@ async fn get_metrics(
     Ok(Json(response))
 }
 
+// 获取当前会议成员列表
+// 当一个已经加入（或正要加入）会议的客户端想要知道“现在会议室里还有谁”时，会调用这个接口
+// 1、身份鉴权：authorization_header，同时提取user_id和call_id
+// 2、调用 SFU 逻辑，获取指定会议（call_id）中的成员列表
 async fn get_participants(
     Extension(config): Extension<&'static config::Config>,
     Extension(sfu): Extension<Arc<Mutex<Sfu>>>,
@@ -231,12 +237,20 @@ async fn get_participants(
     trace!("get_participants():");
 
     let (user_id, call_id) = match parse_and_authenticate(config, &authorization_header) {
-        Ok((user_id, call_id)) => (user_id, call_id),
+        Ok((user_id, call_id)) => {
+            info!("parse_and_authenticate success: user_id={:?}, call_id={}", user_id, crate::call::LoggableCallId::from(&call_id));
+            (user_id, call_id)
+        },
         Err(err) => {
             warn!("get(): unauthorized {}", err);
             return Ok((StatusCode::UNAUTHORIZED, err.to_string()).into_response());
         }
     };
+    
+    // [Debug Log] 打印请求获取成员列表的用户信息
+    // Log user info requesting participants list
+    // Use .clone() and conversion because UserId fields are private and LoggableCallId needs refs
+    info!("get_participants() called by: call_id={}", crate::call::LoggableCallId::from(&call_id));
 
     let sfu = sfu.lock();
 
@@ -248,7 +262,7 @@ async fn get_participants(
         // dropping.
 
         let conference_id = conference_id_from_signaling_info(&signaling);
-        let participants = signaling
+        let participants: Vec<Participant> = signaling
             .client_ids
             .into_iter()
             .map(|(demux_id, user_id)| Participant {
@@ -264,6 +278,13 @@ async fn get_participants(
                 demux_id: demux_id.as_u32(),
             })
             .collect();
+        
+        // [Debug Log] 打印返回给客户端的成员列表信息
+        info!("get_participants() response for call_id={:?}: participants_count={}, active_participants={:?}", 
+            conference_id, 
+            participants.len(),
+            participants.iter().map(|p| format!("demux_id:{}/user:{:?}", p.demux_id, p.opaque_user_id)).collect::<Vec<_>>()
+        );
 
         let response = ParticipantsResponse {
             conference_id,
@@ -279,6 +300,11 @@ async fn get_participants(
     }
 }
 
+// 加入视频/发起视频，信令接口
+// 1、身份鉴权：authorization_header，同时提取user_id和call_id
+// 2、检查客户端上传的密钥交换参数，包括 ECDH 公钥 (dhe_public_key) 和 HKDF 额外信息。这些用于后续建立加密的媒体通道。
+// 3、生成服务器端的 ICE 认证信息（ufrag 和 pwd），用于 NAT 穿透和连接建立。
+// 4、调用 SFU 逻辑，尝试将客户端添加到指定的会议（call_id）中。如果会议不存在则创建新会议。
 async fn join_conference(
     Extension(config): Extension<&'static config::Config>,
     Extension(sfu): Extension<Arc<Mutex<Sfu>>>,
@@ -288,12 +314,19 @@ async fn join_conference(
     trace!("join_conference():");
 
     let (user_id, call_id) = match parse_and_authenticate(config, &authorization_header) {
-        Ok((user_id, call_id)) => (user_id, call_id),
+        // Ok((user_id, call_id)) => (user_id, call_id),
+        Ok((user_id, call_id)) => {
+            info!("join_conference success: user_id={:?}, call_id={}", user_id, crate::call::LoggableCallId::from(&call_id));
+            (user_id, call_id)
+        },
         Err(err) => {
             warn!("join(): unauthorized {}", err);
             return Ok((StatusCode::UNAUTHORIZED, err.to_string()).into_response());
         }
     };
+
+    // [Debug Log] 打印尝试加入会议的客户端上传的用户信息
+    info!("join_conference() called by: call_id={}", crate::call::LoggableCallId::from(&call_id));
 
     if join_request.dhe_public_key.is_empty() {
         return Ok((
@@ -303,7 +336,7 @@ async fn join_conference(
             .into_response());
     }
 
-    let client_dhe_public_key = match <[u8; 65]>::from_hex(join_request.dhe_public_key) {
+    let client_dhe_public_key = match <[u8; 33]>::from_hex(join_request.dhe_public_key) {
         Ok(client_dhe_public_key) => client_dhe_public_key,
         Err(_) => {
             return Ok((
@@ -387,6 +420,7 @@ async fn join_conference(
 }
 
 fn app(sfu: Arc<Mutex<Sfu>>, config: &'static config::Config) -> Router {
+    // SFU资源监控
     let metrics_route = Router::new()
         .route("/metrics", get(get_metrics))
         .layer(Extension(sfu.clone()));

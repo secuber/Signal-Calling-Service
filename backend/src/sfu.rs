@@ -22,7 +22,7 @@ use parking_lot::Mutex;
 use sha2::Sha256;
 use strum::IntoEnumIterator;
 use thiserror::Error;
-use signal_crypto::{sm2_generate_key, sm2_compute_shared_key};
+use sm2_integrated::{sm2_generate_key, sm2_decompress_public_key, sm2_compute_ecdh};
 
 use crate::{
     call::{self, Call, CallSizeBucket, LoggableCallId},
@@ -164,6 +164,44 @@ pub struct SfuStats {
     pub values: HashMap<&'static str, f32>,
 }
 
+pub fn verify_sm2_correctness() -> anyhow::Result<()> {
+    // 1. Generate keys
+    let (s_priv, s_pub) = sm2_generate_key().map_err(|e| anyhow::anyhow!("Gen failed: {}", e))?;
+    let (c_priv, c_pub) = sm2_generate_key().map_err(|e| anyhow::anyhow!("Gen failed: {}", e))?;
+
+    // 2. Check compression roundtrip
+    let s_comp = compress_public_key(&s_pub);
+    let s_decomp = sm2_decompress_public_key(&s_comp)
+        .map_err(|e| anyhow::anyhow!("Decomp failed: {}", e))?;
+    
+    if s_decomp != s_pub {
+         return Err(anyhow::anyhow!("Compression roundtrip failed"));
+    }
+
+    // 3. Check shared secret
+    let s_shared = sm2_compute_ecdh(&s_priv, &c_pub)
+        .map_err(|e| anyhow::anyhow!("Compute failed: {}", e))?;
+    
+    let c_shared = sm2_compute_ecdh(&c_priv, &s_pub)
+        .map_err(|e| anyhow::anyhow!("Compute failed: {}", e))?;
+
+    if s_shared != c_shared {
+        return Err(anyhow::anyhow!("Shared secret mismatch: {:?} != {:?}", s_shared, c_shared));
+    }
+
+    Ok(())
+}
+
+pub fn compress_public_key(raw: &[u8; 64]) -> [u8; 33] {
+    let mut compressed = [0u8; 33];
+    // raw is X || Y. X is raw[0..32], Y is raw[32..64].
+    // In Big Endian, the last byte is the LSB.
+    let y_last_byte = raw[63];
+    compressed[0] = if y_last_byte & 1 == 1 { 0x03 } else { 0x02 };
+    compressed[1..33].copy_from_slice(&raw[0..32]);
+    compressed
+}
+
 impl Sfu {
     pub fn new(now: Instant, config: &'static config::Config) -> Result<Self> {
         Ok(Self {
@@ -194,10 +232,11 @@ impl Sfu {
     }
 
     /// Get info about a call that is relevant to call signaling.
+    /// //函数的功能是 获取当前通话的信令相关信息
     pub fn get_call_signaling_info(
         &self,
-        call_id: CallId,
-        user_id: Option<&UserId>,
+        call_id: CallId,            // 要查询的会议ID
+        user_id: Option<&UserId>,   // 发起查询的用户
     ) -> Option<CallSignalingInfo> {
         let call = self.call_by_call_id.get(&call_id)?;
         let call = call.lock();
@@ -447,6 +486,7 @@ impl Sfu {
     }
 
     /// Adds the given client, creating a call if it doesn't exist.
+    /// 创建/加入
     #[allow(clippy::too_many_arguments)]
     pub fn get_or_create_call_and_add_client(
         &mut self,
@@ -465,22 +505,22 @@ impl Sfu {
         approved_users: Option<Vec<UserId>>,
     ) -> Result<(DhePublicKey, ClientStatus), SfuError> {
         let loggable_call_id = LoggableCallId::from(&call_id);
-        trace!("get_or_create_call_and_add_client():");
+        info!("get_or_create_call_and_add_client():");
 
-        trace!("  {:25}{}", "call_id:", loggable_call_id);
-        trace!("  {:25}{}", "user_id:", user_id.as_str());
-        trace!("  {:25}{}", "client_ice_ufrag:", client_ice_ufrag);
-        trace!(
+        info!("  {:25}{}", "call_id:", loggable_call_id);
+        info!("  {:25}{}", "user_id:", user_id.as_str());
+        info!("  {:25}{}", "client_ice_ufrag:", client_ice_ufrag);
+        info!(
             "  {:25}{:?}",
             "client_dhe_public_key:",
             client_dhe_public_key
         );
-        trace!(
+        info!(
             "  {:25}{:?}",
             "client_hkdf_extra_info:",
             client_hkdf_extra_info
         );
-        trace!("  {:25}{:?}", "demux_id:", demux_id);
+        info!("  {:25}{:?}", "demux_id:", demux_id);
 
         let initial_target_send_rate =
             DataRate::from_kbps(self.config.initial_target_send_rate_kbps);
@@ -489,8 +529,8 @@ impl Sfu {
         let default_requested_max_send_rate =
             DataRate::from_kbps(self.config.default_requested_max_send_rate_kbps);
 
-        trace!("  {:25}{}", "server_ice_ufrag:", server_ice_ufrag);
-        trace!("  {:25}{}", "server_ice_pwd:", server_ice_pwd);
+        info!("  {:25}{}", "server_ice_ufrag:", server_ice_ufrag);
+        info!("  {:25}{}", "server_ice_pwd:", server_ice_pwd);
 
         let ice_pwd = server_ice_pwd.as_bytes().to_vec();
 
@@ -560,10 +600,21 @@ impl Sfu {
         // video base layer, so use that.
         let ack_ssrc = call::LayerId::Video0.to_ssrc(demux_id);
 
-        let (server_private_key, server_dhe_public_key) = sm2_generate_key()
+        // Generate server key pair
+        let (server_private_key, server_public_key_raw) = sm2_generate_key()
             .map_err(|e| SfuError::CryptoError(format!("Key generation failed: {}", e)))?;
-        let shared_secret = sm2_compute_shared_key(&server_private_key, &client_dhe_public_key)
+
+        // Compress server public key (64 bytes raw -> 33 bytes compressed)
+        let server_dhe_public_key = compress_public_key(&server_public_key_raw);
+
+        // Decompress client public key
+        let client_public_key_raw = sm2_decompress_public_key(&client_dhe_public_key)
+            .map_err(|e| SfuError::CryptoError(format!("Client public key decompression failed: {}", e)))?;
+
+        // Compute shared secret
+        let shared_secret = sm2_compute_ecdh(&server_private_key, &client_public_key_raw)
             .map_err(|e| SfuError::CryptoError(format!("Shared key computation failed: {}", e)))?;
+
         let mut srtp_master_key_material = new_master_key_material();
         Hkdf::<Sha256>::new(None, &shared_secret)
             .expand_multi_info(
@@ -1364,7 +1415,12 @@ mod sfu_tests {
     }
 
     fn valid_client_key() -> DhePublicKey {
-        sm2_generate_key().expect("key generation failed").1
+        let raw = sm2_generate_key().expect("key generation failed").1;
+        let mut compressed = [0u8; 33];
+        let y_last_byte = raw[63];
+        compressed[0] = if y_last_byte & 1 == 1 { 0x03 } else { 0x02 };
+        compressed[1..33].copy_from_slice(&raw[0..32]);
+        compressed
     }
 
     #[tokio::test]
@@ -1765,5 +1821,18 @@ mod sfu_tests {
             "call_id: e43483, demux_id: 123456",
             format!("{}", connection_id)
         );
+    }
+}
+
+#[cfg(test)]
+mod sm2_tests {
+    use super::*;
+    use sm2_integrated::{sm2_generate_key, sm2_decompress_public_key, sm2_derive_public_key};
+
+    #[test]
+    fn test_sm2_key_exchange() {
+        if let Err(e) = super::verify_sm2_correctness() {
+            panic!("SM2 Correctness Check Failed: {}", e);
+        }
     }
 }
